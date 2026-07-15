@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-zinc-950">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBOT Investments - Admin Dashboard</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Layout boundaries standard lock */
+        html, body {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            height: auto !important;
+            min-h-screen: 100vh;
+        }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #09090b; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+    </style>
+</head>
+<body class="h-full bg-zinc-950 text-zinc-300 relative overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Ambient Gold Tech Glows -->
+    <div class="absolute top-0 right-1/4 w-[300px] sm:w-[600px] h-[300px] bg-amber-500/[0.02] blur-[130px] rounded-full pointer-events-none z-0"></div>
+    <div class="absolute bottom-0 left-1/4 w-[300px] sm:w-[500px] h-[400px] bg-yellow-600/[0.01] blur-[150px] rounded-full pointer-events-none z-0"></div>
+
+<!-- ========================================== -->
+<!-- COMPLETE UNIFIED RESPONSIVE NAVIGATION -->
+<!-- ========================================== -->
+<header class="sticky top-0 z-50 w-full bg-zinc-950/90 backdrop-blur-xl border-b border-amber-500/10 shadow-[0_4px_30px_rgba(245,158,11,0.02)] font-sans">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20 relative w-full">
+        
+        <!-- BRAND LOGO -->
+        <div class="flex-shrink-0 flex items-center py-2 z-30">
+            <a href="#dashboard" class="flex items-center group transition duration-300">
+                <img src="assets/images/logo.png" 
+                     alt="IBOT Panel Logo" 
+                     class="h-8 sm:h-11 w-auto object-contain block transform group-hover:scale-[1.03] transition duration-500 pointer-events-none filter drop-shadow-[0_0_8px_rgba(245,158,11,0.1)]" />
+            </a>
+        </div>
+
+        <!-- HAMBURGER TRIGGER BUTTON (Mobile-only) -->
+        <div class="flex xl:hidden items-center z-30">
+            <button id="menu-toggle-btn" class="text-zinc-400 hover:text-amber-400 p-2.5 bg-zinc-900/50 rounded-xl border border-zinc-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <!-- BACKDROP OVERLAY FOR MOBILE (Drawer background click dims main viewport) -->
+        <div id="nav-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden xl:hidden transition-opacity duration-300"></div>
+
+        <!-- THE UNIFIED NAVIGATION MATRIX -->
+        <!-- Desktop: Inline Row | Mobile: Absolute Full-height Right Drawer Menu -->
+        <nav id="unified-nav-mesh" class="
+            fixed top-0 right-0 bottom-0 h-screen w-72 sm:w-80 bg-zinc-950 border-l border-zinc-900 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto
+            xl:static xl:h-auto xl:w-auto xl:bg-transparent xl:border-l-0 xl:p-0 xl:shadow-none xl:transform-none xl:transition-none xl:overflow-y-visible
+            flex flex-col xl:flex-row items-stretch xl:items-center gap-4 xl:gap-2 text-sm font-medium">
+            
+            <!-- Mobile Shell Header (Visible ONLY inside Mobile Drawer) -->
+            <div class="flex xl:hidden items-center justify-between border-b border-zinc-900 pb-4 mb-2">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">Navigation Core</span>
+                <button id="menu-close-btn" class="text-zinc-500 hover:text-white text-sm font-bold p-1">✕</button>
+            </div>
+
+            <!-- 1. DASHBOARD LINK -->
+            <a href="#dashboard" class="nav-core-link px-4 py-3 xl:py-2 rounded-xl text-amber-400 bg-zinc-900/60 border border-amber-500/10 shadow-sm shadow-amber-500/5 text-center xl:text-left">Dashboard</a>
+            
+            <!-- 2. MY ACCOUNT HUB -->
+            <div class="relative group/main nav-node-group">
+                <button class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
+                    <span>My Account</span>
+                    <svg class="chevron-icon w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                
+                <!-- Dropdown Shell Component -->
+                <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-56 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
+                    <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
+                        <a href="#profile" class="nav-core-link block px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-950/60 rounded-xl transition font-medium">My Profile</a>
+                        
+                        <!-- Lvl 2: Security Settings -->
+                        <div class="relative group/sub nav-subnode-group">
+                            <button class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
+                                <span>Security Settings</span>
+                                <svg class="subchevron-icon w-3 h-3 transition-transform xl:-rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:left-full xl:pl-3 w-full xl:w-52 pl-3 mt-1 xl:mt-0 z-50">
+                                <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
+                                    <a href="#modify-login" class="nav-core-link block px-4 py-2 text-zinc-400 xl:text-zinc-300 hover:text-amber-400 xl:hover:bg-zinc-950/40 rounded-xl transition">Modify Login Password</a>
+                                    <a href="#modify-wallet" class="nav-core-link block px-4 py-2 text-zinc-400 xl:text-zinc-300 hover:text-amber-400 xl:hover:bg-zinc-950/40 rounded-xl transition">Modify Wallet Password</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. WALLETS & INVESTMENT HUB -->
+            <div class="relative group/main nav-node-group">
+                <button class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
+                    <span>Wallets & Investment</span>
+                    <svg class="chevron-icon w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-64 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
+                    <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
+                        <a href="#make-investment" class="nav-core-link block px-4 py-2.5 text-xs font-semibold text-amber-400 bg-amber-500/5 xl:bg-amber-500/10 rounded-xl border border-amber-500/10 xl:border-amber-500/30 hover:bg-amber-500/20 transition">★ Make Investment</a>
+                        
+                        <!-- Sub Activation Wallet -->
+                        <div class="relative group/sub nav-subnode-group">
+                            <button class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
+                                <span>Activation Wallet</span>
+                                <svg class="subchevron-icon w-3 h-3 transition-transform xl:-rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:left-full xl:pl-3 w-full xl:w-48 pl-3 mt-1 xl:mt-0 z-50">
+                                <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
+                                    <a href="#add-fund" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-950/40 rounded-xl transition">Add Fund</a>
+                                    <a href="#add-fund-summary" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Add Fund Summary</a>
+                                    <a href="#transfer-fund" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Transfer Fund</a>
+                                    <a href="#transfer-summary" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Transfer Summary</a>
+                                    <a href="#wallet-summary" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-950/40 rounded-xl transition">Wallet Summary</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sub Income Wallet -->
+                        <div class="relative group/sub nav-subnode-group">
+                            <button class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
+                                <span>Income Wallet</span>
+                                <svg class="subchevron-icon w-3 h-3 transition-transform xl:-rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:left-full xl:pl-3 w-full xl:w-48 pl-3 mt-1 xl:mt-0 z-50">
+                                <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
+                                    <a href="#income-transfer" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Transfer Fund</a>
+                                    <a href="#withdraw-fund" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-950/40 rounded-xl transition">Withdraw Fund</a>
+                                    <a href="#withdraw-history" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Withdrawal History</a>
+                                    <a href="#income-summary" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-950/40 rounded-xl transition">Wallet Summary</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. MY NETWORK & REPORTS HUB -->
+            <div class="relative group/main nav-node-group">
+                <button class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
+                    <span>My Network & Reports</span>
+                    <svg class="chevron-icon w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:right-0 xl:pt-3 w-full xl:w-60 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
+                    <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
+                        
+                        <!-- Sub Team Reports -->
+                        <div class="relative group/sub nav-subnode-group">
+                            <button class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
+                                <span>Team Reports</span>
+                                <svg class="subchevron-icon w-3 h-3 transition-transform xl:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:right-full xl:pr-3 w-full xl:w-48 pl-3 mt-1 xl:mt-0 z-50">
+                                <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
+                                    <a href="#direct-team" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Direct Team</a>
+                                    <a href="#indirect-team" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-950/40 rounded-xl transition">Indirect Team</a>
+                                    <a href="#business-report" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Team Business Report</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sub Income Reports -->
+                        <div class="relative group/sub nav-subnode-group">
+                            <button class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
+                                <span>Income Reports</span>
+                                <svg class="subchevron-icon w-3 h-3 transition-transform xl:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:right-full xl:pr-3 w-full xl:w-52 pl-3 mt-1 xl:mt-0 z-50">
+                                <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
+                                    <a href="#daily-profit" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Daily Profit Income</a>
+                                    <a href="#direct-income" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-950/40 rounded-xl transition">Direct Income</a>
+                                    <a href="#sharing-income" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Profit Sharing Income</a>
+                                    <a href="#pool-income" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Team Pool Income</a>
+                                    <a href="#rewards-income" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-950/40 rounded-xl transition">Rewards Income</a>
+                                    <a href="#weekly-salary" class="nav-core-link block px-4 py-1.5 hover:text-amber-400 xl:text-zinc-300 xl:hover:bg-zinc-955/40 rounded-xl transition">Weekly Salary Income</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. LOGOUT -->
+            <a href="#logout" class="nav-core-link mt-4 xl:mt-0 xl:ml-2 px-4 py-3 xl:py-2 text-center text-rose-400 hover:text-white bg-rose-500/5 xl:bg-transparent hover:bg-rose-500/10 border border-rose-500/10 xl:border-transparent xl:hover:border-rose-500/20 rounded-xl transition duration-300 font-bold uppercase xl:normal-case tracking-wider xl:tracking-normal">Logout</a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+<!-- ======================================================= -->
+<!-- FIXED: CENTRALIZED AXIS MAX-W PANEL CONTROLLER MODULE   -->
+<!-- ======================================================= -->
+
+
+
+<!-- ======================================================= -->
+<!-- FUTURISTIC CYBER-PUNK QUANTUM LIQUID TECH DASHBOARD CORE -->
+<!-- ======================================================= -->
+<main class="w-full max-w-[1600px] mx-auto p-4 sm:p-8 space-y-10 flex-1 bg-[#050507] text-zinc-300 font-sans selection:bg-yellow-400 selection:text-black overflow-hidden relative">
+    
+    <!-- Decorative Ambient Vector Mesh Grid Lines -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f0f15_1px,transparent_1px),linear-gradient(to_bottom,#0f0f15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-60 pointer-events-none z-0"></div>
+    <div class="absolute top-0 left-1/3 w-[500px] h-[250px] bg-gradient-to-br from-amber-500/[0.04] to-cyan-500/[0.02] blur-[120px] rounded-full pointer-events-none z-0"></div>
+
+    <!-- TIER 1: CORE TELEMETRY & CONSOLE STATUS HEADER -->
+    <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-zinc-900/60 w-full">
+        <div class="space-y-2 min-w-0">
+            <div class="flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] text-zinc-500 uppercase">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b]"></span>
+                <span>System Protocol Node</span>
+                <span class="text-zinc-700">//</span>
+                <span class="text-amber-400 font-bold">Terminal initialized</span>
+            </div>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tighter text-white font-sans uppercase">
+                    Console.<span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">mainframe</span>
+                </h1>
+                <p class="text-xs font-mono text-zinc-500 tracking-wide">ID: <span class="text-zinc-300">RG3038998</span> <span class="text-zinc-700">|</span> Node: <span class="text-emerald-400 font-bold">Active Sync</span></p>
+            </div>
+        </div>
+
+        <!-- System Latency Gauge Row -->
+        <div class="flex items-center gap-4 font-mono overflow-x-auto pb-2 lg:pb-0 scrollbar-none">
+            <div class="flex items-center gap-3 px-4 py-2 bg-zinc-950 border border-zinc-900 rounded-xl shadow-inner shrink-0">
+                <div class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                </div>
+                <div class="text-[11px]">
+                    <span class="text-zinc-500 uppercase block text-[9px] tracking-wider font-bold">SYSTEM TIME</span>
+                    <span id="liveTimestampClock" class="text-zinc-300 font-bold text-nowrap">2026-06-20 | 06:55 PM</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3 px-4 py-2 bg-zinc-950 border border-zinc-900 rounded-xl shadow-inner shrink-0">
+                <div class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_6px_#22d3ee]"></div>
+                <div class="text-[11px]">
+                    <span class="text-zinc-500 uppercase block text-[9px] tracking-wider font-bold">NETWORK PIPELINE</span>
+                    <span class="text-cyan-400 font-bold text-nowrap">14ms Optimal</span>
+                </div>
+            </div>
+
+            <button onclick="window.location.reload()" class="h-9 w-9 bg-zinc-900 hover:bg-amber-500 border border-zinc-800 hover:border-amber-400 text-zinc-400 hover:text-zinc-950 rounded-xl flex items-center justify-center transition-all duration-300 shrink-0 focus:outline-none shadow-md">
+                <svg class="w-4 h-4 animate-[spin_4s_linear_infinite]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17.5"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- TIER 2: ASYMMETRICAL FLOATING MATRIX OVERVIEW (DASHBOARD HIGHLIGHT) -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
+        
+        <!-- Welcome Slate & Core Statistics Pool (Col-7: Big Focus Hero) -->
+        <div class="lg:col-span-7 bg-gradient-to-br from-[#0c0c12] to-[#08080c] rounded-3xl border border-zinc-900 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group shadow-2xl min-w-0">
+            <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-gradient-to-br from-amber-500/[0.02] to-cyan-500/[0.02] blur-3xl rounded-full pointer-events-none"></div>
+            <!-- Laser Neon Accent Side Trim -->
+            <div class="absolute top-0 left-0 w-[3px] h-1/2 bg-gradient-to-b from-amber-500 to-transparent"></div>
+            
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-xs px-2.5 py-0.5 font-mono bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-md font-bold uppercase tracking-widest">Operator</span>
+                    <span class="text-xs font-mono text-zinc-500">Account Type: Verified Corporate Node</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white font-sans truncate">
+                    Welcome Back, <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">Realgains LLC</span>
+                </h2>
+                
+                <!-- Dynamic Horizontal Referral Code Strip -->
+                <div class="pt-2">
+                    <div class="w-full sm:max-w-xl h-11 bg-zinc-950/80 border border-zinc-900 rounded-xl px-3 flex items-center justify-between overflow-hidden hover:border-amber-500/20 transition duration-300">
+                        <span class="text-[11px] font-mono text-zinc-500 truncate mr-2">https://realgains.lc/referral.php?id=RG3038998</span>
+                        <button onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')" class="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-400 hover:text-white transition-colors shrink-0 focus:outline-none">
+                            [ Copy ]
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini Horizontal Metric Parameters Inside Hero -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-zinc-900/60 font-mono text-center">
+                <div class="space-y-0.5 text-left">
+                    <span class="text-[9px] text-zinc-500 font-bold uppercase tracking-widest block">Operator Handle</span>
+                    <span class="text-xs font-bold text-zinc-200 truncate block">@REALGAINS</span>
+                </div>
+                <div class="space-y-0.5 text-left pl-0 sm:pl-4 sm:border-l border-zinc-900">
+                    <span class="text-[9px] text-zinc-500 font-bold uppercase tracking-widest block">Sponsor Node</span>
+                    <span class="text-xs font-bold text-zinc-200 truncate block">COMPANY</span>
+                </div>
+                <div class="space-y-0.5 text-left pl-0 sm:pl-4 sm:border-l border-zinc-900">
+                    <span class="text-[9px] text-zinc-500 font-bold uppercase tracking-widest block">Registration Node</span>
+                    <span class="text-xs font-bold text-zinc-200 block">2026-06-13</span>
+                </div>
+                <div class="space-y-0.5 text-left pl-0 sm:pl-4 sm:border-l border-zinc-900">
+                    <span class="text-[9px] text-amber-500 font-bold uppercase tracking-widest block">Tier Standing</span>
+                    <span class="text-xs font-bold text-amber-400 block tracking-wide">🏆 AFFILIATE</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Circular Progress / Realtime Earning Meter (Col-5: Asymmetrical Split) -->
+        <div class="lg:col-span-5 bg-gradient-to-br from-[#0c0c12] to-[#08080c] rounded-3xl border border-zinc-900 p-6 flex flex-col justify-between relative overflow-hidden group shadow-2xl">
+            <!-- Laser Neon Accent Side Trim -->
+            <div class="absolute bottom-0 right-0 w-[3px] h-1/2 bg-gradient-to-t from-cyan-400 to-transparent"></div>
+            
+            <div class="flex items-center justify-between w-full font-mono">
+                <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">[ CAP PROTOCOL MULTIPLIER ]</span>
+                <span class="text-[10px] font-bold text-cyan-400 bg-cyan-400/5 border border-cyan-400/20 px-2 py-0.5 rounded-md">5X Active</span>
+            </div>
+
+            <!-- Creative Liquid Data Bar Presentation instead of standard circular meter -->
+            <div class="my-6 space-y-3 font-mono">
+                <div class="flex justify-between items-end">
+                    <div>
+                        <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-bold block">Current Active Earning Stack</span>
+                        <h4 class="text-3xl font-black text-white tracking-tight mt-1">$5.00 <span class="text-xs text-zinc-600 font-normal">/ $15,000 Cap</span></h4>
+                    </div>
+                    <span class="text-xs font-bold text-cyan-400">0.03% Yielded</span>
+                </div>
+                
+                <!-- Dual-track premium tech progress bar -->
+                <div class="w-full h-2.5 bg-zinc-950 rounded-lg p-[2px] border border-zinc-900 overflow-hidden relative">
+                    <div class="h-full bg-gradient-to-r from-amber-500 via-yellow-400 to-cyan-400 rounded-md shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all duration-500" style="width: 35%"></div>
+                    <!-- Micro Pulse Shimmer Grid line effect -->
+                    <div class="absolute inset-0 bg-[linear-gradient(to_right,transparent_50%,rgba(255,255,255,0.15)_50%)] bg-[size:6px_100%]"></div>
+                </div>
+                
+                <div class="flex justify-between text-[10px] text-zinc-500 pt-1">
+                    <span>Staked Vol: $5,000.00</span>
+                    <span>Remaining Cap: $14,995.00</span>
+                </div>
+            </div>
+
+            <div class="pt-3 border-t border-zinc-900/60 flex items-center justify-between font-mono text-[10px] text-zinc-500">
+                <span>Ecosystem TVL: $4.86M</span>
+                <span class="text-cyan-500/80 font-bold">Secure Escrow Node ✓</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TIER 3: GLOWING FOUR-QUADRANT QUANTUM WALLETS (TOTALLY UNIQUE SHAPES) -->
+    <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        
+        <!-- Wallet Node 1: Capital Staked -->
+        <div class="bg-[#09090e] border border-zinc-900 hover:border-amber-500/20 p-5 rounded-2xl shadow-xl flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-amber-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-amber-500/[0.06]"></div>
+            <div class="flex items-center justify-between w-full font-mono">
+                <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">[ CAPITAL STAKED ]</span>
+                <span class="text-xs text-amber-500 font-bold">POOL_01</span>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-3xl font-bold font-mono tracking-tight text-white">$5,000.<span class="text-zinc-500 text-lg font-medium">00</span></h3>
+                <p class="text-[10px] text-zinc-600 font-mono mt-1.5 flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-amber-400"></span> Principal capital locked assets.</p>
+            </div>
+        </div>
+
+        <!-- Wallet Node 2: Total Revenue -->
+        <div class="bg-[#09090e] border border-zinc-900 hover:border-emerald-500/20 p-5 rounded-2xl shadow-xl flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-emerald-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-emerald-500/[0.06]"></div>
+            <div class="flex items-center justify-between w-full font-mono">
+                <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">[ TOTAL REVENUE ]</span>
+                <span class="text-[10px] text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">+$5.00 Live</span>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-3xl font-bold font-mono tracking-tight text-white">$5,000.<span class="text-zinc-500 text-lg font-medium">00</span></h3>
+                <p class="text-[10px] text-zinc-600 font-mono mt-1.5 flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-emerald-400"></span> Consolidated ecosystem gross income.</p>
+            </div>
+        </div>
+
+        <!-- Wallet Node 3: Activation Core -->
+        <div class="bg-[#09090e] border border-zinc-900 hover:border-cyan-500/20 p-5 rounded-2xl shadow-xl flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-cyan-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-cyan-500/[0.06]"></div>
+            <div class="flex items-center justify-between w-full font-mono">
+                <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">[ ACTIVATION CORE ]</span>
+                <span class="text-xs text-cyan-400 font-mono font-bold">RUNTIME</span>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-3xl font-bold font-mono tracking-tight text-white">$1.<span class="text-zinc-300 font-bold text-xl">0187</span></h3>
+                <p class="text-[10px] text-zinc-600 font-mono mt-1.5 flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-cyan-400"></span> Available system activation funds.</p>
+            </div>
+        </div>
+
+        <!-- Wallet Node 4: Liquid Available -->
+        <div class="bg-[#09090e] border border-zinc-900 hover:border-purple-500/20 p-5 rounded-2xl shadow-xl flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-purple-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-purple-500/[0.06]"></div>
+            <div class="flex items-center justify-between w-full font-mono">
+                <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">[ LIQUID AVAILABLE ]</span>
+                <span class="text-[10px] text-purple-400 font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">WITHDRAWABLE</span>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-3xl font-bold font-mono tracking-tight text-amber-400">$5.<span class="text-amber-500/60 text-lg font-medium">0000</span></h3>
+                <p class="text-[10px] text-zinc-600 font-mono mt-1.5 flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-purple-400"></span> Unlocked net liquid income wallet.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TIER 4: REWARDS PROMOS & MULTI-LAYERED SUB-CHANNELS GRID -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start w-full">
+        
+        <!-- LEFT CONTROL BOARD: Promotional Goals & Income Matrices Split (Col-7) -->
+        <div class="lg:col-span-7 space-y-8 min-w-0">
+            
+            <!-- Dual Challenge Horizontal Showcase -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                <!-- Challenge 1: Mahindra XUV700 -->
+                <div class="bg-gradient-to-b from-[#0a0a0f] to-zinc-950 border border-zinc-900 p-5 rounded-2xl shadow-xl relative overflow-hidden group hover:border-amber-500/20 transition duration-300">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/[0.01] blur-2xl rounded-full"></div>
+                    <div class="space-y-3">
+                        <span class="px-2 py-0.5 border border-amber-500/30 bg-amber-500/5 text-amber-400 font-mono text-[9px] font-bold rounded uppercase tracking-wider block w-max shadow-sm">100-Day Fast Track</span>
+                        <h4 class="text-base font-bold text-white uppercase tracking-tight group-hover:text-amber-400 transition-colors">Mahindra XUV700 Event</h4>
+                        
+                        <!-- Leg Metrics Matrix -->
+                        <div class="pt-2 font-mono text-[10px] text-zinc-400 space-y-1.5 bg-zinc-950/60 p-3.5 rounded-xl border border-zinc-900/60 shadow-inner">
+                            <div class="flex items-center justify-between"><span>Vector Leg 1 :</span> <span class="text-white font-bold">$0</span></div>
+                            <div class="flex items-center justify-between"><span>Vector Leg 2 :</span> <span class="text-white font-bold">$0</span></div>
+                            <div class="flex items-center justify-between"><span>Vector Leg 3 :</span> <span class="text-white font-bold">$0</span></div>
+                        </div>
+                    </div>
+                    <!-- Floating high-tech car image element -->
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-zinc-900/60 font-mono">
+                        <span class="text-[9px] text-zinc-500">[ EVENT TARGET BOX ]</span>
+                        <img src="assets/images/mahindra_XUV700.png" alt="XUV700 Asset" class="h-10 w-auto object-contain filter drop-shadow-[0_4px_10px_rgba(245,158,11,0.1)] group-hover:scale-105 transition duration-300" />
+                    </div>
+                </div>
+
+                <!-- Challenge 2: Profit Sharing 5X -->
+                <div class="bg-gradient-to-b from-[#0a0a0f] to-zinc-950 border border-zinc-900 p-5 rounded-2xl shadow-xl relative overflow-hidden group hover:border-cyan-500/20 transition duration-300 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="px-2 py-0.5 border border-cyan-500/30 bg-cyan-400/5 text-cyan-400 font-mono text-[9px] font-bold rounded uppercase tracking-wider block w-max shadow-sm">Process Accelerator</span>
+                        <h4 class="text-base font-bold text-white uppercase tracking-tight group-hover:text-cyan-400 transition-colors">Profit Sharing 5X Loop</h4>
+                        <p class="text-[11px] text-zinc-500 font-mono font-medium leading-relaxed">Require 5 Direct accounts inside 15-day parameter timeline windows.</p>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-zinc-900/60 font-mono text-[10px]">
+                        <div class="flex gap-3 text-zinc-400">
+                            <span>Req: <strong class="text-amber-500">5</strong></span>
+                            <span>Rem: <strong class="text-rose-500">5</strong></span>
+                        </div>
+                        <span class="text-cyan-400 font-bold bg-cyan-400/10 px-2 py-0.5 border border-cyan-500/20 rounded">8 Days Left</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Catalyst Multi-Stream Matrix Channel Boxes -->
+            <div class="bg-[#09090e] border border-zinc-900 rounded-3xl p-5 sm:p-6 space-y-4">
+                <div class="flex items-center justify-between w-full font-mono border-b border-zinc-900 pb-3">
+                    <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider">// Revenue Streams Verification</span>
+                    <span class="text-[10px] text-zinc-600">Channels: 06 Registered</span>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono">
+                    <div class="p-4 bg-zinc-950 border border-zinc-900/80 rounded-xl flex items-center justify-between shadow-inner group hover:border-amber-500/10 transition">
+                        <div class="space-y-1">
+                            <span class="text-[9px] text-zinc-500 uppercase font-bold tracking-wider block">[ DIRECT DISCHARGE ]</span>
+                            <span class="text-base font-bold text-white tracking-tight">$5.00</span>
+                        </div>
+                        <span class="text-[9px] font-sans font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded uppercase tracking-wider animate-pulse">+Live</span>
+                    </div>
+
+                    <div class="p-4 bg-zinc-950 border border-zinc-900/80 rounded-xl flex items-center justify-between shadow-inner opacity-60">
+                        <div class="space-y-1">
+                            <span class="text-[9px] text-zinc-500 uppercase font-bold tracking-wider block">[ LEVEL SHARING ]</span>
+                            <span class="text-base font-bold text-zinc-500 tracking-tight">$0.00</span>
+                        </div>
+                        <span class="text-[9px] text-zinc-700 font-sans">[ NULL ]</span>
+                    </div>
+
+                    <div class="p-4 bg-zinc-950 border border-zinc-900/80 rounded-xl flex items-center justify-between shadow-inner opacity-60">
+                        <div class="space-y-1">
+                            <span class="text-[9px] text-zinc-500 uppercase font-bold tracking-wider block">[ WEEKLY SALARY NODE ]</span>
+                            <span class="text-base font-bold text-zinc-500 tracking-tight">$0.00</span>
+                        </div>
+                        <span class="text-[9px] text-zinc-700 font-sans">[ NULL ]</span>
+                    </div>
+
+                    <div class="p-4 bg-zinc-950 border border-zinc-900/80 rounded-xl flex items-center justify-between shadow-inner opacity-60">
+                        <div class="space-y-1">
+                            <span class="text-[9px] text-zinc-500 uppercase font-bold tracking-wider block">[ DAILY YIELD STREAM ]</span>
+                            <span class="text-base font-bold text-zinc-500 tracking-tight">$0.00</span>
+                        </div>
+                        <span class="text-[9px] text-zinc-700 font-sans">[ NULL ]</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT CONTROL BOARD: Dynamic Network Logs Timeline Framework (Col-5) -->
+        <div class="lg:col-span-5 space-y-6 w-full min-w-0">
+            
+            <!-- Realtime Metrics Side Row Ledger -->
+            <div class="bg-gradient-to-b from-[#0c0c12] to-[#08080c] border border-zinc-900 rounded-3xl p-5 sm:p-6 space-y-3.5 font-mono">
+                <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest block pb-2 border-b border-zinc-900">// Network Node Logs</span>
+                
+                <div class="flex items-center justify-between text-xs py-1.5 border-b border-zinc-900/40">
+                    <span class="text-zinc-400">Ecosystem Profit Matrix :</span>
+                    <span class="text-xs font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded">Level 1</span>
+                </div>
+                <div class="flex items-center justify-between text-xs py-1.5 border-b border-zinc-900/40">
+                    <span class="text-zinc-400">Total Structural Team Vol :</span>
+                    <span class="text-zinc-200 font-bold">$100</span>
+                </div>
+                <div class="flex items-center justify-between text-xs py-1.5 border-b border-zinc-900/40">
+                    <span class="text-zinc-400">Primary Strong Leg Volume :</span>
+                    <span class="text-zinc-200 font-bold">$100</span>
+                </div>
+                <div class="flex items-center justify-between text-xs py-1.5">
+                    <span class="text-zinc-400">Secondary Side Leg Volume :</span>
+                    <span class="text-zinc-500 font-medium">$0</span>
+                </div>
+            </div>
+
+            <!-- Vertical Tech Flow Tree Instead of standard boring grids -->
+            <div class="bg-gradient-to-br from-[#0c0c12] to-[#08080c] border border-zinc-900 rounded-3xl p-5 sm:p-6 space-y-4 font-mono">
+                <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest block border-b border-zinc-900 pb-2">// Associative Topology</span>
+                
+                <div class="space-y-4 relative pl-4 border-l border-zinc-900/80 ml-2">
+                    <!-- Tech Node Trigger Point 1 -->
+                    <div class="relative">
+                        <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-cyan-400 border-2 border-zinc-950 shadow-[0_0_6px_#22d3ee]"></span>
+                        <div class="space-y-0.5">
+                            <span class="text-[9px] text-zinc-500 uppercase font-bold">[ REGISTERED DOWNLINE MEMBER ]</span>
+                            <p class="text-xs font-bold text-white">Direct Registry Matrix Block <span class="text-cyan-400 text-[11px] font-bold ml-1">1 Account</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Tech Node Trigger Point 2 -->
+                    <div class="relative">
+                        <span class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-amber-400 border-2 border-zinc-950 shadow-[0_0_6px_#f59e0b]"></span>
+                        <div class="space-y-0.5">
+                            <span class="text-[9px] text-zinc-500 uppercase font-bold">[ SYSTEM STRUCTURE NODE ]</span>
+                            <p class="text-xs font-bold text-white">Downline Structure Sync Status <span class="text-amber-400 text-[11px] font-bold ml-1">1 Active Node</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TIER 5: HIGH-DENSITY RADIAL RANK LEDGER LEDGER DATA PLATFORM (FULL VIEWPORT WIDTH) -->
+    <div class="relative z-10 bg-[#09090e] rounded-3xl border border-zinc-900/80 overflow-hidden shadow-2xl relative w-full">
+        <!-- Top Tech guidelines alignment path -->
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
+
+        <!-- Table Core Branding Banner Tier -->
+        <div class="p-6 bg-zinc-950 border-b border-zinc-900/60 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono">
+            <div class="space-y-1">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2 uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_6px_#f59e0b]"></span>
+                    Ecosystem Rank Binds Matrix
+                </h3>
+                <p class="text-[10px] text-zinc-500 font-light">Algorithmic linear distribution trackers. Token calculations sync live.</p>
+            </div>
+            <span class="px-3 py-1 bg-zinc-900 border border-zinc-800 text-zinc-400 text-[10px] font-bold rounded-lg uppercase tracking-widest shadow-inner">
+                [ Verified Ledger Window ]
+            </span>
+        </div>
+
+        <!-- High-Contrast Table Box Container -->
+        <div class="overflow-x-auto scrollbar-thin w-full">
+            <table class="w-full text-left border-collapse min-w-[1000px] text-[11px] font-mono">
+                <thead>
+                    <tr class="bg-zinc-950 border-b border-zinc-900/80 uppercase tracking-widest text-zinc-500 font-bold">
+                        <th class="py-4 px-5 text-center w-20">Index</th>
+                        <th class="py-4 px-6">Rank Architecture</th>
+                        <th class="py-4 px-6">Total Matching Matrix</th>
+                        <th class="py-4 px-6">Strong Team (50%)</th>
+                        <th class="py-4 px-6">Other Team (50%)</th>
+                        <th class="py-4 px-6">Instant Reward</th>
+                        <th class="py-4 px-6">Fix Salary Link</th>
+                        <th class="py-4 px-6 text-center w-40">System Node Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-zinc-900/40 text-zinc-400">
+                    <!-- ROW 1: Executive Node -->
+                    <tr class="hover:bg-zinc-900/30 transition-all duration-150 group">
+                        <td class="py-4 px-5 text-center text-zinc-600 font-bold group-hover:text-amber-400">01</td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-6 rounded-lg bg-zinc-950 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shadow-inner">★</span>
+                                <span class="text-xs font-bold font-sans text-white tracking-wide">Executive</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="space-y-1.5">
+                                <span class="text-zinc-200 font-bold">$20,000</span>
+                                <div class="w-24 h-[2px] bg-zinc-950 rounded-full overflow-hidden">
+                                    <div class="w-[85%] h-full bg-amber-500"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$10,000</td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$10,000</td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-0.5 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded font-bold">$300</span></td>
+                        <td class="py-4 px-6 text-zinc-300 font-medium">$50 / Mo</td>
+                        <td class="py-4 px-6 text-center">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-0.5 bg-zinc-950 text-amber-400/80 border border-amber-500/10 text-[9px] font-bold rounded-full uppercase tracking-wider animate-pulse shadow-inner">
+                                Pending Sync
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- ROW 2: Senior Node -->
+                    <tr class="hover:bg-zinc-900/30 transition-all duration-150 group">
+                        <td class="py-4 px-5 text-center text-zinc-600 font-bold group-hover:text-cyan-400">02</td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-6 rounded-lg bg-zinc-950 border border-zinc-800 text-zinc-500 flex items-center justify-center font-bold text-xs shadow-inner">◆</span>
+                                <span class="text-xs font-bold font-sans text-white tracking-wide">Senior</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="space-y-1.5">
+                                <span class="text-zinc-200 font-bold">$60,000</span>
+                                <div class="w-24 h-[2px] bg-zinc-950 rounded-full overflow-hidden">
+                                    <div class="w-[60%] h-full bg-cyan-500"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$30,000</td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$30,000</td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-0.5 bg-zinc-950 border border-zinc-900 text-zinc-500 rounded font-bold">$750</span></td>
+                        <td class="py-4 px-6 text-zinc-400 font-medium">$100 / Mo</td>
+                        <td class="py-4 px-6 text-center">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-0.5 bg-zinc-950 text-zinc-600 border border-zinc-900 text-[9px] font-bold rounded-full uppercase tracking-wider shadow-inner">
+                                Locked Node
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- ROW 3: Manager Node -->
+                    <tr class="hover:bg-zinc-900/30 transition-all duration-150 group">
+                        <td class="py-4 px-5 text-center text-zinc-600 font-bold group-hover:text-purple-400">03</td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-6 rounded-lg bg-zinc-950 border border-zinc-800 text-zinc-500 flex items-center justify-center font-bold text-xs shadow-inner">❖</span>
+                                <span class="text-xs font-bold font-sans text-white tracking-wide">Manager</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="space-y-1.5">
+                                <span class="text-zinc-200 font-bold">$200,000</span>
+                                <div class="w-28 h-[2px] bg-zinc-950 rounded-full overflow-hidden">
+                                    <div class="w-[40%] h-full bg-purple-500"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$100,000</td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$100,000</td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-0.5 bg-zinc-950 border border-zinc-900 text-zinc-500 rounded font-bold">$1,500</span></td>
+                        <td class="py-4 px-6 text-zinc-400 font-medium">$300 / Mo</td>
+                        <td class="py-4 px-6 text-center">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-0.5 bg-zinc-950 text-zinc-600 border border-zinc-900 text-[9px] font-bold rounded-full uppercase tracking-wider shadow-inner">
+                                Locked Node
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<!-- ======================================================= -->
+<!-- HIGH-CONTRAST LAYERED BLACK & GOLD MAIN PANEL CONTROLLER -->
+<!-- ======================================================= -->
+<!-- Fixed: Page background to deep pure solid velvet black (bg-[#070708]) -->
+<main class="w-full max-w-[1600px] mx-auto p-4 sm:p-8 space-y-8 flex-1 bg-[#070708] text-zinc-300 font-sans selection:bg-amber-500 selection:text-zinc-950 overflow-hidden">
+
+    <!-- TOP BREADCRUMB & PAGE TITLE ENGINE -->
+    <div class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-6 border-b border-zinc-900/80">
+        <div class="space-y-1.5">
+            <div class="flex items-center gap-2 font-mono text-[10px] sm:text-xs tracking-[0.2em] text-zinc-500 uppercase">
+                <span>[ CORE CONSOLE ]</span>
+                <svg class="w-3 h-3 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7-7"></path></svg>
+                <span class="text-amber-500 font-bold" id="pageBreadcrumb">DASHBOARD CORE</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white uppercase" id="mainPageTitle">
+                    Dashboard
+                </h2>
+                <span class="flex items-center gap-1.5 px-3 py-1 bg-zinc-900/80 border border-amber-500/30 text-amber-400 text-[10px] font-mono rounded-lg uppercase tracking-wider shadow-[0_0_15px_rgba(245,158,11,0.05)]">
+                    <span class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse shadow-[0_0_6px_#f59e0b]"></span>
+                    <span class="font-bold">Live Node</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- RIGHT METRIC HEADER SYSTEM -->
+        <div class="hidden md:inline-flex items-center gap-3 font-mono">
+            <div class="px-4 py-2 bg-zinc-900 border border-zinc-800/80 rounded-xl flex flex-col min-w-[140px] justify-center shadow-inner">
+                <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-bold">[ LATENCY NETWORK ]</span>
+                <span class="text-xs font-bold mt-0.5 text-zinc-300 flex items-center gap-1.5 whitespace-nowrap">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_#10b981]"></span> 14ms (Optimal)
+                </span>
+            </div>
+
+            <!-- Sync Trigger Button -->
+            <button onclick="window.location.reload()" class="h-[38px] w-[38px] bg-zinc-900 border border-zinc-800 hover:border-amber-500/40 text-zinc-400 hover:text-amber-400 rounded-xl flex items-center justify-center transition-all duration-300 shadow-md shrink-0 focus:outline-none" title="Sync Component Grid">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17.5"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- WELCOME MATRIX & IDENTITY POOL -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 w-full">
+        <!-- Luxury Gold Overlay Welcome Node (Elevated Background Layer) -->
+        <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 rounded-2xl border border-amber-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xl relative overflow-hidden group">
+            <div class="absolute -right-10 -top-10 w-40 h-44 bg-amber-500/[0.03] blur-3xl rounded-full pointer-events-none"></div>
+            
+            <div class="flex items-center gap-4 relative z-10">
+                <div class="w-12 h-12 rounded-xl bg-zinc-950 border border-amber-500/30 text-amber-400 flex items-center justify-center text-sm shadow-lg shadow-amber-500/5 bg-gradient-to-br from-zinc-900 to-zinc-950">
+                    <svg class="w-6 h-6 filter drop-shadow-[0_0_6px_rgba(245,158,11,0.4)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-7 4h10M5 10h.01M5 14h.01M5 18h.01"></path></svg>
+                </div>
+                <div>
+                    <span class="text-[9px] font-mono tracking-[0.25em] text-amber-500 font-bold block uppercase">[ CORE CONTROLLER POOL ]</span>
+                    <h3 class="text-lg font-bold tracking-wide mt-1 text-white">Welcome back, Realgains LLC</h3>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-[11px] bg-zinc-950 border border-zinc-900/60 px-3 py-2 rounded-xl text-zinc-400 font-medium z-10 self-start sm:self-auto shadow-inner">
+                <span class="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping"></span>
+                <span class="text-amber-400 font-bold">LIVE:</span>
+                <span class="text-zinc-500">Saturday, 20 June 2026</span>
+            </div>
+        </div>
+
+        <!-- Identity Metrics Grid Row (Highly Distinct Boxes) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono w-full">
+            <div class="p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl flex flex-col justify-center shadow-lg transition duration-300 hover:border-zinc-700">
+                <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">[ USERNAME ]</span>
+                <span class="text-xs font-bold text-white mt-1.5 truncate">REALGAINS</span>
+            </div>
+            <div class="p-3.5 bg-zinc-900/60 border border-amber-500/20 rounded-xl flex flex-col justify-center shadow-lg transition duration-300 hover:border-amber-500/30">
+                <span class="text-[10px] font-bold text-amber-500/80 uppercase tracking-widest">[ SYSTEM ID ]</span>
+                <span class="text-xs font-bold text-amber-400 mt-1.5">RG3038998</span>
+            </div>
+            <div class="p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl flex flex-col justify-center shadow-lg transition duration-300 hover:border-zinc-700">
+                <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">[ SPONSOR ]</span>
+                <span class="text-xs font-bold text-white mt-1.5 truncate">COMPANY</span>
+            </div>
+            <div class="p-3.5 bg-zinc-900/60 border border-zinc-800/80 rounded-xl flex flex-col justify-center shadow-lg transition duration-300 hover:border-zinc-700">
+                <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">[ ACTIVATION ]</span>
+                <span class="text-xs font-bold text-zinc-400 mt-1.5">2026-06-13</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- REFERRAL BLOCK & RANK SYSTEM -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
+        <div class="lg:col-span-2 h-14 bg-zinc-900/40 border border-zinc-800/80 rounded-xl px-4 flex items-center justify-between overflow-hidden group hover:border-amber-500/20 transition-all shadow-lg">
+            <div class="flex items-center gap-2 overflow-hidden w-[75%]">
+                <svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                <span class="text-xs font-mono text-zinc-400 truncate tracking-wide">https://realgains.lc/referral.php?id=RG3038998</span>
+            </div>
+            <button onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')" class="h-9 px-3.5 bg-zinc-950 hover:bg-amber-500 border border-zinc-800 hover:border-amber-400 text-amber-400 hover:text-zinc-950 font-mono text-[10px] font-bold rounded-lg transition-all duration-300 flex items-center gap-1.5 shrink-0 shadow-md">
+                COPY LINK
+            </button>
+        </div>
+
+        <div class="h-14 bg-zinc-900/60 text-white border border-amber-500/20 rounded-xl px-4 flex items-center justify-between font-mono shadow-lg">
+            <span class="text-[10px] tracking-wider text-zinc-500 font-bold uppercase">[ RANK STATUS ]</span>
+            <span class="text-xs font-bold bg-amber-500/10 border border-amber-500/30 text-amber-400 px-3 py-1 rounded-lg flex items-center gap-1.5 shadow-md">
+                🏆 AFFILIATE
+            </span>
+        </div>
+    </div>
+
+    <!-- CORE WALLETS COUNTERS SHINE TRACK (Deep Premium Pop Boxes) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <!-- Wallet 1: Total Invested -->
+        <div class="bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/80 hover:border-amber-500/30 p-6 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex flex-col justify-between group text-white hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono tracking-wider text-zinc-500 font-bold uppercase">[ STAKED POOL ASSETS ]</span>
+                <div class="w-8 h-8 rounded-lg bg-zinc-950 border border-zinc-800 text-amber-400 flex items-center justify-center text-xs shadow-inner font-bold">$</div>
+            </div>
+            <h3 class="text-2xl font-black font-mono tracking-tight mt-5 text-white">$5,000.00</h3>
+            <div class="w-full h-1 bg-zinc-950 rounded-full mt-4 overflow-hidden">
+                <div class="w-[75%] h-full bg-gradient-to-r from-amber-500 to-yellow-300 rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Wallet 2: Income Earned -->
+        <div class="bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/80 hover:border-amber-500/30 p-6 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex flex-col justify-between group text-white hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono tracking-wider text-zinc-500 font-bold uppercase">[ TOTAL REVENUE ]</span>
+                <div class="w-8 h-8 rounded-lg bg-zinc-950 border border-zinc-800 text-amber-400 flex items-center justify-center text-sm shadow-inner">📈</div>
+            </div>
+            <h3 class="text-2xl font-black font-mono tracking-tight mt-5 text-amber-400">+$5,000.00</h3>
+            <div class="w-full h-1 bg-zinc-950 rounded-full mt-4 overflow-hidden">
+                <div class="w-[45%] h-full bg-amber-500 rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Wallet 3: Activation Wallet -->
+        <div class="bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/80 hover:border-amber-500/30 p-6 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex flex-col justify-between group text-white hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono tracking-wider text-zinc-500 font-bold uppercase">[ ACTIVATION RUNTIME ]</span>
+                <div class="w-8 h-8 rounded-lg bg-zinc-950 border border-zinc-800 text-amber-400 flex items-center justify-center text-sm shadow-inner">⚡</div>
+            </div>
+            <h3 class="text-2xl font-black font-mono tracking-tight mt-5 text-zinc-200">$1.0187</h3>
+            <div class="w-full h-1 bg-zinc-950 rounded-full mt-4 overflow-hidden">
+                <div class="w-[20%] h-full bg-amber-500/40 rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Wallet 4: Income Wallet -->
+        <div class="bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/80 hover:border-amber-500/30 p-6 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex flex-col justify-between group text-white hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div class="flex items-center justify-between">
+                <span class="text-[10px] font-mono tracking-wider text-zinc-500 font-bold uppercase">[ WALLET BALANCE ]</span>
+                <div class="w-8 h-8 rounded-lg bg-zinc-950 border border-zinc-800 text-amber-400 flex items-center justify-center text-sm shadow-inner">💎</div>
+            </div>
+            <h3 class="text-2xl font-black font-mono tracking-tight mt-5 text-zinc-200">$5.0000</h3>
+            <div class="w-full h-1 bg-zinc-950 rounded-full mt-4 overflow-hidden">
+                <div class="w-[60%] h-full bg-amber-500 rounded-full"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHALLENGES & REWARDS PROMOS SYSTEM -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+        <!-- XUV Fast Track Card -->
+        <div class="bg-zinc-900/40 backdrop-blur-xl border border-zinc-800/80 p-6 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-center gap-6 relative overflow-hidden group hover:border-amber-500/20 transition-all duration-300 w-full">
+            <div class="space-y-4 z-10 w-full sm:w-[60%]">
+                <span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-[9px] font-black rounded uppercase tracking-widest block w-max shadow-sm">100-Day Fast Track</span>
+                <h3 class="text-xl font-black tracking-tight text-white uppercase group-hover:text-amber-400 transition-colors">
+                    Win a Mahindra XUV700
+                </h3>
+                <div class="pt-1 font-mono text-[11px] text-zinc-400 space-y-2 bg-zinc-950/80 p-4 rounded-xl border border-zinc-900 shadow-inner font-medium">
+                    <p class="flex items-center justify-between"><span>Strong Leg 1 :</span> <span class="text-white font-bold">$0</span></p>
+                    <p class="flex items-center justify-between"><span>Strong Leg 2 :</span> <span class="text-white font-bold">$0</span></p>
+                    <p class="flex items-center justify-between"><span>Strong Leg 3 :</span> <span class="text-white font-bold">$0</span></p>
+                </div>
+            </div>
+            <div class="w-full sm:w-52 h-36 flex flex-col items-center justify-center relative shrink-0">
+                <div class="absolute inset-0 bg-amber-500/[0.01] blur-xl rounded-full"></div>
+                <img src="assets/images/mahindra_XUV700.png" alt="Mahindra XUV700" class="w-full h-24 object-contain z-10 drop-shadow-[0_10px_20px_rgba(245,158,11,0.15)] transform group-hover:scale-105 transition-transform duration-500">
+                <span class="text-[10px] font-mono tracking-widest font-bold text-amber-500/60 uppercase mt-3 relative z-10">[ RUSH TARGET ]</span>
+            </div>
+        </div>
+
+        <!-- Profit Sharing Booster -->
+        <div class="bg-zinc-900/40 backdrop-blur-xl border border-zinc-800/80 p-6 rounded-2xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 group hover:border-amber-500/20 transition-all duration-300 relative overflow-hidden w-full">
+            <div class="space-y-3 z-10">
+                <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-900 text-amber-400 font-mono text-[9px] font-bold rounded uppercase tracking-widest block w-max shadow-inner">Booster Process Active</span>
+                <h3 class="text-xl font-black tracking-tight text-white uppercase group-hover:text-amber-400 transition-colors">
+                    Profit Sharing 5X
+                </h3>
+                <p class="text-xs text-zinc-400 leading-normal font-mono max-w-sm font-medium">5 Direct accounts within 15 days threshold loop parameters.</p>
+                <div class="pt-2 font-mono text-[11px] text-zinc-300 flex gap-4 bg-zinc-950/80 px-4 py-2 border border-zinc-900 rounded-lg w-max mt-2 shadow-inner">
+                    <span>Required: <strong class="text-amber-400 font-bold">5</strong></span>
+                    <span>Remaining: <strong class="text-rose-500 font-bold">5</strong></span>
+                </div>
+            </div>
+            <div class="w-24 h-24 bg-zinc-950 border border-zinc-900 rounded-2xl text-white flex flex-col items-center justify-center text-center p-2 font-mono shadow-inner shrink-0 relative">
+                <div class="absolute inset-0 border border-amber-500/20 rounded-2xl pointer-events-none"></div>
+                <span class="text-3xl font-black text-amber-400 tracking-tight">8</span>
+                <span class="text-[9px] text-zinc-500 uppercase tracking-widest font-bold mt-1">Days Left</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- INCOME MODULE CATALYST MATRIX -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 w-full">
+        <!-- Left Side Cards Block -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-zinc-900/20 border border-zinc-900 p-4 rounded-2xl shadow-inner">
+            <div class="bg-zinc-900/60 p-5 rounded-xl border border-zinc-800/80 hover:border-amber-500/20 transition-all duration-300 relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-[2px] bg-amber-500"></div>
+                <span class="text-[10px] font-mono tracking-wider text-zinc-500 font-bold uppercase block">[ DIRECT INCOME ]</span>
+                <h4 class="text-lg font-bold font-mono tracking-tight text-white mt-2 flex items-center justify-between">
+                    $5.00 <span class="px-2 py-0.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded text-[10px] font-sans font-bold uppercase">+Live</span>
+                </h4>
+            </div>
+            <div class="bg-zinc-900/40 p-5 rounded-xl border border-zinc-850/80 hover:border-zinc-800 transition-all duration-300 relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-[2px] bg-zinc-800"></div>
+                <span class="text-[10px] font-mono tracking-wider text-zinc-600 font-bold uppercase block">[ LEVEL PROFIT SHARING ]</span>
+                <h4 class="text-lg font-bold font-mono tracking-tight text-zinc-600 mt-2">$0.00</h4>
+            </div>
+            <div class="bg-zinc-900/40 p-5 rounded-xl border border-zinc-850/80 hover:border-zinc-800 transition-all duration-300 relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-[2px] bg-zinc-800"></div>
+                <span class="text-[10px] font-mono tracking-wider text-zinc-600 font-bold uppercase block">[ WEEKLY SALARY ]</span>
+                <h4 class="text-lg font-bold font-mono tracking-tight text-zinc-600 mt-2">$0.00</h4>
+            </div>
+            <div class="bg-zinc-900/40 p-5 rounded-xl border border-zinc-850/80 hover:border-zinc-800 transition-all duration-300 relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-[2px] bg-zinc-800"></div>
+                <span class="text-[10px] font-mono tracking-wider text-zinc-600 font-bold uppercase block">[ DAILY PROFIT INCOME ]</span>
+                <h4 class="text-lg font-bold font-mono tracking-tight text-zinc-600 mt-2">$0.00</h4>
+            </div>
+        </div>
+
+        <!-- Right Side Cards Block -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-zinc-900/20 border border-zinc-900 p-4 rounded-2xl shadow-inner">
+            <div class="bg-zinc-900/40 p-5 rounded-xl border border-zinc-850/80 hover:border-zinc-800 transition-all duration-300 relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-[2px] bg-zinc-800"></div>
+                <span class="text-[10px] font-mono tracking-wider text-zinc-600 font-bold uppercase block">[ REWARDS INCOME ]</span>
+                <h4 class="text-lg font-bold font-mono tracking-tight text-zinc-600 mt-2">$0.00</h4>
+            </div>
+            <div class="bg-zinc-900/40 p-5 rounded-xl border border-zinc-850/80 hover:border-zinc-800 transition-all duration-300 relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-[2px] bg-zinc-800"></div>
+                <span class="text-[10px] font-mono tracking-wider text-zinc-600 font-bold uppercase block">[ TEAM SHARING POOL ]</span>
+                <h4 class="text-lg font-bold font-mono tracking-tight text-zinc-600 mt-2">$0.00</h4>
+            </div>
+            <div class="bg-zinc-900/60 p-5 rounded-xl border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300 relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-[2px] bg-zinc-700"></div>
+                <span class="text-[10px] font-mono tracking-wider text-zinc-500 font-bold uppercase block">[ DIRECT MEMBERS ]</span>
+                <h4 class="text-lg font-bold font-mono tracking-tight text-white mt-2 flex items-center gap-2">
+                    1 <span class="px-2 py-0.5 bg-zinc-950 border border-zinc-800 text-zinc-400 text-[10px] rounded uppercase font-bold">1 Account</span>
+                </h4>
+            </div>
+            <div class="bg-zinc-900/60 p-5 rounded-xl border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300 relative overflow-hidden shadow-md">
+                <div class="absolute left-0 top-0 h-full w-[2px] bg-zinc-700"></div>
+                <span class="text-[10px] font-mono tracking-wider text-zinc-500 font-bold uppercase block">[ DOWNLINE STRUCTURE ]</span>
+                <h4 class="text-lg font-bold font-mono tracking-tight text-white mt-2 flex items-center gap-2">
+                    1 <span class="px-2 py-0.5 bg-zinc-950 border border-zinc-800 text-zinc-400 text-[10px] rounded uppercase font-bold">1 Node Active</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK TEAM HIGHLIGHTS STATUS LINE -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center font-mono text-xs w-full">
+        <div class="p-4 bg-zinc-900/40 rounded-xl flex items-center justify-between border border-zinc-800/80 shadow-md">
+            <span class="text-zinc-500 uppercase flex items-center gap-1.5">⚡ Profit Level</span>
+            <span class="font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded uppercase text-[10px]">Level 1</span>
+        </div>
+        <div class="p-4 bg-zinc-900/40 rounded-xl flex items-center justify-between border border-zinc-800/80 shadow-md">
+            <span class="text-zinc-500 uppercase flex items-center gap-1.5">💼 Team Business</span>
+            <span class="font-bold text-white bg-zinc-950 px-2 py-0.5 rounded border border-zinc-900 text-[11px] shadow-inner">$100</span>
+        </div>
+        <div class="p-4 bg-zinc-900/40 rounded-xl flex items-center justify-between border border-zinc-800/80 shadow-md">
+            <span class="text-zinc-500 uppercase flex items-center gap-1.5">🔥 Strong Team</span>
+            <span class="font-bold text-white bg-zinc-950 px-2 py-0.5 rounded border border-zinc-900 text-[11px] shadow-inner">$100</span>
+        </div>
+        <div class="p-4 bg-zinc-900/40 rounded-xl flex items-center justify-between border border-zinc-800/80 shadow-md">
+            <span class="text-zinc-500 uppercase flex items-center gap-1.5">📊 Other Team</span>
+            <span class="font-bold text-zinc-500 bg-zinc-950 px-2 py-0.5 rounded border border-zinc-900 text-[11px] shadow-inner">$0</span>
+        </div>
+    </div>
+
+    <!-- RANKS & REWARDS CRITERIA PREMIUM LEDGER TABLE -->
+    <div class="bg-zinc-900/30 rounded-2xl border border-zinc-900 overflow-hidden shadow-2xl relative group transition-all duration-300 hover:border-amber-500/10 w-full">
+        <!-- Top Laser Accent Guidelines -->
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
+
+        <!-- Table Header Dynamic Area -->
+        <div class="p-6 bg-zinc-900/60 border-b border-zinc-900 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono">
+            <div class="space-y-1.5">
+                <h3 class="text-sm font-bold text-white flex items-center gap-2.5 uppercase tracking-wider">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                    </span>
+                    Network Ranks &amp; Rewards Ledger
+                </h3>
+                <p class="text-[11px] text-zinc-500 font-light">Algorithmic tier structural mapping nodes. Real-time updates active.</p>
+            </div>
+            <div>
+                <span class="px-3 py-1.5 bg-zinc-950 border border-zinc-850 text-amber-400 text-[10px] font-bold rounded-xl uppercase tracking-widest shadow-inner">
+                    [ 7 Node Matrices Registered ]
+                </span>
+            </div>
+        </div>
+
+        <!-- Responsive Table Window (Clean Alternate Dark Row Separation) -->
+        <div class="overflow-x-auto scrollbar-thin w-full">
+            <table class="w-full text-left border-collapse min-w-[1000px] text-xs">
+                <thead>
+                    <tr class="bg-zinc-950/80 border-b border-zinc-900 font-mono uppercase tracking-widest text-zinc-500 font-bold">
+                        <th class="py-4 px-5 text-center w-20">Index</th>
+                        <th class="py-4 px-6">Rank Architecture</th>
+                        <th class="py-4 px-6">Total Matching Matrix</th>
+                        <th class="py-4 px-6">Strong Team (50%)</th>
+                        <th class="py-4 px-6">Other Team (50%)</th>
+                        <th class="py-4 px-6">Instant Reward</th>
+                        <th class="py-4 px-6">Fix Salary Link</th>
+                        <th class="py-4 px-6 text-center w-40">System Node Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-zinc-900/60 font-mono text-zinc-400">
+                    <!-- ROW 1: Executive Node -->
+                    <tr class="hover:bg-zinc-900/40 bg-zinc-950/20 transition-all duration-200 group">
+                        <td class="py-4 px-5 text-center text-zinc-600 font-bold group-hover:text-amber-400">01</td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-zinc-900 border border-amber-500/20 text-amber-400 flex items-center justify-center shadow-sm font-bold">★</div>
+                                <span class="text-sm font-bold font-sans text-white tracking-wide">Executive</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="space-y-1">
+                                <span class="text-zinc-200 font-bold">$20,000</span>
+                                <div class="w-28 h-1 bg-zinc-950 rounded-full overflow-hidden">
+                                    <div class="w-[85%] h-full bg-amber-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$10,000</td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$10,000</td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded font-bold text-xs">$300</span></td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-1 bg-zinc-950 text-zinc-400 border border-zinc-900 rounded text-xs text-nowrap shadow-inner">$50 / Mo</span></td>
+                        <td class="py-4 px-6 text-center">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-950 text-amber-400 border border-amber-500/20 text-[10px] font-bold rounded-full uppercase tracking-wider animate-pulse shadow-sm">
+                                Pending Node
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- ROW 2: Senior Node -->
+                    <tr class="hover:bg-zinc-900/40 bg-zinc-950/10 transition-all duration-200 group">
+                        <td class="py-4 px-5 text-center text-zinc-600 font-bold group-hover:text-amber-400">02</td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-zinc-900 border border-amber-500/20 text-amber-400 flex items-center justify-center shadow-sm font-bold">◆</div>
+                                <span class="text-sm font-bold font-sans text-white tracking-wide">Senior</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="space-y-1">
+                                <span class="text-zinc-200 font-bold">$60,000</span>
+                                <div class="w-28 h-1 bg-zinc-950 rounded-full overflow-hidden">
+                                    <div class="w-[60%] h-full bg-amber-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$30,000</td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$30,000</td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded font-bold text-xs">$750</span></td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-1 bg-zinc-950 text-zinc-400 border border-zinc-900 rounded text-xs text-nowrap shadow-inner">$100 / Mo</span></td>
+                        <td class="py-4 px-6 text-center">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-950 text-amber-400 border border-amber-500/20 text-[10px] font-bold rounded-full uppercase tracking-wider animate-pulse shadow-sm">
+                                Pending Node
+                            </span>
+                        </td>
+                    </tr>
+
+                    <!-- ROW 3: Manager Node -->
+                    <tr class="hover:bg-zinc-900/40 bg-zinc-950/20 transition-all duration-200 group">
+                        <td class="py-4 px-5 text-center text-zinc-600 font-bold group-hover:text-amber-400">03</td>
+                        <td class="py-4 px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-zinc-900 border border-amber-500/20 text-amber-400 flex items-center justify-center shadow-sm font-bold">❖</div>
+                                <span class="text-sm font-bold font-sans text-white tracking-wide">Manager</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="space-y-1">
+                                <span class="text-zinc-200 font-bold">$200,000</span>
+                                <div class="w-28 h-1 bg-zinc-950 rounded-full overflow-hidden">
+                                    <div class="w-[40%] h-full bg-amber-500 rounded-full"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$100,000</td>
+                        <td class="py-4 px-6 text-zinc-300 font-bold">$100,000</td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded font-bold text-xs">$1,500</span></td>
+                        <td class="py-4 px-6"><span class="px-2.5 py-1 bg-zinc-950 text-zinc-400 border border-zinc-900 rounded text-xs text-nowrap shadow-inner">$300 / Mo</span></td>
+                        <td class="py-4 px-6 text-center">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-950 text-amber-400 border border-amber-500/20 text-[10px] font-bold rounded-full uppercase tracking-wider animate-pulse shadow-sm">
+                                Pending Node
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+    <!-- ========================================== -->
+    <!-- ENTERPRISE DASHBOARD FOOTER -->
+    <!-- ========================================== -->
+    <footer class="w-full bg-zinc-950 border-t border-zinc-900 mt-auto font-sans relative z-10 shadow-[0_-4px_30px_rgba(0,0,0,0.3)] w-full overflow-hidden">
+        <div class="absolute bottom-0 right-1/3 w-[200px] h-[100px] bg-amber-500/[0.01] blur-[100px] rounded-full pointer-events-none"></div>
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
+            <div class="text-center sm:text-left min-w-0">
+                <p class="text-xs font-semibold text-white tracking-wide break-all">
+                    © 2026 <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 font-bold">IBOT Investments</span>. All Rights Reserved.
+                </p> 
+            </div>
+            <div class="flex items-center justify-center sm:justify-end text-xs font-medium flex-shrink-0">
+                <a href="#developer" class="text-zinc-500 hover:text-amber-400 tracking-wide transition duration-300 uppercase text-[10px] font-bold tracking-widest">
+                    Design and Developed
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DROPDOWN CONTROLS SCRIPT -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.getElementById("menu-toggle-btn");
+        const closeBtn = document.getElementById("menu-close-btn");
+        const navMesh = document.getElementById("unified-nav-mesh");
+        const backdrop = document.getElementById("nav-backdrop");
+
+        function openDrawer() {
+            if (navMesh && backdrop) {
+                navMesh.classList.remove("translate-x-full");
+                backdrop.classList.remove("hidden");
+                document.body.style.overflow = "hidden"; // Prevent background scroll
+            }
+        }
+
+        function closeDrawer() {
+            if (navMesh && backdrop) {
+                navMesh.classList.add("translate-x-full");
+                backdrop.classList.add("hidden");
+                document.body.style.overflow = ""; 
+            }
+        }
+
+        // Trigger Listeners
+        if (toggleBtn) toggleBtn.addEventListener("click", (e) => { e.stopPropagation(); openDrawer(); });
+        if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+        if (backdrop) backdrop.addEventListener("click", closeDrawer);
+
+        // Auto Close Drawer when deep link is clicked
+        const coreLinks = document.querySelectorAll(".nav-core-link");
+        coreLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                if (window.innerWidth < 1280) closeDrawer();
+            });
+        });
+
+        // Mobile Accordion (1st Level Dropdowns)
+        const nodeGroups = document.querySelectorAll(".nav-node-group");
+        nodeGroups.forEach(group => {
+            const trigger = group.querySelector(".nav-trigger-btn");
+            const shell = group.querySelector(".nav-dropdown-shell");
+            const chevron = group.querySelector(".chevron-icon");
+
+            trigger.addEventListener("click", (e) => {
+                if (window.innerWidth < 1280) {
+                    e.preventDefault();
+                    shell.classList.toggle("hidden");
+                    chevron.classList.toggle("rotate-180");
+                }
+            });
+        });
+
+        // Mobile Sub-Accordion (2nd Level Subgroups)
+        const subNodeGroups = document.querySelectorAll(".nav-subnode-group");
+        subNodeGroups.forEach(sub => {
+            const subTrigger = sub.querySelector(".nav-subtrigger-btn");
+            const subShell = sub.querySelector(".nav-subdropdown-shell");
+            const subChevron = sub.querySelector(".subchevron-icon");
+
+            subTrigger.addEventListener("click", (e) => {
+                if (window.innerWidth < 1280) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    subShell.classList.toggle("hidden");
+                    subChevron.classList.toggle("rotate-180");
+                }
+            });
+        });
+    });
+</script>
+<script>
+    (function() {
+        // Safe injection layer to strip execution tags right after document parsing finishes
+        document.documentElement.classList.remove("is-loading", "loading-locked");
+        document.body.classList.remove("is-loading", "loading-locked");
+    })();
+</script>
+</body>
+</html>

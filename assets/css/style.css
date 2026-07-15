@@ -1,0 +1,231 @@
+
+
+ body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+/* Optional CSS for smooth inner gallery scrolling */
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 3px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: rgba(24, 24, 27, 0.4);
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: rgba(251, 191, 36, 0.2);
+                border-radius: 10px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: rgba(251, 191, 36, 0.4);
+            }
+
+
+    @keyframes spin-slow {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+        animation: spin-slow 15s linear infinite;
+    }
+
+
+  
+
+        /* Premium Modern Pagination Bullet (Dynamic Progress Line) */
+        .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.2) !important;
+            width: 35px;
+            height: 4px;
+            border-radius: 2px;
+            opacity: 1;
+            transition: all 0.4s ease;
+        }
+        .swiper-pagination-bullet-active {
+            background: linear-gradient(90deg, #fbbf24, #d97706) !important;
+            width: 60px;
+        }
+
+        /* Creative Glassmorphic Navigation Buttons */
+        .creative-nav-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(24, 24, 27, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 50%;
+            color: #fbbf24;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .creative-nav-btn:hover {
+            background: #fbbf24;
+            color: #09090b;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+            border-color: #fbbf24;
+        }
+        .creative-nav-btn::after {
+            font-size: 18px !important;
+            font-weight: bold;
+        }
+
+        /* Text Animation Timing Control */
+        .swiper-slide-active .animate-fade-up {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        .swiper-slide-active .animate-delay-1 { animation-delay: 0.2s; }
+        .swiper-slide-active .animate-delay-2 { animation-delay: 0.4s; }
+        .swiper-slide-active .animate-delay-3 { animation-delay: 0.6s; }
+
+    /* Premium Gold Progress Pagination Bullet */
+    .portfolio-swiper .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.2) !important;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .portfolio-swiper .swiper-pagination-bullet-active {
+        background: linear-gradient(90deg, #fbbf24, #d97706) !important;
+        width: 50px;
+    }
+    /* Custom Navigation Buttons Positioning & Glass Effect */
+    .portfolio-nav-btn {
+        width: 45px;
+        height: 45px;
+        background: rgba(24, 24, 27, 0.6);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(251, 191, 36, 0.2);
+        border-radius: 50%;
+        color: #fbbf24 !important;
+        transition: all 0.3s ease;
+    }
+    .portfolio-nav-btn:hover {
+        background: #fbbf24;
+        color: #09090b !important;
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+    }
+    .portfolio-nav-btn::after {
+        font-size: 16px !important;
+        font-weight: bold;
+    }
+
+
+
+
+     .gaming-container .swiper {
+        width: 100%;
+        height: auto;
+    }
+    .gaming-container .gaming-nav-btn {
+        width: 45px;
+        height: 45px;
+        background: rgba(24, 24, 27, 0.8);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(251, 191, 36, 0.3);
+        border-radius: 50%;
+        color: #fbbf24 !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        justify-center: center;
+    }
+    .gaming-container .gaming-nav-btn:hover {
+        background: #fbbf24;
+        color: #09090b !important;
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+    }
+    .gaming-container .gaming-nav-btn::after {
+        font-size: 16px !important;
+        font-weight: bold;
+    }
+    .gaming-container .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.2) !important;
+        width: 25px;
+        height: 4px;
+        border-radius: 2px;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .gaming-container .swiper-pagination-bullet-active {
+        background: linear-gradient(90deg, #fbbf24, #d97706) !important;
+        width: 45px;
+    }
+
+
+
+
+    /* Premium Minimalist Navigation Icons */
+    .gaming-nav-btn {
+        width: 45px;
+        height: 45px;
+        background: rgba(24, 24, 27, 0.6);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(251, 191, 36, 0.2);
+        border-radius: 50%;
+        color: #fbbf24 !important;
+        transition: all 0.3s ease;
+    }
+    .gaming-nav-btn:hover {
+        background: #fbbf24;
+        color: #09090b !important;
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+    }
+    .gaming-nav-btn::after {
+        font-size: 16px !important;
+        font-weight: bold;
+    }
+    /* Gold Line Pagination Progress Dots */
+    .gaming-swiper .swiper-pagination-bullet {
+        background: rgba(255, 255, 255, 0.2) !important;
+        width: 25px;
+        height: 4px;
+        border-radius: 2px;
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .gaming-swiper .swiper-pagination-bullet-active {
+        background: linear-gradient(90deg, #fbbf24, #d97706) !important;
+        width: 45px;
+    }
+
+
+
+    /* Inactive slides styling */
+    .testimonial-swiper .swiper-slide {
+        transform: scale(0.92);
+        opacity: 0.4;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    /* Active center slide styling */
+    .testimonial-swiper .swiper-slide-active {
+        transform: scale(1);
+        opacity: 1;
+        border-color: rgba(251, 191, 36, 0.4) !important;
+        background-color: rgba(24, 24, 27, 0.8) !important;
+        box-shadow: 0 20px 40px -15px rgba(251, 191, 36, 0.05);
+    }
+    /* Smooth Navigation Arrow Styling */
+    .testimonial-nav-btn {
+        width: 45px;
+        height: 45px;
+        background: rgba(24, 24, 27, 0.8);
+        border: 1px solid rgba(251, 191, 36, 0.2);
+        border-radius: 50%;
+        color: #fbbf24 !important;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .testimonial-nav-btn:hover {
+        background: #fbbf24;
+        color: #09090b !important;
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+    }
+    .testimonial-nav-btn::after {
+        font-size: 16px !important;
+        font-weight: bold;
+    }
+
