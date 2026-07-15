@@ -31,7 +31,7 @@
 <!-- ========================================== -->
 <!-- COMPLETE UNIFIED RESPONSIVE NAVIGATION -->
 <!-- ========================================== -->
-<header class="sticky top-0 z-50 w-full bg-zinc-950/90 backdrop-blur-xl border-b border-amber-500/10 shadow-[0_10px_40px_rgba(245,158,11,0.06)] font-sans">
+<header class="sticky top-0 z-50 w-full bg-zinc-950/90 backdrop-blur-xl border-b border-amber-500/10 shadow-[0_4px_30px_rgba(245,158,11,0.02)] font-sans">
     <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20 relative w-full">
         
         <!-- BRAND LOGO -->
@@ -1037,33 +1037,6 @@
         const closeBtn = document.getElementById("menu-close-btn");
         const navMesh = document.getElementById("unified-nav-mesh");
         const backdrop = document.getElementById("nav-backdrop");
-
-        // --- 1. CORE ON-SCROLL INTERACTIONS ---
-        function handleScroll() {
-            if (window.scrollY > 20) {
-                // Active State styling on scroll
-                header.classList.remove("bg-transparent", "border-transparent");
-                header.classList.add(
-                    "bg-zinc-950/90", 
-                    "backdrop-blur-xl", 
-                    "border-amber-500/10", 
-                    "shadow-[0_10px_30px_rgba(245,158,11,0.04)]"
-                );
-            } else {
-                // Initial Baseline styling at top of page
-                header.classList.remove(
-                    "bg-zinc-950/90", 
-                    "backdrop-blur-xl", 
-                    "border-amber-500/10", 
-                    "shadow-[0_10px_30px_rgba(245,158,11,0.04)]"
-                );
-                header.classList.add("bg-transparent", "border-transparent");
-            }
-        }
-        
-        window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Initial invocation on page instantiation
-        
 
         function openDrawer() {
             if (navMesh && backdrop) {
