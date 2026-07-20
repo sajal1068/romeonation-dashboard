@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-zinc-950">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBOT Investments - Admin Dashboard</title>
+    <title>IBOT Investments - Admin Dashboard</title>    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -12,15 +11,12 @@
     <linl rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="h-full bg-zinc-950 text-zinc-300 relative overflow-x-hidden flex flex-col min-h-screen">
-    <div
-        class="absolute top-0 right-1/4 w-[300px] sm:w-[600px] h-[300px] bg-amber-500/[0.02] blur-[130px] rounded-full pointer-events-none z-0">
+<body class="h-full bg-zinc-950 text-zinc-300 relative overflow-x-hidden flex flex-col min-h-screen">    
+    <div class="absolute top-0 right-1/4 w-[300px] sm:w-[600px] h-[300px] bg-amber-500/[0.02] blur-[130px] rounded-full pointer-events-none z-0">
     </div>
-    <div
-        class="absolute bottom-0 left-1/4 w-[300px] sm:w-[500px] h-[400px] bg-yellow-600/[0.01] blur-[150px] rounded-full pointer-events-none z-0">
-    </div>
-    <header
-        class="sticky top-0 z-50 w-full bg-zinc-950/90 backdrop-blur-xl border-b border-amber-500/10 shadow-[0_4px_30px_rgba(245,158,11,0.02)] font-sans">
+    <div class="absolute bottom-0 left-1/4 w-[300px] sm:w-[500px] h-[400px] bg-yellow-600/[0.01] blur-[150px] rounded-full pointer-events-none z-0">
+    </div>    
+    <header class="sticky top-0 z-50 w-full bg-zinc-950/90 backdrop-blur-xl border-b border-amber-500/10 shadow-[0_4px_30px_rgba(245,158,11,0.02)] font-sans">
         <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20 relative w-full">
 
             <!-- BRAND LOGO -->
@@ -29,7 +25,7 @@
                     <img src="assets/images/logo.png" alt="IBOT Panel Logo"
                         class="h-8 sm:h-11 w-auto object-contain block transform group-hover:scale-[1.03] transition duration-500 pointer-events-none filter drop-shadow-[0_0_8px_rgba(245,158,11,0.1)]" />
                 </a>
-            </div>
+            </div>            
             <div class="flex xl:hidden items-center z-30">
                 <button id="menu-toggle-btn"
                     class="text-zinc-400 hover:text-amber-400 p-2.5 bg-zinc-900/50 rounded-xl border border-zinc-900 focus:outline-none">
@@ -38,7 +34,7 @@
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-            </div>
+            </div>            
             <div id="nav-backdrop"
                 class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden xl:hidden transition-opacity duration-300">
             </div>
@@ -47,15 +43,14 @@
             fixed top-0 right-0 bottom-0 h-screen w-72 sm:w-80 bg-zinc-950 border-l border-zinc-900 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto
             xl:static xl:h-auto xl:w-auto xl:bg-transparent xl:border-l-0 xl:p-0 xl:shadow-none xl:transform-none xl:transition-none xl:overflow-y-visible
             flex flex-col xl:flex-row items-stretch xl:items-center gap-4 xl:gap-2 text-sm font-medium">
-
+                
                 <div class="flex xl:hidden items-center justify-between border-b border-zinc-900 pb-4 mb-2">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">Navigation Core</span>
                     <button id="menu-close-btn" class="text-zinc-500 hover:text-white text-sm font-bold p-1">✕</button>
                 </div>
-
-                <a href="index.html"
-                    class="nav-core-link px-4 py-3 xl:py-2 rounded-xl text-amber-400 bg-zinc-900/60 border border-amber-500/10 shadow-sm shadow-amber-500/5 text-center xl:text-left">Dashboard</a>
-
+               
+                <a href="index.html" class="nav-core-link px-4 py-3 xl:py-2 rounded-xl text-amber-400 bg-zinc-900/60 border border-amber-500/10 shadow-sm shadow-amber-500/5 text-center xl:text-left">Dashboard</a>
+                
                 <div class="relative group/main nav-node-group">
                     <button
                         class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
@@ -67,18 +62,15 @@
                         </svg>
                     </button>
 
-
-                    <div
-                        class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-56 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
-                        <div
-                            class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
+                    
+                    <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-56 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
+                        <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
                             <a href="profile.html"
                                 class="nav-core-link block px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-950/60 rounded-xl transition font-medium">My
                                 Profile</a>
-
+                            
                             <div class="relative group/sub nav-subnode-group">
-                                <button
-                                    class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
+                                <button  class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
                                     <span>Security Settings</span>
                                     <svg class="subchevron-icon w-3 h-3 transition-transform xl:-rotate-90" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
@@ -86,10 +78,8 @@
                                             d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
-                                <div
-                                    class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:left-full xl:pl-3 w-full xl:w-52 pl-3 mt-1 xl:mt-0 z-50">
-                                    <div
-                                        class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
+                                <div  class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:left-full xl:pl-3 w-full xl:w-52 pl-3 mt-1 xl:mt-0 z-50">
+                                    <div  class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
                                         <a href="modify-login.html"
                                             class="nav-core-link block px-4 py-2 text-zinc-400 xl:text-zinc-300 hover:text-amber-400 xl:hover:bg-zinc-950/40 rounded-xl transition">Modify
                                             Login Password</a>
@@ -105,8 +95,7 @@
 
                 <!-- 3. WALLETS & INVESTMENT HUB -->
                 <div class="relative group/main nav-node-group">
-                    <button
-                        class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
+                    <button class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
                         <span>Wallets & Investment</span>
                         <svg class="chevron-icon w-4 h-4 transition-transform duration-200" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
@@ -114,14 +103,12 @@
                             </path>
                         </svg>
                     </button>
-                    <div
-                        class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-64 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
-                        <div
-                            class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
-                            <a href="make-investment.html"
+                    <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-64 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
+                        <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
+                            <a href="#make-investment"
                                 class="nav-core-link block px-4 py-2.5 text-xs font-semibold text-amber-400 bg-amber-500/5 xl:bg-amber-500/10 rounded-xl border border-amber-500/10 xl:border-amber-500/30 hover:bg-amber-500/20 transition">★
                                 Make Investment</a>
-
+                            
                             <div class="relative group/sub nav-subnode-group">
                                 <button
                                     class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
@@ -154,7 +141,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                      
                             <div class="relative group/sub nav-subnode-group">
                                 <button
                                     class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
@@ -281,18 +268,14 @@
 
 
 
-    <main
-        class="w-full max-w-[1600px] mx-auto p-4 sm:p-8 space-y-10 flex-1 bg-[#050507] text-zinc-300 font-sans selection:bg-yellow-400 selection:text-black overflow-hidden relative">
+    <main class="w-full max-w-[1600px] mx-auto p-4 sm:p-8 space-y-10 flex-1 bg-[#050507] text-zinc-300 font-sans selection:bg-yellow-400 selection:text-black overflow-hidden relative">
 
-        <div
-            class="absolute inset-0 bg-[linear-gradient(to_right,#0f0f15_1px,transparent_1px),linear-gradient(to_bottom,#0f0f15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-60 pointer-events-none z-0">
+        <div  class="absolute inset-0 bg-[linear-gradient(to_right,#0f0f15_1px,transparent_1px),linear-gradient(to_bottom,#0f0f15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-60 pointer-events-none z-0">
         </div>
-        <div
-            class="absolute top-0 left-1/3 w-[500px] h-[250px] bg-gradient-to-br from-amber-500/[0.04] to-cyan-500/[0.02] blur-[120px] rounded-full pointer-events-none z-0">
+        <div class="absolute top-0 left-1/3 w-[500px] h-[250px] bg-gradient-to-br from-amber-500/[0.04] to-cyan-500/[0.02] blur-[120px] rounded-full pointer-events-none z-0">
         </div>
-
-        <div
-            class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-zinc-900/60 w-full">
+   
+        <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-zinc-900/60 w-full">
             <div class="space-y-2 min-w-0">
                 <div class="flex items-center gap-2 font-mono text-sm tracking-[0.3em] text-zinc-500 uppercase">
                     <span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b]"></span>
@@ -327,8 +310,7 @@
                     </div>
                 </div>
 
-                <div
-                    class="flex items-center gap-3 px-4 py-2 bg-zinc-950 border border-zinc-900 rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.03)] shrink-0">
+                <div  class="flex items-center gap-3 px-4 py-2 bg-zinc-950 border border-zinc-900 rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.03)] shrink-0">
                     <div class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_6px_#22d3ee]"></div>
                     <div class="text-[11px]">
                         <span class="text-zinc-500 uppercase block text-[9px] tracking-wider font-bold">NETWORK
@@ -350,30 +332,23 @@
 
         <!-- TIER 2: ASYMMETRICAL FLOATING MATRIX OVERVIEW -->
         <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
-            <div
-                class="lg:col-span-7 bg-gradient-to-br from-[#0c0c12] to-[#08080c] rounded-3xl border border-amber-700/40 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group shadow-[0_15px_40px_rgba(245,158,11,0.04)]  min-w-0">
-                <div
-                    class="absolute -right-20 -bottom-20 w-64 h-64 bg-gradient-to-br from-amber-500/[0.02] to-cyan-500/[0.02] blur-3xl rounded-full pointer-events-none">
+            <div class="lg:col-span-7 bg-gradient-to-br from-[#0c0c12] to-[#08080c] rounded-3xl border border-amber-700/40 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group shadow-[0_15px_40px_rgba(245,158,11,0.04)]  min-w-0">
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-gradient-to-br from-amber-500/[0.02] to-cyan-500/[0.02] blur-3xl rounded-full pointer-events-none">
                 </div>
                 <div class="absolute top-0 left-0 w-[3px] h-1/2 bg-gradient-to-b from-amber-500 to-transparent"></div>
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <span
-                            class="text-sm px-2.5 py-0.5 font-mono bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-md font-bold uppercase tracking-widest">Operator</span>
+                        <span class="text-sm px-2.5 py-0.5 font-mono bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-md font-bold uppercase tracking-widest">Operator</span>
                         <span class="text-sm font-mono text-zinc-500">Account Type: Verified Corporate Node</span>
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white font-sans truncate">
-                        Welcome Back, <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">Realgains
+                        Welcome Back, <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">Realgains
                             LLC</span>
                     </h2>
                     <div class="pt-2">
-                        <div
-                            class="w-full sm:max-w-xl h-11 bg-zinc-950/80 border border-zinc-900 rounded-xl px-3 flex items-center justify-between overflow-hidden hover:border-amber-500/20 transition duration-300">
-                            <span
-                                class="text-sm font-mono text-zinc-500 truncate mr-2">https://realgains.lc/referral.php?id=RG3038998</span>
-                            <button
-                                onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')"
+                        <div class="w-full sm:max-w-xl h-11 bg-zinc-950/80 border border-zinc-900 rounded-xl px-3 flex items-center justify-between overflow-hidden hover:border-amber-500/20 transition duration-300">
+                            <span  class="text-sm font-mono text-zinc-500 truncate mr-2">https://realgains.lc/referral.php?id=RG3038998</span>
+                            <button onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')"
                                 class="text-sm font-mono font-bold uppercase tracking-widest text-amber-400 hover:text-white transition-colors shrink-0 focus:outline-none">
                                 [ Copy ]
                             </button>
@@ -405,17 +380,14 @@
                     </div>
                 </div>
             </div>
-
-            <div
-                class="lg:col-span-5 bg-gradient-to-br from-[#0c0c12] to-[#08080c] rounded-3xl border border-cyan-700/40 p-6 flex flex-col justify-between relative overflow-hidden group shadow-[0_15px_40px_rgba(34,211,238,0.04)]">
+           
+            <div class="lg:col-span-5 bg-gradient-to-br from-[#0c0c12] to-[#08080c] rounded-3xl border border-cyan-700/40 p-6 flex flex-col justify-between relative overflow-hidden group shadow-[0_15px_40px_rgba(34,211,238,0.04)]">
                 <div class="absolute bottom-0 right-0 w-[3px] h-1/2 bg-gradient-to-t from-cyan-400 to-transparent">
                 </div>
                 <div class="flex items-center justify-between w-full font-mono">
                     <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ CAP PROTOCOL MULTIPLIER
                         ]</span>
-                    <span
-                        class="text-sm font-bold text-cyan-400 bg-cyan-400/5 border border-cyan-400/20 px-2 py-0.5 rounded-md">5X
-                        Active</span>
+                    <span class="text-sm font-bold text-cyan-400 bg-cyan-400/5 border border-cyan-400/20 px-2 py-0.5 rounded-md">5X Active</span>
                 </div>
 
                 <div class="my-6 space-y-3 font-mono">
@@ -423,18 +395,15 @@
                         <div>
                             <span class="text-xs text-zinc-500 uppercase tracking-widest font-bold block">Current Active
                                 Earning Stack</span>
-                            <h4 class="text-3xl font-black text-white tracking-tight mt-1">$5.00 <span
-                                    class="text-xs text-zinc-600 font-normal">/ $15,000 Cap</span></h4>
+                            <h4 class="text-3xl font-black text-white tracking-tight mt-1">$5.00 <span class="text-xs text-zinc-600 font-normal">/ $15,000 Cap</span></h4>
                         </div>
                         <span class="text-xs font-bold text-cyan-400">0.03% Yielded</span>
                     </div>
 
                     <div
                         class="w-full h-2.5 bg-zinc-950 rounded-lg p-[2px] border border-zinc-900 overflow-hidden relative">
-                        <div class="h-full bg-gradient-to-r from-amber-500 via-yellow-400 to-cyan-400 rounded-md shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all duration-500"
-                            style="width: 35%"></div>
-                        <div
-                            class="absolute inset-0 bg-[linear-gradient(to_right,transparent_50%,rgba(255,255,255,0.15)_50%)] bg-[size:6px_100%]">
+                        <div class="h-full bg-gradient-to-r from-amber-500 via-yellow-400 to-cyan-400 rounded-md shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all duration-500" style="width: 35%"></div>
+                        <div class="absolute inset-0 bg-[linear-gradient(to_right,transparent_50%,rgba(255,255,255,0.15)_50%)] bg-[size:6px_100%]">
                         </div>
                     </div>
 
@@ -455,10 +424,8 @@
 
         <!-- TIER 3: GLOWING FOUR-QUADRANT WALLETS (COLOR MATCHED DROP SHADOWS) -->
         <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-            <div
-                class="bg-[#09090e] border border-amber-600/20 hover:border-amber-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(245,158,11,0.03)] hover:shadow-[0_15px_40px_rgba(245,158,11,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
-                <div
-                    class="absolute -right-6 -bottom-6 w-16 h-16 bg-amber-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-amber-500/[0.06]">
+            <div class="bg-[#09090e] border border-amber-600/20 hover:border-amber-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(245,158,11,0.03)] hover:shadow-[0_15px_40px_rgba(245,158,11,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-amber-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-amber-500/[0.06]">
                 </div>
                 <div class="flex items-center justify-between w-full font-mono">
                     <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ CAPITAL STAKED ]</span>
@@ -471,15 +438,12 @@
                             class="w-1 h-1 rounded-full bg-amber-400"></span> Principal capital locked assets.</p>
                 </div>
             </div>
-            <div
-                class="bg-[#09090e] border border-emerald-600/20 hover:border-emerald-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(16,185,129,0.03)] hover:shadow-[0_15px_40px_rgba(16,185,129,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
-                <div
-                    class="absolute -right-6 -bottom-6 w-16 h-16 bg-emerald-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-emerald-500/[0.06]">
+            <div class="bg-[#09090e] border border-emerald-600/20 hover:border-emerald-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(16,185,129,0.03)] hover:shadow-[0_15px_40px_rgba(16,185,129,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-emerald-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-emerald-500/[0.06]">
                 </div>
                 <div class="flex items-center justify-between w-full font-mono">
                     <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ TOTAL REVENUE ]</span>
-                    <span
-                        class="text-sm text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">+$5.00
+                    <span class="text-sm text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">+$5.00
                         Live</span>
                 </div>
                 <div class="mt-6">
@@ -489,10 +453,8 @@
                             class="w-1 h-1 rounded-full bg-emerald-400"></span> Consolidated ecosystem gross income.</p>
                 </div>
             </div>
-            <div
-                class="bg-[#09090e] border border-cyan-600/20 hover:border-cyan-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(34,211,238,0.03)] hover:shadow-[0_15px_40px_rgba(34,211,238,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
-                <div
-                    class="absolute -right-6 -bottom-6 w-16 h-16 bg-cyan-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-cyan-500/[0.06]">
+            <div class="bg-[#09090e] border border-cyan-600/20 hover:border-cyan-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(34,211,238,0.03)] hover:shadow-[0_15px_40px_rgba(34,211,238,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-cyan-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-cyan-500/[0.06]">
                 </div>
                 <div class="flex items-center justify-between w-full font-mono">
                     <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ ACTIVATION CORE ]</span>
@@ -507,10 +469,8 @@
             </div>
 
             <!-- Wallet Node 4: Liquid Available (Info Electric Purple Shadow) -->
-            <div
-                class="bg-[#09090e] border border-purple-600/20 hover:border-purple-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(168,85,247,0.03)] hover:shadow-[0_15px_40px_rgba(168,85,247,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
-                <div
-                    class="absolute -right-6 -bottom-6 w-16 h-16 bg-purple-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-purple-500/[0.06]">
+            <div class="bg-[#09090e] border border-purple-600/20 hover:border-purple-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(168,85,247,0.03)] hover:shadow-[0_15px_40px_rgba(168,85,247,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-purple-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-purple-500/[0.06]">
                 </div>
                 <div class="flex items-center justify-between w-full font-mono">
                     <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ LIQUID AVAILABLE ]</span>
@@ -1039,302 +999,6 @@
 
         </div>
 
-          <!-- Active Investment Multi-Grid Platform -->
-        <div class="w-full text-white bg-black antialiased px-2 py-6 relative z-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- ================= CARD 1: ACTIVE INVESTMENT (Emerald Focus) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_15px_30px_rgba(16,185,129,0.05)] group flex flex-col justify-between min-h-[140px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-500/[0.02] blur-xl rounded-full group-hover:bg-emerald-500/[0.05] transition-all duration-300">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
-                            Investment</span>
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_#10B981]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5000</h3>
-                        <div
-                            class="w-10 h-10 rounded-xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-500/30 flex items-center justify-center text-xl group-hover:text-emerald-400/80 group-hover:bg-emerald-500/10 transition-all duration-300">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= CARD 2: ACTIVE EARNING (Purple Focus) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_15px_30px_rgba(168,85,247,0.05)] group flex flex-col justify-between min-h-[140px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-purple-500/[0.02] blur-xl rounded-full group-hover:bg-purple-500/[0.05] transition-all duration-300">
-                    </div>
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
-                            Earning</span>
-                        <span class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_6px_#a855f7]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5.00</h3>
-                        <div
-                            class="w-10 h-10 rounded-xl bg-purple-500/5 border border-purple-500/10 text-purple-500/30 flex items-center justify-center text-xl group-hover:text-purple-400/80 group-hover:bg-purple-500/10 transition-all duration-300">
-                            <i class="bi bi-lightning-charge-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= CARD 3: ACTIVE REMAINING (Rose Focus) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-rose-500/40 hover:shadow-[0_15px_30px_rgba(244,63,94,0.05)] group flex flex-col justify-between min-h-[140px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-rose-500/[0.02] blur-xl rounded-full group-hover:bg-rose-500/[0.05] transition-all duration-300">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
-                            Remaining</span>
-                        <span class="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_6px_#f43f5e]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$14995</h3>
-                        <div
-                            class="w-10 h-10 rounded-xl bg-rose-500/5 border border-rose-500/10 text-rose-500/30 flex items-center justify-center text-xl group-hover:text-rose-400/80 group-hover:bg-rose-500/10 transition-all duration-300">
-                            <i class="bi bi-hourglass-split"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= CARD 4: TODAY TEAM BUSINESS (Cyan Focus) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_15px_30px_rgba(6,182,212,0.05)] group flex flex-col justify-between min-h-[140px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-cyan-500/[0.02] blur-xl rounded-full group-hover:bg-cyan-500/[0.05] transition-all duration-300">
-                    </div>
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Today Team
-                            Business</span>
-                        <span class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_6px_#06b6d4]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-[#EAB308]">$0</h3>
-                        <div
-                            class="w-10 h-10 rounded-xl bg-cyan-500/5 border border-cyan-500/10 text-cyan-500/30 flex items-center justify-center text-xl group-hover:text-cyan-400/80 group-hover:bg-cyan-500/10 transition-all duration-300">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-      
-      
-
-        <!-- Quick Team Highlights Status (Elite High-Contrast Version) -->
-        <div class="w-full text-white bg-black antialiased px-2 py-4 relative z-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-base">
-
-                <!-- 01: Profit Level Pod -->
-                <div
-                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-amber-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-500 flex items-center justify-center text-lg shrink-0">
-                            <i class="bi bi-bar-chart-fill"></i>
-                        </div>
-                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Profit Level</span>
-                    </div>
-                    <span
-                        class="font-black text-amber-400 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow-sm">
-                        Level 1
-                    </span>
-                </div>
-
-                <!-- 02: Team Business Pod -->
-                <div
-                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-emerald-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg shrink-0">
-                            <i class="bi bi-briefcase-fill"></i>
-                        </div>
-                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Team Business</span>
-                    </div>
-                    <span
-                        class="font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-lg text-sm shadow-sm">
-                        $100
-                    </span>
-                </div>
-
-                <!-- 03: Strong Team Pod -->
-                <div
-                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-purple-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg shrink-0">
-                            <i class="bi bi-lightning-fill"></i>
-                        </div>
-                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Strong Team</span>
-                    </div>
-                    <span
-                        class="font-black text-purple-400 bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-lg text-sm shadow-sm">
-                        $100
-                    </span>
-                </div>
-
-                <!-- 04: Other Team Pod -->
-                <div
-                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-zinc-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-zinc-500/10 border border-zinc-800 text-zinc-400 flex items-center justify-center text-lg shrink-0">
-                            <i class="bi bi-pie-chart-fill"></i>
-                        </div>
-                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Other Team</span>
-                    </div>
-                    <span
-                        class="font-black text-zinc-300 bg-zinc-800 border border-zinc-700 px-3 py-1 rounded-lg text-sm shadow-sm">
-                        $0
-                    </span>
-                </div>
-
-            </div>
-        </div>
-
-
-
-
-        <!-- Elite Cyber-Glow HUD Investment Pods (Universal Gradient Underline Edition) -->
-        <div class="w-full text-white bg-black antialiased px-2 py-8 relative z-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-emerald-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-[0_20px_40px_rgba(16,185,129,0.08)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/[0.03] blur-2xl rounded-full group-hover:bg-emerald-500/[0.08] transition-all">
-                    </div>
-                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                            </span>
-                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Active
-                                Investment</span>
-                        </div>
-                        <span
-                            class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">LIVE_NODE</span>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-emerald-500 via-emerald-500/30 to-transparent">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5000</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-emerald-500 text-black flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/10 transition duration-300">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-purple-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30 hover:shadow-[0_20px_40px_rgba(168,85,247,0.08)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-purple-500/[0.03] blur-2xl rounded-full group-hover:bg-purple-500/[0.08] transition-all">
-                    </div>
-                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
-                            </span>
-                            <span class="text-sm font-mono font-black text-zinc-400  tracking-widest">Active
-                                Earning</span>
-                        </div>
-                        <span
-                            class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-md border border-purple-500/20">SYS_BOOST</span>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-purple-500 via-purple-500/30 to-transparent">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5.00</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-purple-500/10 transition duration-300">
-                            <i class="bi bi-lightning-charge-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-rose-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-rose-500/30 hover:shadow-[0_20px_40px_rgba(244,63,94,0.08)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-rose-500/[0.03] blur-2xl rounded-full group-hover:bg-rose-500/[0.08] transition-all">
-                    </div>
-                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
-                            </span>
-                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Active
-                                Remaining</span>
-                        </div>
-                        <span
-                            class="text-xs font-mono font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded-md border border-rose-500/20">LIMIT_CALC</span>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-rose-500 via-rose-500/30 to-transparent">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$14995</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-rose-500/10 transition duration-300">
-                            <i class="bi bi-hourglass-split"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-[#EAB308] rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-[0_20px_45px_rgba(6,182,212,0.08)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-cyan-500/[0.03] blur-2xl rounded-full group-hover:bg-cyan-500/[0.08] transition-all">
-                    </div>
-                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
-                            </span>
-                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Today Team
-                                Business</span>
-                        </div>
-                        <span
-                            class="text-xs font-mono font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-md border border-cyan-500/20">MATRIX_STAT</span>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500 via-cyan-500/30 to-transparent">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$0</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-cyan-500/10 transition duration-300">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <div class="relative z-10 w-full antialiased text-white bg-black px-2 py-6">
             <div
@@ -1544,12 +1208,839 @@
         </div>
 
 
-      
+        <!-- Active Investment Multi-Grid Platform -->
+        <div class="w-full text-white bg-black antialiased px-2 py-6 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
+                <!-- ================= CARD 1: ACTIVE INVESTMENT (Emerald Focus) ================= -->
+                <div
+                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_15px_30px_rgba(16,185,129,0.05)] group flex flex-col justify-between min-h-[140px]">
+                    <!-- Subtle Radial Light Backdrops -->
+                    <div
+                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-500/[0.02] blur-xl rounded-full group-hover:bg-emerald-500/[0.05] transition-all duration-300">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full font-mono relative z-10">
+                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
+                            Investment</span>
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_#10B981]"></span>
+                    </div>
+
+                    <div class="flex items-end justify-between mt-6 relative z-10">
+                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5000</h3>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-500/30 flex items-center justify-center text-xl group-hover:text-emerald-400/80 group-hover:bg-emerald-500/10 transition-all duration-300">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= CARD 2: ACTIVE EARNING (Purple Focus) ================= -->
+                <div
+                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_15px_30px_rgba(168,85,247,0.05)] group flex flex-col justify-between min-h-[140px]">
+                    <div
+                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-purple-500/[0.02] blur-xl rounded-full group-hover:bg-purple-500/[0.05] transition-all duration-300">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full font-mono relative z-10">
+                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
+                            Earning</span>
+                        <span class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_6px_#a855f7]"></span>
+                    </div>
+
+                    <div class="flex items-end justify-between mt-6 relative z-10">
+                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5.00</h3>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-purple-500/5 border border-purple-500/10 text-purple-500/30 flex items-center justify-center text-xl group-hover:text-purple-400/80 group-hover:bg-purple-500/10 transition-all duration-300">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= CARD 3: ACTIVE REMAINING (Rose Focus) ================= -->
+                <div
+                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-rose-500/40 hover:shadow-[0_15px_30px_rgba(244,63,94,0.05)] group flex flex-col justify-between min-h-[140px]">
+                    <div
+                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-rose-500/[0.02] blur-xl rounded-full group-hover:bg-rose-500/[0.05] transition-all duration-300">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full font-mono relative z-10">
+                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
+                            Remaining</span>
+                        <span class="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_6px_#f43f5e]"></span>
+                    </div>
+
+                    <div class="flex items-end justify-between mt-6 relative z-10">
+                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$14995</h3>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-rose-500/5 border border-rose-500/10 text-rose-500/30 flex items-center justify-center text-xl group-hover:text-rose-400/80 group-hover:bg-rose-500/10 transition-all duration-300">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= CARD 4: TODAY TEAM BUSINESS (Cyan Focus) ================= -->
+                <div
+                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_15px_30px_rgba(6,182,212,0.05)] group flex flex-col justify-between min-h-[140px]">
+                    <div
+                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-cyan-500/[0.02] blur-xl rounded-full group-hover:bg-cyan-500/[0.05] transition-all duration-300">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full font-mono relative z-10">
+                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Today Team
+                            Business</span>
+                        <span class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_6px_#06b6d4]"></span>
+                    </div>
+
+                    <div class="flex items-end justify-between mt-6 relative z-10">
+                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-[#EAB308]">$0</h3>
+                        <div
+                            class="w-10 h-10 rounded-xl bg-cyan-500/5 border border-cyan-500/10 text-cyan-500/30 flex items-center justify-center text-xl group-hover:text-cyan-400/80 group-hover:bg-cyan-500/10 transition-all duration-300">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Cyber Tech Infographic Investment Deck -->
+        <div class="w-full text-white bg-black antialiased px-2 py-6 relative z-10">
+            <!-- Responsive Matrix: Mobile pe 1 column, tab pe 2, desktop pe 4 columns seamlessly handle hote hain -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- ================= CELLS 01: CURRENT ACTIVE INVESTMENT (Emerald Glow) ================= -->
+                <div
+                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_15px_30px_rgba(16,185,129,0.05)] group flex flex-col justify-between min-h-[150px]">
+                    <!-- Soft Ambient Background Layer Fill -->
+                    <div
+                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-500/[0.02] blur-xl rounded-full group-hover:bg-emerald-500/[0.06] transition-all">
+                    </div>
+                    <!-- Dynamic Neon Top Line Accent -->
+                    <div class="absolute top-0 left-0 w-2/3 h-[2px] bg-gradient-to-r from-emerald-500 to-transparent">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full font-mono relative z-10">
+                        <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider block">Active
+                            Investment</span>
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981]"></span>
+                    </div>
+
+                    <div class="flex items-end justify-between mt-6 relative z-10">
+                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5000</h3>
+                        <div
+                            class="w-11 h-11 rounded-xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-500/40 flex items-center justify-center text-xl group-hover:text-emerald-400 group-hover:bg-emerald-500/10 transition-all duration-300">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= CELLS 02: CURRENT ACTIVE EARNING (Purple Glow) ================= -->
+                <div
+                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_15px_30px_rgba(168,85,247,0.05)] group flex flex-col justify-between min-h-[150px]">
+                    <div
+                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-purple-500/[0.02] blur-xl rounded-full group-hover:bg-purple-500/[0.06] transition-all">
+                    </div>
+                    <div class="absolute top-0 left-0 w-2/3 h-[2px] bg-gradient-to-r from-purple-500 to-transparent">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full font-mono relative z-10">
+                        <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider block">Active
+                            Earning</span>
+                        <span class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_#a855f7]"></span>
+                    </div>
+
+                    <div class="flex items-end justify-between mt-6 relative z-10">
+                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5.00</h3>
+                        <div
+                            class="w-11 h-11 rounded-xl bg-purple-500/5 border border-purple-500/10 text-purple-500/40 flex items-center justify-center text-xl group-hover:text-purple-400 group-hover:bg-purple-500/10 transition-all duration-300">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= CELLS 03: CURRENT ACTIVE REMAINING (Rose Glow) ================= -->
+                <div
+                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-rose-500/40 hover:shadow-[0_15px_30px_rgba(244,63,94,0.05)] group flex flex-col justify-between min-h-[150px]">
+                    <div
+                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-rose-500/[0.02] blur-xl rounded-full group-hover:bg-rose-500/[0.06] transition-all">
+                    </div>
+                    <div class="absolute top-0 left-0 w-2/3 h-[2px] bg-gradient-to-r from-rose-500 to-transparent">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full font-mono relative z-10">
+                        <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider block">Active
+                            Remaining</span>
+                        <span class="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]"></span>
+                    </div>
+
+                    <div class="flex items-end justify-between mt-6 relative z-10">
+                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$14995</h3>
+                        <div
+                            class="w-11 h-11 rounded-xl bg-rose-500/5 border border-rose-500/10 text-rose-500/40 flex items-center justify-center text-xl group-hover:text-rose-400 group-hover:bg-rose-500/10 transition-all duration-300">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= CELLS 04: TODAY TEAM BUSINESS (Cyan Glow) ================= -->
+                <div
+                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_15px_30px_rgba(6,182,212,0.05)] group flex flex-col justify-between min-h-[150px]">
+                    <div
+                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-cyan-500/[0.02] blur-xl rounded-full group-hover:bg-cyan-500/[0.06] transition-all">
+                    </div>
+                    <div class="absolute top-0 left-0 w-2/3 h-[2px] bg-gradient-to-r from-cyan-500 to-transparent">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full font-mono relative z-10">
+                        <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider block">Today Team
+                            Business</span>
+                        <span class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_#06b6d4]"></span>
+                    </div>
+
+                    <div class="flex items-end justify-between mt-6 relative z-10">
+                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-[#EAB308]">$0</h3>
+                        <div
+                            class="w-11 h-11 rounded-xl bg-cyan-500/5 border border-cyan-500/10 text-cyan-500/40 flex items-center justify-center text-xl group-hover:text-cyan-400 group-hover:bg-cyan-500/10 transition-all duration-300">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Elite Cyber-Glow HUD Investment Pods -->
+        <div class="w-full text-white bg-black antialiased px-2 py-8 relative z-10">
+            <!-- Fully Responsive Layout Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- ================= POD 1: ACTIVE INVESTMENT (Emerald Laser Core) ================= -->
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-emerald-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] group flex flex-col justify-between min-h-[170px]">
+                    <!-- Inner Dynamic Backglow -->
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/[0.03] blur-2xl rounded-full group-hover:bg-emerald-500/[0.08] transition-all">
+                    </div>
+
+                    <!-- Top Tracker Area -->
+                    <div class="flex items-center justify-between w-full border-b border-zinc-900 pb-3 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                            </span>
+                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
+                                Investment</span>
+                        </div>
+                        <span
+                            class="text-[9px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">LIVE_NODE</span>
+                    </div>
+
+                    <!-- Bottom Big Value Frame -->
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5000</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-emerald-500 text-black flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/10 transition duration-300">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= POD 2: ACTIVE EARNING (Purple Laser Core) ================= -->
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-purple-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-purple-400 hover:shadow-[0_20px_40px_rgba(168,85,247,0.1)] group flex flex-col justify-between min-h-[170px]">
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-purple-500/[0.03] blur-2xl rounded-full group-hover:bg-purple-500/[0.08] transition-all">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full border-b border-zinc-900 pb-3 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
+                            </span>
+                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
+                                Earning</span>
+                        </div>
+                        <span
+                            class="text-[9px] font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-md border border-purple-500/20">SYS_BOOST</span>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5.00</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-purple-500/10 transition duration-300">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= POD 3: ACTIVE REMAINING (Rose Laser Core) ================= -->
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-rose-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-rose-400 hover:shadow-[0_20px_40px_rgba(244,63,94,0.1)] group flex flex-col justify-between min-h-[170px]">
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-rose-500/[0.03] blur-2xl rounded-full group-hover:bg-rose-500/[0.08] transition-all">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full border-b border-zinc-900 pb-3 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
+                            </span>
+                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
+                                Remaining</span>
+                        </div>
+                        <span
+                            class="text-[9px] font-mono font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded-md border border-rose-500/20">LIMIT_CALC</span>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$14995</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-rose-500/10 transition duration-300">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= POD 4: TODAY TEAM BUSINESS (Cyan Laser Core) ================= -->
+                <div
+                    class="bg-gradient-to-b from-[#16161A] to-[#0D0D0F] border-2 border-[#EAB308] rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(234,179,8,0.15)] group flex flex-col justify-between min-h-[170px]">
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-amber-500/[0.04] blur-2xl rounded-full group-hover:bg-amber-500/[0.1] transition-all">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full border-b border-zinc-800 pb-3 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#EAB308] opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#EAB308]"></span>
+                            </span>
+                            <span class="text-xs font-mono font-black text-zinc-200 uppercase tracking-widest">Today
+                                Team Business</span>
+                        </div>
+                        <span
+                            class="text-[9px] font-mono font-black bg-[#EAB308] text-black px-2 py-0.5 rounded-md">MATRIX_STAT</span>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-[#EAB308]">$0</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-[#EAB308] text-black flex items-center justify-center text-2xl shadow-lg shadow-[#EAB308]/20 transition duration-300 border border-[#FBBF24]/40">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Quick Team Highlights Status (Elite High-Contrast Version) -->
+        <div class="w-full text-white bg-black antialiased px-2 py-4 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-base">
+
+                <!-- 01: Profit Level Pod -->
+                <div
+                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-amber-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-500 flex items-center justify-center text-lg shrink-0">
+                            <i class="bi bi-bar-chart-fill"></i>
+                        </div>
+                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Profit Level</span>
+                    </div>
+                    <span
+                        class="font-black text-amber-400 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow-sm">
+                        Level 1
+                    </span>
+                </div>
+
+                <!-- 02: Team Business Pod -->
+                <div
+                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-emerald-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="bi bi-briefcase-fill"></i>
+                        </div>
+                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Team Business</span>
+                    </div>
+                    <span
+                        class="font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-lg text-sm shadow-sm">
+                        $100
+                    </span>
+                </div>
+
+                <!-- 03: Strong Team Pod -->
+                <div
+                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-purple-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="bi bi-lightning-fill"></i>
+                        </div>
+                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Strong Team</span>
+                    </div>
+                    <span
+                        class="font-black text-purple-400 bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-lg text-sm shadow-sm">
+                        $100
+                    </span>
+                </div>
+
+                <!-- 04: Other Team Pod -->
+                <div
+                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-zinc-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-zinc-500/10 border border-zinc-800 text-zinc-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="bi bi-pie-chart-fill"></i>
+                        </div>
+                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Other Team</span>
+                    </div>
+                    <span
+                        class="font-black text-zinc-300 bg-zinc-800 border border-zinc-700 px-3 py-1 rounded-lg text-sm shadow-sm">
+                        $0
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Quick Team Highlights Status (Futuristic Neon Pulse Edition) -->
+        <div class="w-full text-white bg-black antialiased px-2 py-6 relative z-10">
+
+            <!-- Tailwind Custom CSS Animations for Glow Pulse & Background Flow -->
+            <style>
+                @keyframes pulse-glow {
+
+                    0%,
+                    100% {
+                        transform: scale(1);
+                        opacity: 0.2;
+                        filter: blur(20px);
+                    }
+
+                    50% {
+                        transform: scale(1.15);
+                        opacity: 0.6;
+                        filter: blur(30px);
+                    }
+                }
+
+                .animate-neon-glow {
+                    animation: pulse-glow 3s infinite ease-in-out;
+                }
+            </style>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-base">
+
+                <!-- 01: Profit Level Pod (Amber Neon Flare) -->
+                <div class="group relative rounded-2xl p-[1px] transition-all duration-300 hover:scale-[1.03]">
+                    <!-- Animated Background Glow behind the card (Solves the black-blend problem) -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl opacity-20 filter blur-xl group-hover:opacity-60 transition-all duration-500 animate-neon-glow">
+                    </div>
+                    <!-- Sharp Hover Border Mask -->
+                    <div
+                        class="absolute inset-0 bg-zinc-800 rounded-2xl group-hover:bg-gradient-to-r group-hover:from-amber-500 group-hover:to-yellow-400 transition-all duration-300">
+                    </div>
+
+                    <!-- Inner Main Card Content Frame -->
+                    <div
+                        class="relative bg-[#09090B] rounded-2xl p-5 flex items-center justify-between gap-4 h-full z-10">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-amber-500 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)] flex items-center justify-center text-lg shrink-0 font-sans">
+                                <i class="bi bi-bar-chart-fill animate-pulse"></i>
+                            </div>
+                            <span
+                                class="text-zinc-300 font-black uppercase tracking-wide text-sm group-hover:text-white transition-colors">Profit
+                                Level</span>
+                        </div>
+                        <span
+                            class="font-black text-amber-400 bg-amber-500/10 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs uppercase tracking-widest shadow-[inset_0_0_8px_rgba(234,179,8,0.1)]">
+                            Level 1
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 02: Team Business Pod (Emerald Neon Flare) -->
+                <div class="group relative rounded-2xl p-[1px] transition-all duration-300 hover:scale-[1.03]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl opacity-20 filter blur-xl group-hover:opacity-60 transition-all duration-500 animate-neon-glow"
+                        style="animation-delay: 0.7s;"></div>
+                    <div
+                        class="absolute inset-0 bg-zinc-800 rounded-2xl group-hover:bg-gradient-to-r group-hover:from-emerald-500 group-hover:to-green-400 transition-all duration-300">
+                    </div>
+
+                    <div
+                        class="relative bg-[#09090B] rounded-2xl p-5 flex items-center justify-between gap-4 h-full z-10">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-emerald-500 text-black shadow-[0_0_15px_rgba(16,185,129,0.4)] flex items-center justify-center text-lg shrink-0 font-sans">
+                                <i class="bi bi-briefcase-fill animate-bounce"></i>
+                            </div>
+                            <span
+                                class="text-zinc-300 font-black uppercase tracking-wide text-sm group-hover:text-white transition-colors">Team
+                                Business</span>
+                        </div>
+                        <span
+                            class="font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/40 px-3 py-1.5 rounded-xl text-sm shadow-[inset_0_0_8px_rgba(16,185,129,0.1)]">
+                            $100
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 03: Strong Team Pod (Purple Neon Flare) -->
+                <div class="group relative rounded-2xl p-[1px] transition-all duration-300 hover:scale-[1.03]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-2xl opacity-20 filter blur-xl group-hover:opacity-60 transition-all duration-500 animate-neon-glow"
+                        style="animation-delay: 1.4s;"></div>
+                    <div
+                        class="absolute inset-0 bg-zinc-800 rounded-2xl group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-fuchsia-400 transition-all duration-300">
+                    </div>
+
+                    <div
+                        class="relative bg-[#09090B] rounded-2xl p-5 flex items-center justify-between gap-4 h-full z-10">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-purple-500 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)] flex items-center justify-center text-lg shrink-0 font-sans">
+                                <i class="bi bi-lightning-fill"></i>
+                            </div>
+                            <span
+                                class="text-zinc-300 font-black uppercase tracking-wide text-sm group-hover:text-white transition-colors">Strong
+                                Team</span>
+                        </div>
+                        <span
+                            class="font-black text-purple-400 bg-purple-500/10 border border-purple-500/40 px-3 py-1.5 rounded-xl text-sm shadow-[inset_0_0_8px_rgba(168,85,247,0.1)]">
+                            $100
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 04: Other Team Pod (Cyan Neon Flare) -->
+                <div class="group relative rounded-2xl p-[1px] transition-all duration-300 hover:scale-[1.03]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl opacity-20 filter blur-xl group-hover:opacity-60 transition-all duration-500 animate-neon-glow"
+                        style="animation-delay: 2.1s;"></div>
+                    <div
+                        class="absolute inset-0 bg-zinc-800 rounded-2xl group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:to-blue-400 transition-all duration-300">
+                    </div>
+
+                    <div
+                        class="relative bg-[#09090B] rounded-2xl p-5 flex items-center justify-between gap-4 h-full z-10">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-cyan-500 text-black shadow-[0_0_15px_rgba(6,182,212,0.4)] flex items-center justify-center text-lg shrink-0 font-sans">
+                                <i class="bi bi-pie-chart-fill"></i>
+                            </div>
+                            <span
+                                class="text-zinc-300 font-black uppercase tracking-wide text-sm group-hover:text-white transition-colors">Other
+                                Team</span>
+                        </div>
+                        <span
+                            class="font-black text-cyan-400 bg-cyan-500/10 border border-cyan-500/40 px-3 py-1.5 rounded-xl text-sm shadow-[inset_0_0_8px_rgba(6,182,212,0.1)]">
+                            $0
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+
+        <!-- Elite Cyber-Glow HUD Investment Pods (Fade-to-Transparent Gradient Edition) -->
+        <div class="w-full text-white bg-black antialiased px-2 py-8 relative z-10">
+            <!-- Fully Responsive Layout Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- ================= POD 1: ACTIVE INVESTMENT (Emerald Laser Core) ================= -->
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border border-zinc-900 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-[0_20px_40px_rgba(16,185,129,0.08)] group flex flex-col justify-between min-h-[170px]">
+
+                    <!-- Image Style Top Gradient Accent Line (Fade to Transparent) -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-emerald-400 via-emerald-500/40 to-transparent">
+                    </div>
+
+                    <!-- Inner Dynamic Backglow -->
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/[0.03] blur-2xl rounded-full group-hover:bg-emerald-500/[0.08] transition-all">
+                    </div>
+
+                    <!-- Top Tracker Area -->
+                    <div class="flex items-center justify-between w-full relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                            </span>
+                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
+                                Investment</span>
+                        </div>
+                        <span
+                            class="text-[9px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">LIVE_NODE</span>
+                    </div>
+
+                    <!-- Bottom Big Value Frame -->
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5000</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-emerald-500 text-black flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/10 transition duration-300">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= POD 2: ACTIVE EARNING (Purple Laser Core) ================= -->
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border border-zinc-900 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30 hover:shadow-[0_20px_40px_rgba(168,85,247,0.08)] group flex flex-col justify-between min-h-[170px]">
+
+                    <!-- Image Style Top Gradient Accent Line (Fade to Transparent) -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-400 via-purple-500/40 to-transparent">
+                    </div>
+
+                    <!-- Inner Dynamic Backglow -->
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-purple-500/[0.03] blur-2xl rounded-full group-hover:bg-purple-500/[0.08] transition-all">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
+                            </span>
+                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
+                                Earning</span>
+                        </div>
+                        <span
+                            class="text-[9px] font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-md border border-purple-500/20">SYS_BOOST</span>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5.00</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-purple-500/10 transition duration-300">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= POD 3: ACTIVE REMAINING (Rose Laser Core) ================= -->
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border border-zinc-900 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-rose-500/30 hover:shadow-[0_20px_40px_rgba(244,63,94,0.08)] group flex flex-col justify-between min-h-[170px]">
+
+                    <!-- Image Style Top Gradient Accent Line (Fade to Transparent) -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-rose-400 via-rose-500/40 to-transparent">
+                    </div>
+
+                    <!-- Inner Dynamic Backglow -->
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-rose-500/[0.03] blur-2xl rounded-full group-hover:bg-rose-500/[0.08] transition-all">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
+                            </span>
+                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
+                                Remaining</span>
+                        </div>
+                        <span
+                            class="text-[9px] font-mono font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded-md border border-rose-500/20">LIMIT_CALC</span>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$14995</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-rose-500/10 transition duration-300">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= POD 4: TODAY TEAM BUSINESS (Cyan Laser Core) ================= -->
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border border-zinc-900 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-[0_20px_45px_rgba(6,182,212,0.08)] group flex flex-col justify-between min-h-[170px]">
+
+                    <!-- Image Style Top Gradient Accent Line (Fade to Transparent) -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-400 via-cyan-500/40 to-transparent">
+                    </div>
+
+                    <!-- Inner Dynamic Backglow -->
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-cyan-500/[0.03] blur-2xl rounded-full group-hover:bg-cyan-500/[0.08] transition-all">
+                    </div>
+
+                    <div class="flex items-center justify-between w-full relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
+                            </span>
+                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Today
+                                Team Business</span>
+                        </div>
+                        <span
+                            class="text-[9px] font-mono font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-md border border-cyan-500/20">MATRIX_STAT</span>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$0</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-cyan-500/10 transition duration-300">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Elite Cyber-Glow HUD Investment Pods (Universal Gradient Underline Edition) -->
+        <div class="w-full text-white bg-black antialiased px-2 py-8 relative z-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-emerald-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-[0_20px_40px_rgba(16,185,129,0.08)] group flex flex-col justify-between min-h-[170px]">
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/[0.03] blur-2xl rounded-full group-hover:bg-emerald-500/[0.08] transition-all">
+                    </div>
+                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                            </span>
+                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Active
+                                Investment</span>
+                        </div>
+                        <span
+                            class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">LIVE_NODE</span>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-emerald-500 via-emerald-500/30 to-transparent">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5000</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-emerald-500 text-black flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/10 transition duration-300">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-purple-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30 hover:shadow-[0_20px_40px_rgba(168,85,247,0.08)] group flex flex-col justify-between min-h-[170px]">
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-purple-500/[0.03] blur-2xl rounded-full group-hover:bg-purple-500/[0.08] transition-all">
+                    </div>
+                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
+                            </span>
+                            <span class="text-sm font-mono font-black text-zinc-400  tracking-widest">Active
+                                Earning</span>
+                        </div>
+                        <span
+                            class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-md border border-purple-500/20">SYS_BOOST</span>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-purple-500 via-purple-500/30 to-transparent">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5.00</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-purple-500/10 transition duration-300">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-rose-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-rose-500/30 hover:shadow-[0_20px_40px_rgba(244,63,94,0.08)] group flex flex-col justify-between min-h-[170px]">
+                    <div
+                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-rose-500/[0.03] blur-2xl rounded-full group-hover:bg-rose-500/[0.08] transition-all">
+                    </div>
+                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
+                            </span>
+                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Active
+                                Remaining</span>
+                        </div>
+                        <span
+                            class="text-xs font-mono font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded-md border border-rose-500/20">LIMIT_CALC</span>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-rose-500 via-rose-500/30 to-transparent">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$14995</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-rose-500/10 transition duration-300">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-[#EAB308] rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-[0_20px_45px_rgba(6,182,212,0.08)] group flex flex-col justify-between min-h-[170px]">
+                    <div  class="absolute -right-4 -bottom-4 w-28 h-28 bg-cyan-500/[0.03] blur-2xl rounded-full group-hover:bg-cyan-500/[0.08] transition-all">
+                    </div>
+                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
+                        <div class="flex items-center gap-2.5">
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
+                            </span>
+                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Today Team
+                                Business</span>
+                        </div>
+                        <span
+                            class="text-xs font-mono font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-md border border-cyan-500/20">MATRIX_STAT</span>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500 via-cyan-500/30 to-transparent">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6 relative z-10">
+                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$0</h3>
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-cyan-500/10 transition duration-300">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
 
-    <footer
-        class="w-full bg-zinc-950 border-t border-zinc-900 mt-auto font-sans relative z-10 shadow-[0_-4px_30px_rgba(0,0,0,0.3)] w-full overflow-hidden">
+
+    <footer class="w-full bg-zinc-950 border-t border-zinc-900 mt-auto font-sans relative z-10 shadow-[0_-4px_30px_rgba(0,0,0,0.3)] w-full overflow-hidden">
         <div
             class="absolute bottom-0 right-1/3 w-[200px] h-[100px] bg-amber-500/[0.01] blur-[100px] rounded-full pointer-events-none">
         </div>
