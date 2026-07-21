@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full bg-zinc-950">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBOT Investments - Admin Dashboard</title>    
+    <title>IBOT Investments - Admin Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -11,12 +12,15 @@
     <linl rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="h-full bg-zinc-950 text-zinc-300 relative overflow-x-hidden flex flex-col min-h-screen">    
-    <div class="absolute top-0 right-1/4 w-[300px] sm:w-[600px] h-[300px] bg-amber-500/[0.02] blur-[130px] rounded-full pointer-events-none z-0">
+<body class="h-full bg-zinc-950 text-zinc-300 relative overflow-x-hidden flex flex-col min-h-screen">
+    <div
+        class="absolute top-0 right-1/4 w-[300px] sm:w-[600px] h-[300px] bg-amber-500/[0.02] blur-[130px] rounded-full pointer-events-none z-0">
     </div>
-    <div class="absolute bottom-0 left-1/4 w-[300px] sm:w-[500px] h-[400px] bg-yellow-600/[0.01] blur-[150px] rounded-full pointer-events-none z-0">
-    </div>    
-    <header class="sticky top-0 z-50 w-full bg-zinc-950/90 backdrop-blur-xl border-b border-amber-500/10 shadow-[0_4px_30px_rgba(245,158,11,0.02)] font-sans">
+    <div
+        class="absolute bottom-0 left-1/4 w-[300px] sm:w-[500px] h-[400px] bg-yellow-600/[0.01] blur-[150px] rounded-full pointer-events-none z-0">
+    </div>
+    <header
+        class="sticky top-0 z-50 w-full bg-zinc-950/90 backdrop-blur-xl border-b border-amber-500/10 shadow-[0_4px_30px_rgba(245,158,11,0.02)] font-sans">
         <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20 relative w-full">
 
             <!-- BRAND LOGO -->
@@ -25,7 +29,7 @@
                     <img src="assets/images/logo.png" alt="IBOT Panel Logo"
                         class="h-8 sm:h-11 w-auto object-contain block transform group-hover:scale-[1.03] transition duration-500 pointer-events-none filter drop-shadow-[0_0_8px_rgba(245,158,11,0.1)]" />
                 </a>
-            </div>            
+            </div>
             <div class="flex xl:hidden items-center z-30">
                 <button id="menu-toggle-btn"
                     class="text-zinc-400 hover:text-amber-400 p-2.5 bg-zinc-900/50 rounded-xl border border-zinc-900 focus:outline-none">
@@ -34,7 +38,7 @@
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-            </div>            
+            </div>
             <div id="nav-backdrop"
                 class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden xl:hidden transition-opacity duration-300">
             </div>
@@ -43,14 +47,15 @@
             fixed top-0 right-0 bottom-0 h-screen w-72 sm:w-80 bg-zinc-950 border-l border-zinc-900 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto
             xl:static xl:h-auto xl:w-auto xl:bg-transparent xl:border-l-0 xl:p-0 xl:shadow-none xl:transform-none xl:transition-none xl:overflow-y-visible
             flex flex-col xl:flex-row items-stretch xl:items-center gap-4 xl:gap-2 text-sm font-medium">
-                
+
                 <div class="flex xl:hidden items-center justify-between border-b border-zinc-900 pb-4 mb-2">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">Navigation Core</span>
                     <button id="menu-close-btn" class="text-zinc-500 hover:text-white text-sm font-bold p-1">✕</button>
                 </div>
-               
-                <a href="index.html" class="nav-core-link px-4 py-3 xl:py-2 rounded-xl text-amber-400 bg-zinc-900/60 border border-amber-500/10 shadow-sm shadow-amber-500/5 text-center xl:text-left">Dashboard</a>
-                
+
+                <a href="index.html"
+                    class="nav-core-link px-4 py-3 xl:py-2 rounded-xl text-amber-400 bg-zinc-900/60 border border-amber-500/10 shadow-sm shadow-amber-500/5 text-center xl:text-left">Dashboard</a>
+
                 <div class="relative group/main nav-node-group">
                     <button
                         class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
@@ -62,15 +67,18 @@
                         </svg>
                     </button>
 
-                    
-                    <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-56 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
-                        <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
+
+                    <div
+                        class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-56 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
+                        <div
+                            class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
                             <a href="profile.html"
                                 class="nav-core-link block px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-950/60 rounded-xl transition font-medium">My
                                 Profile</a>
-                            
+
                             <div class="relative group/sub nav-subnode-group">
-                                <button  class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
+                                <button
+                                    class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
                                     <span>Security Settings</span>
                                     <svg class="subchevron-icon w-3 h-3 transition-transform xl:-rotate-90" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
@@ -78,8 +86,10 @@
                                             d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
-                                <div  class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:left-full xl:pl-3 w-full xl:w-52 pl-3 mt-1 xl:mt-0 z-50">
-                                    <div  class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
+                                <div
+                                    class="nav-subdropdown-shell hidden xl:group-hover/sub:block xl:absolute xl:top-0 xl:left-full xl:pl-3 w-full xl:w-52 pl-3 mt-1 xl:mt-0 z-50">
+                                    <div
+                                        class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 space-y-1 text-[11px] xl:text-xs border-l border-zinc-800/60 xl:border-l-transparent text-zinc-500">
                                         <a href="modify-login.html"
                                             class="nav-core-link block px-4 py-2 text-zinc-400 xl:text-zinc-300 hover:text-amber-400 xl:hover:bg-zinc-950/40 rounded-xl transition">Modify
                                             Login Password</a>
@@ -95,7 +105,8 @@
 
                 <!-- 3. WALLETS & INVESTMENT HUB -->
                 <div class="relative group/main nav-node-group">
-                    <button class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
+                    <button
+                        class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
                         <span>Wallets & Investment</span>
                         <svg class="chevron-icon w-4 h-4 transition-transform duration-200" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
@@ -103,12 +114,14 @@
                             </path>
                         </svg>
                     </button>
-                    <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-64 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
-                        <div class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
+                    <div
+                        class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-64 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
+                        <div
+                            class="rounded-2xl bg-transparent xl:bg-zinc-900/95 xl:backdrop-blur-xl xl:border xl:border-amber-500/20 p-1 xl:p-2 xl:shadow-[0_20px_50px_rgba(245,158,11,0.08)] space-y-1 border-l border-zinc-800 xl:border-l-transparent">
                             <a href="#make-investment"
                                 class="nav-core-link block px-4 py-2.5 text-xs font-semibold text-amber-400 bg-amber-500/5 xl:bg-amber-500/10 rounded-xl border border-amber-500/10 xl:border-amber-500/30 hover:bg-amber-500/20 transition">★
                                 Make Investment</a>
-                            
+
                             <div class="relative group/sub nav-subnode-group">
                                 <button
                                     class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
@@ -141,7 +154,7 @@
                                     </div>
                                 </div>
                             </div>
-                      
+
                             <div class="relative group/sub nav-subnode-group">
                                 <button
                                     class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-400 xl:text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/40 xl:hover:bg-zinc-955/60 rounded-xl transition font-medium">
@@ -270,1792 +283,323 @@
 
     <main class="w-full max-w-[1600px] mx-auto p-4 sm:p-8 space-y-10 flex-1 bg-[#050507] text-zinc-300 font-sans selection:bg-yellow-400 selection:text-black overflow-hidden relative">
 
-        <div  class="absolute inset-0 bg-[linear-gradient(to_right,#0f0f15_1px,transparent_1px),linear-gradient(to_bottom,#0f0f15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-60 pointer-events-none z-0">
+      
+        <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#EAB308]/[0.05] rounded-full blur-[150px] pointer-events-none">
         </div>
-        <div class="absolute top-0 left-1/3 w-[500px] h-[250px] bg-gradient-to-br from-amber-500/[0.04] to-cyan-500/[0.02] blur-[120px] rounded-full pointer-events-none z-0">
-        </div>
-   
-        <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-zinc-900/60 w-full">
-            <div class="space-y-2 min-w-0">
-                <div class="flex items-center gap-2 font-mono text-sm tracking-[0.3em] text-zinc-500 uppercase">
-                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_#f59e0b]"></span>
-                    <span>System Protocol Node</span>
-                    <span class="text-zinc-700">//</span>
-                    <span class="text-amber-400 font-bold">Terminal initialized</span>
-                </div>
-                <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tighter text-white font-sans uppercase">
-                        Console.<span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500">mainframe</span>
-                    </h1>
-                    <p class="text-sm font-mono text-zinc-500 tracking-wide">ID: <span
-                            class="text-zinc-300">RG3038998</span> <span class="text-zinc-700">|</span> Node: <span
-                            class="text-emerald-400 font-bold">Active Sync</span></p>
+        <div class="absolute bottom-10 left-1/4 w-[450px] h-[450px] bg-amber-500/[0.04] rounded-full blur-[150px] pointer-events-none">
+        </div>       
+        <div class="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-8 border-b-2 border-zinc-900 relative z-10">
+
+            <!-- Compact Cyber HUD Header & Dynamic Breadcrumb -->
+            <div class="space-y-2 py-0">                
+                <nav class="inline-flex items-center gap-2 px-3 py-1 bg-[#0A0A0B] border border-zinc-800/80 rounded-lg text-sm font-narmal tracking-wider shadow-inner">
+                    <span class="flex items-center gap-1.5 text-zinc-500 font-medium hover:text-zinc-300 transition-colors cursor-pointer">
+                        <i class="bi bi-cpu text-[#EAB308] text-xs"></i> My Account
+                    </span>
+                    <!-- <i class="bi bi-chevron-right text-[9px] text-zinc-600"></i>
+                    <span class="text-zinc-400  font-medium">System</span> -->
+                    <i class="bi bi-chevron-right text-xs text-[#EAB308]"></i>
+                    <span class="text-[#EAB308] font-semibold  tracking-widest" id="pageBreadcrumb">
+                        My Profile
+                    </span>
+                </nav>
+                
+                <div class="flex items-center gap-3">                    
+                    <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white font-sans uppercase leading-tight"
+                        id="mainPageTitle">
+                        Operator Profile
+                    </h2>                    
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#EAB308]/10 border border-[#EAB308]/30 text-[#EAB308] text-xs font-mono font-black rounded-md tracking-wider shadow-[0_0_10px_rgba(234,179,8,0.15)]">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#EAB308] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#EAB308]"></span>
+                        </span>
+                        Live Node
+                    </span>
                 </div>
             </div>
 
-            <div class="flex items-center gap-4 font-mono overflow-x-auto pb-2 lg:pb-0 scrollbar-none">
-                <div
-                    class="flex items-center gap-3 px-4 py-2 bg-zinc-950 border border-zinc-900 rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.03)] shrink-0">
-                    <div class="relative flex h-2 w-2">
-                        <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            <!-- Latency Diagnostics & Sync Stream -->
+            <div class="flex items-center gap-3.5 self-start md:self-auto font-mono">
+                <div class="px-5 py-2.5 bg-[#0A0A0B] border border-zinc-900 rounded-xl flex flex-col min-w-[160px] shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#EAB308] via-[#EAB308]/40 to-transparent">
                     </div>
-                    <div class="text-[11px]">
-                        <span class="text-zinc-500 uppercase block text-[9px] tracking-wider font-bold">SYSTEM
-                            TIME</span>
-                        <span id="liveTimestampClock" class="text-zinc-300 font-bold text-nowrap">2026-06-20 | 06:55
-                            PM</span>
-                    </div>
+                    <!-- Metadata font increased to text-[10px] -->
+                    <span class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">NETWORK LATENCY</span>
+                    <!-- Value font increased to text-sm -->
+                    <span class="text-sm font-black text-white mt-1.5 flex items-center gap-1.5">
+                        <i class="bi bi-wifi text-[#EAB308] text-sm animate-pulse"></i> 14ms <span
+                            class="text-[#EAB308] text-[11px] font-normal">[OPTIMAL]</span>
+                    </span>
                 </div>
 
-                <div  class="flex items-center gap-3 px-4 py-2 bg-zinc-950 border border-zinc-900 rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.03)] shrink-0">
-                    <div class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_6px_#22d3ee]"></div>
-                    <div class="text-[11px]">
-                        <span class="text-zinc-500 uppercase block text-[9px] tracking-wider font-bold">NETWORK
-                            PIPELINE</span>
-                        <span class="text-cyan-400 font-bold text-nowrap">14ms Optimal</span>
-                    </div>
-                </div>
-
+                <!-- Reload button upscaled to h-12/w-12 -->
                 <button onclick="window.location.reload()"
-                    class="h-9 w-9 bg-zinc-900 hover:bg-amber-500 border border-zinc-800 hover:border-amber-400 text-zinc-400 hover:text-zinc-950 rounded-xl flex items-center justify-center transition-all duration-300 shrink-0 focus:outline-none shadow-md">
-                    <svg class="w-4 h-4 animate-[spin_4s_linear_infinite]" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17.5"></path>
-                    </svg>
+                    class="h-12 w-12 bg-[#0A0A0B] border border-zinc-800 hover:border-[#EAB308] text-zinc-400 hover:text-black hover:bg-[#EAB308] rounded-xl flex items-center justify-center transition-all duration-300 shadow-md cursor-pointer"
+                    title="Sync Current Component Nodes">
+                    <i class="bi bi-arrow-clockwise text-xl"></i>
                 </button>
             </div>
         </div>
 
-        <!-- TIER 2: ASYMMETRICAL FLOATING MATRIX OVERVIEW -->
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
-            <div class="lg:col-span-7 bg-gradient-to-br from-[#0c0c12] to-[#08080c] rounded-3xl border border-amber-700/40 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group shadow-[0_15px_40px_rgba(245,158,11,0.04)]  min-w-0">
-                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-gradient-to-br from-amber-500/[0.02] to-cyan-500/[0.02] blur-3xl rounded-full pointer-events-none">
+        <!-- ================= MAIN CORE SPLIT GRID ================= -->
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-stretch">
+
+            <!-- LEFT PLATFORM: EDIT PROFILE CONSOLE (7 Columns) -->
+            <!-- Group Padding increased to p-8/10 -->
+            <div
+                class="lg:col-span-7 bg-[#0A0A0B] border border-zinc-900 p-8 sm:p-10 rounded-3xl relative overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-[#EAB308]/30 shadow-2xl">
+
+                <!-- Golden Fade Top Border Accent -->
+                <div
+                    class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#EAB308] via-[#EAB308]/40 to-transparent">
                 </div>
-                <div class="absolute top-0 left-0 w-[3px] h-1/2 bg-gradient-to-b from-amber-500 to-transparent"></div>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <span class="text-sm px-2.5 py-0.5 font-mono bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-md font-bold uppercase tracking-widest">Operator</span>
-                        <span class="text-sm font-mono text-zinc-500">Account Type: Verified Corporate Node</span>
+
+                <div class="w-full">
+                    <!-- Section Sub-Header -->
+                    <div
+                        class="border-b border-zinc-900 pb-5 mb-8 font-normal flex items-center justify-between relative">
+                        <div>
+                            <!-- Title font increased to text-base -->
+                            <h3
+                                class="text-base font-black text-white flex items-center gap-2.5 uppercase tracking-wider">
+                                <i class="bi bi-sliders text-[#EAB308]"></i> Edit Profile Console
+                            </h3>                            
+                            <p class="text-sm text-zinc-500 mt-1">Modify system ledger account parameters below
+                                securely.</p>
+                        </div>
+                        
+                        <span class="text-sm font-nomal text-[#EAB308] bg-[#EAB308]/10 px-2.5 py-1 rounded border border-[#EAB308]/20">MOD_CORE_02</span>
+                        <!-- Underline Gradient -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#EAB308]/40 via-[#EAB308]/10 to-transparent">
+                        </div>
                     </div>
-                    <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white font-sans truncate">
-                        Welcome Back, <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">Realgains
-                            LLC</span>
-                    </h2>
-                    <div class="pt-2">
-                        <div class="w-full sm:max-w-xl h-11 bg-zinc-950/80 border border-zinc-900 rounded-xl px-3 flex items-center justify-between overflow-hidden hover:border-amber-500/20 transition duration-300">
-                            <span  class="text-sm font-mono text-zinc-500 truncate mr-2">https://realgains.lc/referral.php?id=RG3038998</span>
-                            <button onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')"
-                                class="text-sm font-mono font-bold uppercase tracking-widest text-amber-400 hover:text-white transition-colors shrink-0 focus:outline-none">
-                                [ Copy ]
+
+                    <form onsubmit="event.preventDefault();" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">                            
+                            <div class="space-y-2.5">                                
+                                <label class="text-xs font-mono tracking-widest text-zinc-400 uppercase font-black block">First
+                                    Name <span class="text-rose-500">*</span></label>
+                                <div class="relative rounded-xl overflow-hidden p-[1px] bg-zinc-900 focus-within:bg-[#EAB308]">
+                                    <i class="bi bi-person absolute left-4 top-3 text-zinc-600 text-base"></i>                                    
+                                    <input type="text" value="Realgains" class="w-full h-12 pl-11 pr-4 bg-black border-0 text-sm text-white font-semibold rounded-xl focus:outline-none placeholder:text-zinc-700"
+                                        required>
+                                </div>
+                            </div>
+                            <!-- Last Name -->
+                            <div class="space-y-2.5">
+                                <label class="text-xs font-mono tracking-widest text-zinc-400 uppercase font-black block">Last
+                                    Name</label>
+                                <div class="relative rounded-xl overflow-hidden p-[1px] bg-zinc-900 focus-within:bg-[#EAB308]">
+                                    <i class="bi bi-person absolute left-4 top-3 text-zinc-600 text-base"></i>
+                                    <input type="text" value="LLC" class="w-full h-12 pl-11 pr-4 bg-black border-0 text-sm text-white font-semibold rounded-xl focus:outline-none placeholder:text-zinc-700">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="space-y-2.5">
+                            <label class="text-xs font-mono tracking-widest text-zinc-400 uppercase font-black block">Phone</label>
+                            <div class="relative rounded-xl overflow-hidden p-[1px] bg-zinc-900 focus-within:bg-[#EAB308]">
+                                <i class="bi bi-telephone absolute left-4 top-3 text-zinc-600 text-base"></i>
+                                <input type="text" placeholder="Enter contact track mapping context"
+                                    class="w-full h-12 pl-11 pr-4 bg-black border-0 text-sm text-white rounded-xl focus:outline-none font-mono placeholder:text-zinc-700">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="space-y-2.5">
+                            <label class="text-xs font-mono tracking-widest text-zinc-400 uppercase font-black block">Email
+                                ID Link <span class="text-rose-500">*</span></label>
+                            <div class="relative rounded-xl overflow-hidden p-[1px] bg-zinc-900 focus-within:bg-[#EAB308]">
+                                <i class="bi bi-envelope absolute left-4 top-3 text-zinc-600 text-base"></i>
+                                <input type="email" value="info@realgains.llc"
+                                    class="w-full h-12 pl-11 pr-4 bg-black border-0 text-sm text-white font-semibold rounded-xl focus:outline-none placeholder:text-zinc-700"
+                                    required>
+                            </div>
+                        </div>
+
+                        <!-- USDT Destination -->
+                        <div class="space-y-2.5">
+                            <label class="text-xs font-mono tracking-widest text-[#EAB308] font-black uppercase block">USDT.BEP20
+                                Address Network Target <span class="text-rose-500">*</span></label>
+                            <div class="relative rounded-xl overflow-hidden p-[1px] bg-zinc-900 focus-within:bg-[#EAB308]">
+                                <i class="bi bi-currency-bitcoin absolute left-4 top-3 text-[#EAB308] text-base"></i>
+                                <input type="text" value="0xBa27944738BcE91ADCe1449055e867Ab52DCaBec"
+                                    class="w-full h-12 pl-11 pr-4 bg-black border-0 text-sm text-[#EAB308] font-bold rounded-xl focus:outline-none font-mono select-all placeholder:text-zinc-700"
+                                    required>
+                            </div>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="space-y-2.5">
+                            <label class="text-xs font-mono tracking-widest text-zinc-400 uppercase font-black block">Country
+                                Node Base <span class="text-rose-500">*</span></label>
+                            <div
+                                class="relative rounded-xl overflow-hidden p-[1px] bg-zinc-900 focus-within:bg-[#EAB308]">
+                                <i class="bi bi-globe2 absolute left-4 top-3 text-zinc-600 text-base"></i>
+                                <select
+                                    class="w-full h-12 pl-11 pr-12 bg-black border-0 text-sm text-white font-bold rounded-xl focus:outline-none transition-all appearance-none cursor-pointer font-mono">
+                                    <option value="UK" selected>United Kingdom (UK Node)</option>
+                                    <option value="IN">India (IN Core Node)</option>
+                                    <option value="US">United States (US Core)</option>
+                                </select>
+                                <i
+                                    class="bi bi-chevron-down absolute right-5 top-4 text-xs text-zinc-500 pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="space-y-2.5">
+                            <label
+                                class="text-xs font-mono tracking-widest text-[#EAB308] font-black uppercase block">Operational
+                                Wallet Password <span class="text-rose-500">*</span></label>
+                            <div
+                                class="relative rounded-xl overflow-hidden p-[1px] bg-zinc-900 focus-within:bg-[#EAB308]">
+                                <i class="bi bi-key-fill absolute left-4 top-3 text-[#EAB308] text-base"></i>
+                                <input type="password" placeholder="••••••••"
+                                    class="w-full h-12 pl-11 pr-4 bg-black border-0 text-sm text-white rounded-xl focus:outline-none font-mono placeholder:text-zinc-700"
+                                    required>
+                            </div>
+                        </div>
+
+                        <!-- Submit Action Button -->
+                        <div class="pt-6 flex justify-start">
+                            <!-- Height increased to h-12, Text increased to text-sm -->
+                            <button type="submit"
+                                class="relative group/btn overflow-hidden h-12 px-10 bg-[#EAB308] text-black font-mono text-sm font-black rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none uppercase tracking-widest cursor-pointer shadow-[0_10px_30px_rgba(234,179,8,0.25)]">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-amber-400 via-yellow-300 to-[#EAB308] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0">
+                                </div>
+                                <span class="relative z-10 flex items-center gap-2 text-black font-black">
+                                    <i class="bi bi-shield-lock-fill text-base"></i> Update Profile Token
+                                </span>
                             </button>
                         </div>
-                    </div>
-                </div>
-
-                <div
-                    class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-zinc-900/60 font-mono text-center">
-                    <div class="space-y-0.5 text-left">
-                        <span class="text-xs text-zinc-500 font-bold uppercase tracking-widest block">Operator
-                            Handle</span>
-                        <span class="text-xs font-bold text-zinc-200 truncate block">@REALGAINS</span>
-                    </div>
-                    <div class="space-y-0.5 text-left pl-0 sm:pl-4 sm:border-l border-zinc-900">
-                        <span class="text-xs text-zinc-500 font-bold uppercase tracking-widest block">Sponsor
-                            Node</span>
-                        <span class="text-xs font-bold text-zinc-200 truncate block">COMPANY</span>
-                    </div>
-                    <div class="space-y-0.5 text-left pl-0 sm:pl-4 sm:border-l border-zinc-900">
-                        <span class="text-xs text-zinc-500 font-bold uppercase tracking-widest block">Registration
-                            Node</span>
-                        <span class="text-xs font-bold text-zinc-200 block">2026-06-13</span>
-                    </div>
-                    <div class="space-y-0.5 text-left pl-0 sm:pl-4 sm:border-l border-zinc-900">
-                        <span class="text-xs text-amber-500 font-bold uppercase tracking-widest block">Tier
-                            Standing</span>
-                        <span class="text-xs font-bold text-amber-400 block tracking-wide">🏆 AFFILIATE</span>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="lg:col-span-5 bg-gradient-to-br from-[#0c0c12] to-[#08080c] rounded-3xl border border-cyan-700/40 p-6 flex flex-col justify-between relative overflow-hidden group shadow-[0_15px_40px_rgba(34,211,238,0.04)]">
-                <div class="absolute bottom-0 right-0 w-[3px] h-1/2 bg-gradient-to-t from-cyan-400 to-transparent">
-                </div>
-                <div class="flex items-center justify-between w-full font-mono">
-                    <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ CAP PROTOCOL MULTIPLIER
-                        ]</span>
-                    <span class="text-sm font-bold text-cyan-400 bg-cyan-400/5 border border-cyan-400/20 px-2 py-0.5 rounded-md">5X Active</span>
-                </div>
-
-                <div class="my-6 space-y-3 font-mono">
-                    <div class="flex justify-between items-end">
-                        <div>
-                            <span class="text-xs text-zinc-500 uppercase tracking-widest font-bold block">Current Active
-                                Earning Stack</span>
-                            <h4 class="text-3xl font-black text-white tracking-tight mt-1">$5.00 <span class="text-xs text-zinc-600 font-normal">/ $15,000 Cap</span></h4>
-                        </div>
-                        <span class="text-xs font-bold text-cyan-400">0.03% Yielded</span>
-                    </div>
-
-                    <div
-                        class="w-full h-2.5 bg-zinc-950 rounded-lg p-[2px] border border-zinc-900 overflow-hidden relative">
-                        <div class="h-full bg-gradient-to-r from-amber-500 via-yellow-400 to-cyan-400 rounded-md shadow-[0_0_10px_rgba(34,211,238,0.3)] transition-all duration-500" style="width: 35%"></div>
-                        <div class="absolute inset-0 bg-[linear-gradient(to_right,transparent_50%,rgba(255,255,255,0.15)_50%)] bg-[size:6px_100%]">
-                        </div>
-                    </div>
-
-                    <div class="flex justify-between text-[10px] text-zinc-500 pt-1">
-                        <span>Staked Vol: $5,000.00</span>
-                        <span>Remaining Cap: $14,995.00</span>
-                    </div>
-                </div>
-
-                <div
-                    class="pt-3 border-t border-zinc-900/60 flex items-center justify-between font-mono text-[10px] text-zinc-500">
-                    <span>Ecosystem TVL: $4.86M</span>
-                    <span class="text-cyan-500/80 font-bold">Secure Escrow Node ✓</span>
+                    </form>
                 </div>
             </div>
 
-        </div>
-
-        <!-- TIER 3: GLOWING FOUR-QUADRANT WALLETS (COLOR MATCHED DROP SHADOWS) -->
-        <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-            <div class="bg-[#09090e] border border-amber-600/20 hover:border-amber-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(245,158,11,0.03)] hover:shadow-[0_15px_40px_rgba(245,158,11,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
-                <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-amber-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-amber-500/[0.06]">
-                </div>
-                <div class="flex items-center justify-between w-full font-mono">
-                    <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ CAPITAL STAKED ]</span>
-                    <span class="text-xs text-amber-500 font-bold">POOL_01</span>
-                </div>
-                <div class="mt-6">
-                    <h3 class="text-3xl font-bold font-mono tracking-tight text-white">$5,000.<span
-                            class="text-zinc-500 text-lg font-medium">00</span></h3>
-                    <p class="text-sm text-zinc-600 font-mono mt-1.5 flex items-center gap-1"><span
-                            class="w-1 h-1 rounded-full bg-amber-400"></span> Principal capital locked assets.</p>
-                </div>
-            </div>
-            <div class="bg-[#09090e] border border-emerald-600/20 hover:border-emerald-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(16,185,129,0.03)] hover:shadow-[0_15px_40px_rgba(16,185,129,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
-                <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-emerald-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-emerald-500/[0.06]">
-                </div>
-                <div class="flex items-center justify-between w-full font-mono">
-                    <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ TOTAL REVENUE ]</span>
-                    <span class="text-sm text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">+$5.00
-                        Live</span>
-                </div>
-                <div class="mt-6">
-                    <h3 class="text-3xl font-bold font-mono tracking-tight text-white">$5,000.<span
-                            class="text-zinc-500 text-lg font-medium">00</span></h3>
-                    <p class="text-sm text-zinc-600 font-mono mt-1.5 flex items-center gap-1"><span
-                            class="w-1 h-1 rounded-full bg-emerald-400"></span> Consolidated ecosystem gross income.</p>
-                </div>
-            </div>
-            <div class="bg-[#09090e] border border-cyan-600/20 hover:border-cyan-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(34,211,238,0.03)] hover:shadow-[0_15px_40px_rgba(34,211,238,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
-                <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-cyan-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-cyan-500/[0.06]">
-                </div>
-                <div class="flex items-center justify-between w-full font-mono">
-                    <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ ACTIVATION CORE ]</span>
-                    <span class="text-xs text-cyan-400 font-mono font-bold">RUNTIME</span>
-                </div>
-                <div class="mt-6">
-                    <h3 class="text-3xl font-bold font-mono tracking-tight text-white">$1.<span
-                            class="text-zinc-300 font-bold text-xl">0187</span></h3>
-                    <p class="text-sm text-zinc-600 font-mono mt-1.5 flex items-center gap-1"><span
-                            class="w-1 h-1 rounded-full bg-cyan-400"></span> Available system activation funds.</p>
-                </div>
-            </div>
-
-            <!-- Wallet Node 4: Liquid Available (Info Electric Purple Shadow) -->
-            <div class="bg-[#09090e] border border-purple-600/20 hover:border-purple-700/40 p-5 rounded-2xl shadow-[0_10px_30px_rgba(168,85,247,0.03)] hover:shadow-[0_15px_40px_rgba(168,85,247,0.08)] flex flex-col justify-between group transition-all duration-300 relative overflow-hidden">
-                <div class="absolute -right-6 -bottom-6 w-16 h-16 bg-purple-500/[0.02] blur-xl rounded-full transition-all duration-300 group-hover:bg-purple-500/[0.06]">
-                </div>
-                <div class="flex items-center justify-between w-full font-mono">
-                    <span class="text-sm text-zinc-500 font-bold uppercase tracking-widest">[ LIQUID AVAILABLE ]</span>
-                    <span
-                        class="text-sm text-purple-400 font-bold bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">WITHDRAWABLE</span>
-                </div>
-                <div class="mt-6">
-                    <h3 class="text-3xl font-bold font-mono tracking-tight text-amber-400">$5.<span
-                            class="text-amber-500/60 text-lg font-medium">0000</span></h3>
-                    <p class="text-sm text-zinc-600 font-mono mt-1.5 flex items-center gap-1"><span
-                            class="w-1 h-1 rounded-full bg-purple-400"></span> Unlocked net liquid income wallet.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- TIER 4: REWARDS PROMOS & MULTI-LAYERED SUB-CHANNELS GRID -->
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start w-full">
-
-            <!-- LEFT CONTROL BOARD (Col-7: Amber & Cyan Glow Elements) -->
-            <div class="lg:col-span-7 space-y-8 min-w-0">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-                    <!-- Challenge 1: Mahindra XUV700 (Amber Glow) -->
-                    <div
-                        class="bg-gradient-to-b from-[#0a0a0f] to-zinc-950 border border-amber-600/30 p-5 rounded-2xl shadow-[0_12px_30px_rgba(245,158,11,0.02)] hover:border-amber-500/20 hover:shadow-[0_15px_40px_rgba(245,158,11,0.06)] transition duration-300 relative overflow-hidden group">
-                        <div class="space-y-3">
-                            <span
-                                class="px-2 py-0.5 border border-amber-500/30 bg-amber-500/5 text-amber-400 font-mono text-xs font-bold rounded uppercase tracking-wider block w-max">100-Day
-                                Fast Track</span>
-                            <h4
-                                class="text-base font-bold text-white uppercase tracking-tight group-hover:text-amber-400 transition-colors">
-                                Mahindra XUV700 Event</h4>
-                            <div
-                                class="pt-2 font-mono text-sm text-zinc-400 space-y-1.5 bg-zinc-950/60 p-3.5 rounded-xl border border-zinc-900/60 shadow-inner">
-                                <div class="flex items-center justify-between"><span>Vector Leg 1 :</span> <span
-                                        class="text-white font-bold">$0</span></div>
-                                <div class="flex items-center justify-between"><span>Vector Leg 2 :</span> <span
-                                        class="text-white font-bold">$0</span></div>
-                                <div class="flex items-center justify-between"><span>Vector Leg 3 :</span> <span
-                                        class="text-white font-bold">$0</span></div>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-zinc-900/60 font-mono">
-                            <span class="text-sm text-zinc-500">[ EVENT TARGET BOX ]</span>
-                            <img src="assets/images/mahindra_XUV700.png" alt="XUV700 Asset"
-                                class="h-10 w-auto object-contain filter drop-shadow-[0_4px_10px_rgba(245,158,11,0.1)] group-hover:scale-105 transition duration-300" />
-                        </div>
-                    </div>
-
-                    <!-- Challenge 2: Profit Sharing 5X (Cyan Glow) -->
-                    <div
-                        class="bg-gradient-to-b from-[#0a0a0f] to-zinc-950 border border-cyan-600/30 p-5 rounded-2xl shadow-[0_12px_30px_rgba(34,211,238,0.02)] hover:border-cyan-500/20 hover:shadow-[0_15px_40px_rgba(34,211,238,0.06)] transition duration-300 relative overflow-hidden group flex flex-col justify-between">
-                        <div class="space-y-3">
-                            <span
-                                class="px-2 py-0.5 border border-cyan-500/30 bg-cyan-400/5 text-cyan-400 font-mono text-xs font-bold rounded uppercase tracking-wider block w-max">Process
-                                Accelerator</span>
-                            <h4
-                                class="text-base font-bold text-white uppercase tracking-tight group-hover:text-cyan-400 transition-colors">
-                                Profit Sharing 5X Loop</h4>
-                            <p class="text-sm text-zinc-500 font-mono font-medium leading-relaxed">Require 5 Direct
-                                accounts inside 15-day parameter timeline windows.</p>
-                        </div>
-                        <div
-                            class="flex items-center justify-between mt-4 pt-3 border-t border-zinc-900/60 font-mono text-sm">
-                            <div class="flex gap-3 text-zinc-400">
-                                <span>Req: <strong class="text-amber-500">5</strong></span>
-                                <span>Rem: <strong class="text-rose-500">5</strong></span>
-                            </div>
-                            <span
-                                class="text-cyan-400 font-bold bg-cyan-400/10 px-2 py-0.5 border border-cyan-500/20 rounded">8
-                                Days Left</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Catalyst Multi-Stream Matrix Channel Boxes -->
-                <div class="bg-[#09090e] border border-zinc-400/40 rounded-3xl p-5 sm:p-6 space-y-4 shadow-xl">
-                    <div class="flex items-center justify-between w-full font-mono border-b border-zinc-900 pb-3">
-                        <span class="text-sm text-zinc-500 font-bold uppercase tracking-wider">// Revenue Streams
-                            Verification</span>
-                        <span class="text-sm text-zinc-600">Channels: 06 Registered</span>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono">
-                        <!-- Amber Glow Channel -->
-                        <div
-                            class="p-4 bg-zinc-950 border border-zinc-900 rounded-xl flex items-center justify-between shadow-inner hover:border-amber-500/20 hover:shadow-[0_0_20px_rgba(245,158,11,0.04)] transition duration-300">
-                            <div class="space-y-1">
-                                <span class="text-sm text-zinc-500 uppercase font-bold tracking-wider block">[ DIRECT
-                                    DISCHARGE ]</span>
-                                <span class="text-base font-bold text-white tracking-tight">$5.00</span>
-                            </div>
-                            <span
-                                class="text-sm font-sans font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded uppercase tracking-wider animate-pulse">+Live</span>
-                        </div>
-
-                        <div
-                            class="p-4 bg-zinc-950 border border-zinc-900/80 rounded-xl flex items-center justify-between shadow-inner opacity-60">
-                            <div class="space-y-1">
-                                <span class="text-sm text-zinc-500 uppercase font-bold tracking-wider block">[ LEVEL
-                                    SHARING ]</span>
-                                <span class="text-base font-bold text-zinc-500 tracking-tight">$0.00</span>
-                            </div>
-                            <span class="text-sm text-zinc-700 font-sans">[ NULL ]</span>
-                        </div>
-
-                        <div
-                            class="p-4 bg-zinc-950 border border-zinc-900/80 rounded-xl flex items-center justify-between shadow-inner opacity-60">
-                            <div class="space-y-1">
-                                <span class="text-sm text-zinc-500 uppercase font-bold tracking-wider block">[ WEEKLY
-                                    SALARY NODE ]</span>
-                                <span class="text-base font-bold text-zinc-500 tracking-tight">$0.00</span>
-                            </div>
-                            <span class="text-sm text-zinc-700 font-sans">[ NULL ]</span>
-                        </div>
-
-                        <div
-                            class="p-4 bg-zinc-950 border border-zinc-900/80 rounded-xl flex items-center justify-between shadow-inner opacity-60">
-                            <div class="space-y-1">
-                                <span class="text-sm text-zinc-500 uppercase font-bold tracking-wider block">[ DAILY
-                                    YIELD STREAM ]</span>
-                                <span class="text-base font-bold text-zinc-500 tracking-tight">$0.00</span>
-                            </div>
-                            <span class="text-sm text-zinc-700 font-sans">[ NULL ]</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- RIGHT CONTROL BOARD (Col-5: Mixed Accent Tree Topology) -->
-            <div class="lg:col-span-5 space-y-6 w-full min-w-0">
-
-                <!-- Realtime Metrics Side Row Ledger (Amber Border Highlight) -->
-                <div
-                    class="bg-gradient-to-b from-[#0c0c12] to-[#08080c] border border-zinc-500/40 rounded-3xl p-5 sm:p-6 space-y-3.5 font-mono shadow-xl">
-                    <span
-                        class="text-sm text-zinc-500 font-bold uppercase tracking-widest block pb-2 border-b border-zinc-900">//
-                        Network Node Logs</span>
-
-                    <div class="flex items-center justify-between text-sm py-1.5 border-b border-zinc-900/40">
-                        <span class="text-zinc-400">Ecosystem Profit Matrix :</span>
-                        <span
-                            class="text-xs font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded">Level
-                            1</span>
-                    </div>
-                    <div class="flex items-center justify-between text-m py-1.5 border-b border-zinc-900/40">
-                        <span class="text-zinc-400">Total Structural Team Vol :</span>
-                        <span class="text-zinc-200 font-bold">$100</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm py-1.5 border-b border-zinc-900/40">
-                        <span class="text-zinc-400">Primary Strong Leg Volume :</span>
-                        <span class="text-zinc-200 font-bold">$100</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm py-1.5">
-                        <span class="text-zinc-400">Secondary Side Leg Volume :</span>
-                        <span class="text-zinc-500 font-medium">$0</span>
-                    </div>
-                </div>
-
-                <!-- Vertical Tech Flow Tree (Cyan and Amber Pin Drops) -->
-                <div
-                    class="bg-gradient-to-br from-[#0c0c12] to-[#08080c] border border-zinc-500/40 rounded-3xl p-5 sm:p-6 space-y-4 font-mono shadow-xl">
-                    <span
-                        class="text-sm text-zinc-500 font-bold uppercase tracking-widest block border-b border-zinc-900 pb-2">//
-                        Associative Topology</span>
-
-                    <div class="space-y-4 relative pl-4 border-l border-zinc-900/80 ml-2">
-                        <div class="relative">
-                            <span
-                                class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-cyan-400 border-2 border-zinc-950 shadow-[0_0_8px_#22d3ee]"></span>
-                            <div class="space-y-0.5">
-                                <span class="text-[9px] text-zinc-500 uppercase font-bold">[ REGISTERED DOWNLINE MEMBER
-                                    ]</span>
-                                <p class="text-xs font-bold text-white">Direct Registry Matrix Block <span
-                                        class="text-cyan-400 text-[11px] font-bold ml-1">1 Account</span></p>
-                            </div>
-                        </div>
-
-                        <div class="relative">
-                            <span
-                                class="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-amber-400 border-2 border-zinc-950 shadow-[0_0_8px_#f59e0b]"></span>
-                            <div class="space-y-0.5">
-                                <span class="text-[9px] text-zinc-500 uppercase font-bold">[ SYSTEM STRUCTURE NODE
-                                    ]</span>
-                                <p class="text-xs font-bold text-white">Downline Structure Sync Status <span
-                                        class="text-amber-400 text-[11px] font-bold ml-1">1 Active Node</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <!-- Full Master Modular Identity & Promo System -->
-        <div
-            class="w-full bg-black text-white font-sans antialiased p-8 rounded-3xl border border-zinc-900 relative overflow-hidden space-y-8">
-
-            <!-- Subtle Multi-Color Digital Background Aura Lines -->
+            <!-- RIGHT PLATFORM: SYSTEM PROFILE DATA MATRIX (5 Columns) -->
             <div
-                class="absolute top-0 right-1/4 w-96 h-96 bg-[#EAB308]/5 rounded-full blur-[140px] pointer-events-none">
-            </div>
-            <div
-                class="absolute bottom-0 left-1/4 w-96 h-96 bg-cyan-500/[0.03] rounded-full blur-[140px] pointer-events-none">
-            </div>
+                class="lg:col-span-5 bg-[#0A0A0B] border border-zinc-900 p-8 sm:p-10 rounded-3xl relative overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-[#EAB308]/30 shadow-2xl h-max">
 
-            <!-- ================= TOP BLOCK: HIGH-CONTRAST HEADER CONTROLLER ================= -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center border-b border-zinc-900 pb-8">
-
-                <!-- Large Text Identity (7 Columns) -->
-                <div class="lg:col-span-7 space-y-2">
-                    <div class="flex items-center gap-3">
-                        <span
-                            class="text-[10px] font-mono font-black tracking-[0.3em] text-[#EAB308] bg-[#EAB308]/10 px-3 py-1 rounded">
-                            SYSTEM_INIT // OK
-                        </span>
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">
-                        Welcome back, <br>
-                        <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-400 to-[#EAB308]">Realgains
-                            LLC</span>
-                    </h2>
-                </div>
-
-                <!-- Live Terminal Status Grid (5 Columns) -->
+                <!-- Golden Fade Top Border Accent -->
                 <div
-                    class="lg:col-span-5 bg-[#0A0A0B] border border-zinc-900 p-4 rounded-xl font-mono text-left space-y-1.5 self-center lg:justify-self-end w-full max-w-md">
-                    <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block">System Live
-                        Stream</span>
-                    <div class="text-sm font-black text-white flex items-center gap-2">
-                        <span class="text-[#EAB308]">Saturday, 20 June 2026</span>
-                        <span class="text-zinc-700">|</span>
-                        <span class="text-zinc-400">06:55:42 pm</span>
-                    </div>
+                    class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#EAB308] via-[#EAB308]/40 to-transparent">
                 </div>
-            </div>
-
-            <!-- ================= MIDDLE BLOCK: ASYMMETRIC USER DATA NODES ================= -->
-            <!-- 4 Column Linear Node architecture that leaves zero blank space -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono">
-
-                <!-- User Node -->
+                <!-- Back Watermark Graphic -->
                 <div
-                    class="bg-[#0A0A0B] border-l-4 border-l-cyan-500 border-y border-r border-zinc-900 p-5 rounded-r-xl group hover:bg-[#0D0D0F] transition duration-200">
-                    <span
-                        class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider block mb-1">Username</span>
-                    <span
-                        class="text-lg font-black text-white tracking-wide truncate block group-hover:text-cyan-400 transition-colors">
-                        REALGAINS
-                    </span>
-                </div>
+                    class="absolute -right-6 -bottom-8 text-[150px] font-black text-zinc-900/20 font-mono select-none pointer-events-none">
+                    SYS</div>
 
-                <!-- ID Node -->
-                <div
-                    class="bg-[#0A0A0B] border-l-4 border-l-[#EAB308] border-y border-r border-zinc-900 p-5 rounded-r-xl group hover:bg-[#0D0D0F] transition duration-200">
-                    <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider block mb-1">System
-                        ID</span>
-                    <span class="text-lg font-black text-[#EAB308] tracking-wide block">
-                        RG3038998
-                    </span>
-                </div>
-
-                <!-- Sponsor Node -->
-                <div
-                    class="bg-[#0A0A0B] border-l-4 border-l-purple-500 border-y border-r border-zinc-900 p-5 rounded-r-xl group hover:bg-[#0D0D0F] transition duration-200">
-                    <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider block mb-1">Sponsor</span>
-                    <span
-                        class="text-lg font-black text-white tracking-wide truncate block group-hover:text-purple-400 transition-colors">
-                        COMPANY
-                    </span>
-                </div>
-
-                <!-- Activation Node -->
-                <div
-                    class="bg-[#0A0A0B] border-l-4 border-l-emerald-500 border-y border-r border-zinc-900 p-5 rounded-r-xl group hover:bg-[#0D0D0F] transition duration-200">
-                    <span
-                        class="text-[10px] font-bold text-zinc-500 block uppercase tracking-wider mb-1">Activation</span>
-                    <span
-                        class="text-lg font-black text-zinc-300 tracking-wide block group-hover:text-emerald-400 transition-colors">
-                        2026-06-13
-                    </span>
-                </div>
-            </div>
-
-            <!-- ================= LOWER BLOCK: CORE ACTION STRIPS ================= -->
-            <div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-center">
-
-                <!-- Referral Engine Link Dispenser (8 Columns) -->
-                <div
-                    class="xl:col-span-8 h-16 bg-[#0A0A0B] border border-zinc-900 rounded-2xl px-5 flex items-center justify-between overflow-hidden group hover:border-zinc-700 transition duration-300">
-                    <div class="flex items-center gap-3 overflow-hidden min-w-0 w-[72%]">
-                        <i class="bi bi-link-45deg text-[#EAB308] text-2xl shrink-0"></i>
-                        <span
-                            class="text-sm font-mono text-zinc-400 truncate tracking-wide selection:bg-[#EAB308] selection:text-black">
-                            https://realgains.lc/referral.php?id=RG3038998
-                        </span>
-                    </div>
-                    <button onclick="navigator.clipboard.writeText('https://realgains.lc/referral.php?id=RG3038998')"
-                        class="h-11 px-5 bg-black border border-zinc-800 text-white hover:bg-[#EAB308] hover:text-black hover:border-[#EAB308] text-xs font-mono font-black rounded-xl transition-all duration-200 shrink-0 flex items-center gap-2 cursor-pointer shadow-md">
-                        <i class="bi bi-copy"></i> COPY NODE LINK
-                    </button>
-                </div>
-
-                <!-- Rank Status Matrix Tag (4 Columns) -->
-                <div
-                    class="xl:col-span-4 h-16 bg-gradient-to-r from-[#0C0C0E] to-[#0A0A0B] border border-zinc-900 rounded-2xl px-5 flex items-center justify-between font-mono">
-                    <span class="text-xs font-bold text-zinc-500 uppercase tracking-wider">Rank Status</span>
-                    <span
-                        class="text-sm font-black bg-gradient-to-r from-[#CA8A04] to-[#EAB308] text-black px-4 py-1.5 rounded-xl shadow-lg uppercase tracking-wide">
-                        AFFILIATE
-                    </span>
-                </div>
-            </div>
-
-            <!-- ================= PROMO BLOCK: CHALLENGES & BOOSTERS MATRIX ================= -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4 border-t border-zinc-900">
-
-                <!-- MODULE 01: XUV Fast Track Challenge -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-stretch gap-6 relative overflow-hidden group hover:border-[#EAB308]/40 transition duration-300">
-                    <div class="space-y-4 z-10 w-full sm:w-[62%] flex flex-col justify-between">
-                        <div class="space-y-2">
-                            <span
-                                class="px-3 py-1 bg-[#EAB308] text-black font-mono text-[10px] font-black rounded-md uppercase tracking-widest block w-max shadow-md">
-                                100-DAY FAST TRACK
-                            </span>
-                            <h3
-                                class="text-xl font-black tracking-tight text-white uppercase group-hover:text-[#EAB308] transition-colors leading-tight">
-                                Win a XUV 700 Complete
-                            </h3>
-                        </div>
-
-                        <!-- Leg Matrix Data Rows -->
-                        <div
-                            class="font-mono text-xs text-zinc-400 space-y-2 bg-black border border-zinc-900/80 p-4 rounded-xl font-bold w-full shadow-inner">
-                            <p class="flex items-center justify-between border-b border-zinc-950 pb-1">
-                                <span>Strong Leg 1 :</span> <span class="text-white font-black">$0</span>
-                            </p>
-                            <p class="flex items-center justify-between border-b border-zinc-950 pb-1">
-                                <span>Strong Leg 2 :</span> <span class="text-white font-black">$0</span>
-                            </p>
-                            <p class="flex items-center justify-between">
-                                <span>Strong Leg 3 :</span> <span class="text-white font-black">$0</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- XUV Image Engine -->
-                    <div
-                        class="w-full sm:w-44 bg-black border border-zinc-900 rounded-xl p-4 flex flex-col items-center justify-center relative shrink-0 min-h-[150px]">
-                        <img src="assets/images/mahindra_XUV700.png" alt="Mahindra XUV700"
-                            class="w-full h-20 object-contain z-10 drop-shadow-[0_10px_15px_rgba(234,179,8,0.2)] transform group-hover:scale-105 transition-transform duration-300">
-                        <span
-                            class="text-[9px] font-mono tracking-widest font-black text-[#EAB308] uppercase mt-3 bg-[#EAB308]/10 px-2 py-0.5 rounded border border-[#EAB308]/20">
-                            XUV CHALLENGE
-                        </span>
-                    </div>
-                </div>
-
-                <!-- MODULE 02: Profit Sharing Booster -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-stretch gap-6 relative overflow-hidden group hover:border-[#EAB308]/40 transition duration-300">
-                    <div class="space-y-4 z-10 w-full sm:w-[62%] flex flex-col justify-between">
-                        <div class="space-y-2">
-                            <span
-                                class="px-3 py-1 bg-[#EAB308]/10 border border-[#EAB308]/30 text-[#EAB308] font-mono text-[10px] font-black rounded-md uppercase tracking-widest block w-max">
-                                Booster Process Active
-                            </span>
-                            <h3
-                                class="text-xl font-black tracking-tight text-white uppercase group-hover:text-[#EAB308] transition-colors leading-tight">
-                                PROFIT SHARING 5X
-                            </h3>
-                            <p class="text-xs text-zinc-400 leading-normal font-sans font-medium">
-                                5 Direct within 15 days (With Same or Above Package)
-                            </p>
-                        </div>
-
-                        <!-- Metrics Count Box -->
-                        <div
-                            class="font-mono text-xs text-zinc-300 flex items-center justify-between bg-black border border-zinc-900 px-4 py-3 rounded-xl w-full shadow-inner font-bold">
-                            <div class="flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                                <span>Required: <strong class="text-[#EAB308] font-black text-sm">5</strong></span>
-                            </div>
-                            <div class="w-px h-4 bg-zinc-900"></div>
-                            <div class="flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
-                                <span>Remaining: <strong class="text-rose-500 font-black text-sm">5</strong></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Timer Module -->
-                    <div
-                        class="w-full sm:w-44 bg-gradient-to-b from-[#141416] to-black border-2 border-[#EAB308] rounded-xl flex flex-col items-center justify-center text-center p-4 shadow-lg shadow-[#EAB308]/5 shrink-0 min-h-[150px]">
-                        <span
-                            class="text-5xl font-black text-[#EAB308] tracking-tighter font-mono animate-pulse">8</span>
-                        <span
-                            class="text-[10px] text-zinc-400 uppercase tracking-widest font-black font-mono mt-2 bg-black/60 px-3 py-0.5 rounded border border-zinc-900">
-                            Days Left
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- Challenges & Rewards Promos Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 text-white bg-black antialiased">
-
-            <!-- MODULE 01: XUV Fast Track Challenge -->
-            <div
-                class="bg-[#0D0D0F] border-2 border-amber-600/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row justify-between items-stretch gap-6 relative overflow-hidden group hover:border-[#EAB308]/60 transition-all duration-300 shadow-[0_20px_40px_rgba(234,179,8,0.03)]">
-                <!-- Abstract Tech Watermark Grid inside the box -->
-                <div
-                    class="absolute -right-6 -bottom-8 text-8xl font-black text-[#EAB308]/[0.02] font-mono select-none pointer-events-none group-hover:text-[#EAB308]/[0.04] transition duration-300">
-                    WIN</div>
-
-                <!-- Left Data Column -->
-                <div class="space-y-4 z-10 w-full md:w-[62%] flex flex-col justify-between">
-                    <div class="space-y-2.5">
-                        <span
-                            class="px-3 py-1 bg-[#EAB308] text-black font-mono text-xs font-black rounded-lg uppercase tracking-widest block w-max shadow-md">
-                            100-DAY FAST TRACK
-                        </span>
-                        <h3
-                            class="text-xl sm:text-2xl font-black tracking-tight text-white uppercase group-hover:text-[#EAB308] transition-colors leading-tight">
-                            Win a XUV 700 Complete
+                <div>
+                    <!-- Section Sub-Header -->
+                    <div class="border-b border-zinc-900 pb-5 mb-8 font-mono relative">
+                        <h3 class="text-base font-black text-white flex items-center gap-2.5 uppercase tracking-wider">
+                            <i class="bi bi-person-vcard-fill text-[#EAB308]"></i> System Profile Data
                         </h3>
-                    </div>
-
-                    <!-- Leg Track Status Interface -->
-                    <div
-                        class="font-mono text-xs sm:text-sm text-zinc-400 space-y-2 bg-black border border-gray-900 p-4 rounded-xl font-bold w-full shadow-inner">
-                        <p class="flex items-center justify-between border-b border-gray-950 pb-1">
-                            <span>Strong Leg 1 :</span>
-                            <span class="text-white font-black text-sm">$0</span>
-                        </p>
-                        <p class="flex items-center justify-between border-b border-gray-950 pb-1">
-                            <span>Strong Leg 2 :</span>
-                            <span class="text-white font-black text-sm">$0</span>
-                        </p>
-                        <p class="flex items-center justify-between">
-                            <span>Strong Leg 3 :</span>
-                            <span class="text-white font-black text-sm">$0</span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Right Visual Display Column -->
-                <div
-                    class="w-full md:w-48 flex flex-col items-center justify-center relative shrink-0 bg-black/40 border border-gray-900 rounded-xl p-4 min-h-[160px]">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-[#EAB308]/5 to-transparent rounded-xl pointer-events-none">
-                    </div>
-
-                    <img src="assets/images/mahindra_XUV700.png" alt="Mahindra XUV700"
-                        class="w-full h-24 object-contain z-10 drop-shadow-[0_10px_20px_rgba(234,179,8,0.25)] transform group-hover:scale-105 transition-transform duration-300">
-
-                    <span
-                        class="text-[10px] font-mono tracking-widest font-black text-[#EAB308] uppercase mt-4 relative z-10 bg-[#EAB308]/10 px-2.5 py-0.5 rounded border border-[#EAB308]/20">
-                        XUV CHALLENGE
-                    </span>
-                </div>
-            </div>
-
-            <!-- MODULE 02: Profit Sharing Booster -->
-            <div
-                class="bg-[#0D0D0F] border-2 border-amber-600/30 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row justify-between items-stretch gap-6 relative overflow-hidden group hover:border-[#EAB308]/60 transition-all duration-300 shadow-[0_20px_40px_rgba(234,179,8,0.03)]">
-                <div
-                    class="absolute -right-6 -bottom-8 text-8xl font-black text-[#EAB308]/[0.02] font-mono select-none pointer-events-none group-hover:text-[#EAB308]/[0.04] transition duration-300">
-                    5X</div>
-
-                <!-- Left Data Column -->
-                <div class="space-y-4 z-10 w-full md:w-[62%] flex flex-col justify-between">
-                    <div class="space-y-2.5">
-                        <span
-                            class="px-3 py-1 bg-[#EAB308]/10 border border-[#EAB308]/30 text-[#EAB308] font-mono text-xs font-black rounded-lg uppercase tracking-widest block w-max">
-                            Booster Process Active
-                        </span>
-                        <h3
-                            class="text-xl sm:text-2xl font-black tracking-tight text-white uppercase group-hover:text-[#EAB308] transition-colors leading-tight">
-                            PROFIT SHARING 5X
-                        </h3>
-                        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed font-sans font-medium max-w-sm">
-                            5 Direct within 15 days (With Same or Above Package)
-                        </p>
-                    </div>
-
-                    <!-- Real-Time Metrics Count Box -->
-                    <div
-                        class="font-mono text-xs sm:text-sm text-zinc-300 flex items-center justify-between bg-black border border-gray-900 px-4 py-3 rounded-xl w-full shadow-inner font-bold">
-                        <div class="flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                            <span>Required: <strong
-                                    class="text-[#EAB308] font-black text-sm sm:text-base">5</strong></span>
-                        </div>
-                        <div class="w-px h-4 bg-gray-900"></div>
-                        <div class="flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
-                            <span>Remaining: <strong
-                                    class="text-rose-500 font-black text-sm sm:text-base">5</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Visual Timer Clock Column -->
-                <div
-                    class="w-full md:w-48 bg-gradient-to-b from-[#16161A] to-black border-2 border-[#EAB308] rounded-xl flex flex-col items-center justify-center text-center p-4 shadow-lg shadow-[#EAB308]/5 shrink-0 min-h-[160px]">
-                    <span
-                        class="text-5xl font-black text-[#EAB308] tracking-tighter font-mono drop-shadow-[0_0_10px_rgba(234,179,8,0.3)] animate-pulse">8</span>
-                    <span
-                        class="text-[11px] text-zinc-300 uppercase tracking-widest font-black font-mono mt-2 bg-black/60 px-3 py-1 rounded-lg border border-gray-900">
-                        Days Left
-                    </span>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="relative z-10 w-full antialiased text-white bg-black px-2 py-6">
-            <div
-                class="bg-[#0A0A0B] rounded-3xl border border-zinc-800/80 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full relative">
-                <div
-                    class="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-amber-500 via-emerald-500 to-purple-500">
-                </div>
-                <div
-                    class="p-8 bg-[#0D0D0F] border-b border-zinc-800/60 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                    <div class="space-y-1">
-                        <h3 class="text-xl font-bold text-white flex items-center gap-3 tracking-wider">
-                            <span class="flex h-3 w-3 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#EAB308] opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#EAB308]"></span>
-                            </span>
-                            Network Ranks & Rewards Ledger
-                        </h3>
-                        <p class="text-sm text-zinc-400 font-medium">Algorithmic tier structural mapping nodes.
-                            Real-time updates active.</p>
-                    </div>
-                    <span
-                        class="px-4 py-2 bg-semibold border border-zinc-800 text-emerald-400 text-sm font-semibold rounded-xl tracking-widest shadow-inner shrink-0 self-start md:self-auto">
-                        7 Node Matrices Registered
-                    </span>
-                </div>
-                <div class="overflow-x-auto w-full">
-                    <table
-                        class="w-full text-left border-collapse min-w-[1100px] text-base font-mono whitespace-nowrap border-b border-zinc-800">
-                        <thead>
-                            <tr class="bg-[#0D0D0F] text-sm font-sans text-zinc-500 font-bold border-b border-zinc-700">
-                                <th class="py-3 px-4 text-center w-24 border-r border-zinc-800">S.No</th>
-                                <th class="py-3 px-4 min-w-[200px] border-r border-zinc-800">Rank Architecture</th>
-                                <th class="py-3 px-4 min-w-[220px] border-r border-zinc-800">Total Matching Matrix</th>
-                                <th class="py-3 px-4 min-w-[160px] border-r border-zinc-800">Strong Team (50%)</th>
-                                <th class="py-3 px-4 min-w-[160px] border-r border-zinc-800">Other Team (50%)</th>
-                                <th class="py-3 px-4 min-w-[160px] border-r border-zinc-800">Instant Reward</th>
-                                <th class="py-3 px-4 min-w-[160px] border-r border-zinc-800">Fix Salary Link</th>
-                                <th class="py-3 px-4 text-center w-48">System Node Status</th>
-                            </tr>
-                        </thead>
-
-                        <!-- Table Body System Data -->
-                        <tbody class="text-zinc-300">
-
-                            <!-- ROW 1: Executive Node -->
-                            <tr
-                                class="hover:bg-amber-500/[0.02] border-b border-zinc-800 transition duration-150 group">
-                                <td
-                                    class="py-3 px-4 text-center font-black text-zinc-600 group-hover:text-[#EAB308] text-lg border-r border-zinc-800">
-                                    01</td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-9 h-9 rounded-lg bg-amber-500 text-white flex items-center justify-center shadow-lg text-lg shrink-0">
-                                            <i class="bi bi-award-fill"></i>
-                                        </div>
-                                        <span
-                                            class="text-lg font-black font-sans text-white tracking-wide">Executive</span>
-                                    </div>
-                                </td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <div class="flex flex-col space-y-1.5 max-w-[180px]">
-                                        <span class="text-white font-black font-mono text-base">$20,000</span>
-                                        <div
-                                            class="w-full h-1.5 bg-[#0D0D0F] rounded-full overflow-hidden p-[0.5px] border border-gray-800">
-                                            <div
-                                                class="h-full w-[85%] bg-amber-500 rounded-full shadow-[0_0_8px_rgba(234,179,8,0.4)]">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td
-                                    class="py-3 px-4 font-bold text-zinc-100 font-mono text-base border-r border-zinc-800">
-                                    $10,000</td>
-                                <td
-                                    class="py-3 px-4 font-bold text-zinc-100 font-mono text-base border-r border-zinc-800">
-                                    $10,000</td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <span
-                                        class="inline-block px-3 py-1 bg-amber-600 border border-amber-600 text-white font-black text-sm rounded-lg shadow-md font-mono">
-                                        $300
-                                    </span>
-                                </td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <span
-                                        class="inline-block px-3 py-1 bg-emerald-600 text-white font-black text-sm rounded-lg shadow-md font-mono">
-                                        $50 <span class="text-xs font-normal font-sans text-emerald-200">/ Mo</span>
-                                    </span>
-                                </td>
-                                <td class="py-3 px-4 text-center">
-                                    <span
-                                        class="inline-flex items-center gap-2 px-3 py-1 bg-[#0D0D0F] text-[#EAB308] border border-[#EAB308]/20 text-xs font-black rounded-full uppercase tracking-wider animate-pulse">
-                                        <span class="w-1.5 h-1.5 bg-[#EAB308] rounded-full"></span> Pending Node
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- ROW 2: Senior Node -->
-                            <tr class="hover:bg-cyan-500/[0.02] border-b border-zinc-800 transition duration-150 group">
-                                <td
-                                    class="py-3 px-4 text-center font-black text-zinc-600 group-hover:text-cyan-400 text-lg border-r border-zinc-800">
-                                    02</td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-9 h-9 rounded-lg bg-cyan-500 text-white flex items-center justify-center shadow-lg text-lg shrink-0">
-                                            <i class="bi bi-gem"></i>
-                                        </div>
-                                        <span
-                                            class="text-lg font-black font-sans text-white tracking-wide">Senior</span>
-                                    </div>
-                                </td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <div class="flex flex-col space-y-1.5 max-w-[180px]">
-                                        <span class="text-white font-black font-mono text-base">$60,000</span>
-                                        <div
-                                            class="w-full h-1.5 bg-[#0D0D0F] rounded-full overflow-hidden p-[0.5px] border border-gray-800">
-                                            <div
-                                                class="h-full w-[60%] bg-cyan-500 rounded-full shadow-[0_0_8px_rgba(6,182,212,0.4)]">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td
-                                    class="py-3 px-4 font-bold text-zinc-100 font-mono text-base border-r border-zinc-800">
-                                    $30,000</td>
-                                <td
-                                    class="py-3 px-4 font-bold text-zinc-100 font-mono text-base border-r border-zinc-800">
-                                    $30,000</td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <span
-                                        class="inline-block px-3 py-1 bg-cyan-600 border border-cyan-600 text-white font-black text-sm rounded-lg shadow-md font-mono">
-                                        $750
-                                    </span>
-                                </td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <span
-                                        class="inline-block px-3 py-1 bg-emerald-600 text-white font-black text-sm rounded-lg shadow-md font-mono">
-                                        $100 <span class="text-xs font-normal font-sans text-emerald-200">/ Mo</span>
-                                    </span>
-                                </td>
-                                <td class="py-3 px-4 text-center">
-                                    <span
-                                        class="inline-flex items-center gap-2 px-3 py-1 bg-[#0D0D0F] text-[#EAB308] border border-[#EAB308]/20 text-xs font-black rounded-full uppercase tracking-wider animate-pulse">
-                                        <span class="w-1.5 h-1.5 bg-[#EAB308] rounded-full"></span> Pending Node
-                                    </span>
-                                </td>
-                            </tr>
-
-                            <!-- ROW 3: Manager Node -->
-                            <tr class="hover:bg-purple-500/[0.02] transition duration-150 group">
-                                <td
-                                    class="py-3 px-4 text-center font-black text-zinc-600 group-hover:text-purple-400 text-lg border-r border-zinc-800">
-                                    03</td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <div class="flex items-center gap-3">
-                                        <div
-                                            class="w-9 h-9 rounded-lg bg-purple-500 text-white flex items-center justify-center shadow-lg text-lg shrink-0">
-                                            <i class="bi bi-diagram-3-fill"></i>
-                                        </div>
-                                        <span
-                                            class="text-lg font-black font-sans text-white tracking-wide">Manager</span>
-                                    </div>
-                                </td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <div class="flex flex-col space-y-1.5 max-w-[180px]">
-                                        <span class="text-white font-black font-mono text-base">$200,000</span>
-                                        <div
-                                            class="w-full h-1.5 bg-[#0D0D0F] rounded-full overflow-hidden p-[0.5px] border border-gray-800">
-                                            <div
-                                                class="h-full w-[40%] bg-purple-500 rounded-full shadow-[0_0_8px_rgba(168,85,247,0.4)]">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td
-                                    class="py-3 px-4 font-bold text-zinc-100 font-mono text-base border-r border-zinc-800">
-                                    $100,000</td>
-                                <td
-                                    class="py-3 px-4 font-bold text-zinc-100 font-mono text-base border-r border-zinc-800">
-                                    $100,000</td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <span
-                                        class="inline-block px-3 py-1 bg-purple-600 border border-purple-600 text-white font-black text-sm rounded-lg shadow-md font-mono">
-                                        $1,500
-                                    </span>
-                                </td>
-                                <td class="py-3 px-4 border-r border-zinc-800">
-                                    <span
-                                        class="inline-block px-3 py-1 bg-emerald-600 text-white font-black text-sm rounded-lg shadow-md font-mono">
-                                        $300 <span class="text-xs font-normal font-sans text-emerald-200">/ Mo</span>
-                                    </span>
-                                </td>
-                                <td class="py-3 px-4 text-center">
-                                    <span
-                                        class="inline-flex items-center gap-2 px-3 py-1 bg-[#0D0D0F] text-[#EAB308] border border-[#EAB308]/20 text-xs font-black rounded-full uppercase tracking-wider animate-pulse">
-                                        <span class="w-1.5 h-1.5 bg-[#EAB308] rounded-full"></span> Pending Node
-                                    </span>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Active Investment Multi-Grid Platform -->
-        <div class="w-full text-white bg-black antialiased px-2 py-6 relative z-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- ================= CARD 1: ACTIVE INVESTMENT (Emerald Focus) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_15px_30px_rgba(16,185,129,0.05)] group flex flex-col justify-between min-h-[140px]">
-                    <!-- Subtle Radial Light Backdrops -->
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-500/[0.02] blur-xl rounded-full group-hover:bg-emerald-500/[0.05] transition-all duration-300">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
-                            Investment</span>
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_#10B981]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5000</h3>
+                        <p class="text-xs text-zinc-500 mt-1">Read-only account metadata nodes mapping matrix.</p>
+                        <!-- Underline Gradient -->
                         <div
-                            class="w-10 h-10 rounded-xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-500/30 flex items-center justify-center text-xl group-hover:text-emerald-400/80 group-hover:bg-emerald-500/10 transition-all duration-300">
-                            <i class="bi bi-shield-lock-fill"></i>
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#EAB308]/40 via-[#EAB308]/10 to-transparent">
                         </div>
                     </div>
-                </div>
 
-                <!-- ================= CARD 2: ACTIVE EARNING (Purple Focus) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_15px_30px_rgba(168,85,247,0.05)] group flex flex-col justify-between min-h-[140px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-purple-500/[0.02] blur-xl rounded-full group-hover:bg-purple-500/[0.05] transition-all duration-300">
-                    </div>
+                    <!-- Structured Golden Cyber Register Stack -->
+                    <!-- Values text increased to text-base -->
+                    <ul class="space-y-3.5 font-mono text-base relative z-10">
 
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
-                            Earning</span>
-                        <span class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_6px_#a855f7]"></span>
-                    </div>
+                        <!-- Member ID -->
+                        <li
+                            class="flex items-center justify-between p-4 bg-black border border-zinc-900 rounded-xl hover:border-zinc-800 transition-colors">
+                            <span class="text-zinc-500 uppercase flex items-center gap-2.5 text-xs font-bold"><i
+                                    class="bi bi-qr-code text-[#EAB308]"></i> Member ID</span>
+                            <span class="font-black text-[#EAB308] tracking-wide">RG3038998</span>
+                        </li>
 
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5.00</h3>
-                        <div
-                            class="w-10 h-10 rounded-xl bg-purple-500/5 border border-purple-500/10 text-purple-500/30 flex items-center justify-center text-xl group-hover:text-purple-400/80 group-hover:bg-purple-500/10 transition-all duration-300">
-                            <i class="bi bi-lightning-charge-fill"></i>
-                        </div>
-                    </div>
-                </div>
+                        <!-- Username -->
+                        <li
+                            class="flex items-center justify-between p-4 bg-black border border-zinc-900 rounded-xl hover:border-zinc-800 transition-colors">
+                            <span class="text-zinc-500 uppercase flex items-center gap-2.5 text-xs font-bold"><i
+                                    class="bi bi-telegram text-[#EAB308]"></i> Username</span>
+                            <span class="font-black text-white tracking-wide">Realgains</span>
+                        </li>
 
-                <!-- ================= CARD 3: ACTIVE REMAINING (Rose Focus) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-rose-500/40 hover:shadow-[0_15px_30px_rgba(244,63,94,0.05)] group flex flex-col justify-between min-h-[140px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-rose-500/[0.02] blur-xl rounded-full group-hover:bg-rose-500/[0.05] transition-all duration-300">
-                    </div>
+                        <!-- Full Name -->
+                        <li
+                            class="flex items-center justify-between p-4 bg-black border border-zinc-900 rounded-xl hover:border-zinc-800 transition-colors">
+                            <span class="text-zinc-500 uppercase flex items-center gap-2.5 text-xs font-bold"><i
+                                    class="bi bi-person-fill text-[#EAB308]"></i> Full Name</span>
+                            <span class="font-black text-zinc-300 tracking-wide">Realgains LLC</span>
+                        </li>
 
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Current Active
-                            Remaining</span>
-                        <span class="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_6px_#f43f5e]"></span>
-                    </div>
+                        <!-- Sponsor -->
+                        <li
+                            class="flex items-center justify-between p-4 bg-black border border-zinc-900 rounded-xl hover:border-zinc-800 transition-colors">
+                            <span class="text-zinc-500 uppercase flex items-center gap-2.5 text-xs font-bold"><i
+                                    class="bi bi-diagram-3-fill text-[#EAB308]"></i> Sponsor</span>
+                            <span class="font-black text-[#EAB308] tracking-wide">companyid</span>
+                        </li>
 
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$14995</h3>
-                        <div
-                            class="w-10 h-10 rounded-xl bg-rose-500/5 border border-rose-500/10 text-rose-500/30 flex items-center justify-center text-xl group-hover:text-rose-400/80 group-hover:bg-rose-500/10 transition-all duration-300">
-                            <i class="bi bi-hourglass-split"></i>
-                        </div>
-                    </div>
-                </div>
+                        <!-- Country -->
+                        <li
+                            class="flex items-center justify-between p-4 bg-black border border-zinc-900 rounded-xl hover:border-zinc-800 transition-colors">
+                            <span class="text-zinc-500 uppercase flex items-center gap-2.5 text-xs font-bold"><i
+                                    class="bi bi-flag-fill text-[#EAB308]"></i> Country</span>
+                            <span class="font-black text-zinc-300 tracking-wide">United Kingdom</span>
+                        </li>
 
-                <!-- ================= CARD 4: TODAY TEAM BUSINESS (Cyan Focus) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-800 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_15px_30px_rgba(6,182,212,0.05)] group flex flex-col justify-between min-h-[140px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-cyan-500/[0.02] blur-xl rounded-full group-hover:bg-cyan-500/[0.05] transition-all duration-300">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Today Team
-                            Business</span>
-                        <span class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_6px_#06b6d4]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-[#EAB308]">$0</h3>
-                        <div
-                            class="w-10 h-10 rounded-xl bg-cyan-500/5 border border-cyan-500/10 text-cyan-500/30 flex items-center justify-center text-xl group-hover:text-cyan-400/80 group-hover:bg-cyan-500/10 transition-all duration-300">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <!-- Cyber Tech Infographic Investment Deck -->
-        <div class="w-full text-white bg-black antialiased px-2 py-6 relative z-10">
-            <!-- Responsive Matrix: Mobile pe 1 column, tab pe 2, desktop pe 4 columns seamlessly handle hote hain -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- ================= CELLS 01: CURRENT ACTIVE INVESTMENT (Emerald Glow) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_15px_30px_rgba(16,185,129,0.05)] group flex flex-col justify-between min-h-[150px]">
-                    <!-- Soft Ambient Background Layer Fill -->
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-500/[0.02] blur-xl rounded-full group-hover:bg-emerald-500/[0.06] transition-all">
-                    </div>
-                    <!-- Dynamic Neon Top Line Accent -->
-                    <div class="absolute top-0 left-0 w-2/3 h-[2px] bg-gradient-to-r from-emerald-500 to-transparent">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider block">Active
-                            Investment</span>
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10B981]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5000</h3>
-                        <div
-                            class="w-11 h-11 rounded-xl bg-emerald-500/5 border border-emerald-500/10 text-emerald-500/40 flex items-center justify-center text-xl group-hover:text-emerald-400 group-hover:bg-emerald-500/10 transition-all duration-300">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= CELLS 02: CURRENT ACTIVE EARNING (Purple Glow) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-purple-500/40 hover:shadow-[0_15px_30px_rgba(168,85,247,0.05)] group flex flex-col justify-between min-h-[150px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-purple-500/[0.02] blur-xl rounded-full group-hover:bg-purple-500/[0.06] transition-all">
-                    </div>
-                    <div class="absolute top-0 left-0 w-2/3 h-[2px] bg-gradient-to-r from-purple-500 to-transparent">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider block">Active
-                            Earning</span>
-                        <span class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_#a855f7]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$5.00</h3>
-                        <div
-                            class="w-11 h-11 rounded-xl bg-purple-500/5 border border-purple-500/10 text-purple-500/40 flex items-center justify-center text-xl group-hover:text-purple-400 group-hover:bg-purple-500/10 transition-all duration-300">
-                            <i class="bi bi-lightning-charge-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= CELLS 03: CURRENT ACTIVE REMAINING (Rose Glow) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-rose-500/40 hover:shadow-[0_15px_30px_rgba(244,63,94,0.05)] group flex flex-col justify-between min-h-[150px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-rose-500/[0.02] blur-xl rounded-full group-hover:bg-rose-500/[0.06] transition-all">
-                    </div>
-                    <div class="absolute top-0 left-0 w-2/3 h-[2px] bg-gradient-to-r from-rose-500 to-transparent">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider block">Active
-                            Remaining</span>
-                        <span class="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-white">$14995</h3>
-                        <div
-                            class="w-11 h-11 rounded-xl bg-rose-500/5 border border-rose-500/10 text-rose-500/40 flex items-center justify-center text-xl group-hover:text-rose-400 group-hover:bg-rose-500/10 transition-all duration-300">
-                            <i class="bi bi-hourglass-split"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= CELLS 04: TODAY TEAM BUSINESS (Cyan Glow) ================= -->
-                <div
-                    class="bg-[#0A0A0B] border border-zinc-900 rounded-2xl p-6 relative overflow-hidden transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_15px_30px_rgba(6,182,212,0.05)] group flex flex-col justify-between min-h-[150px]">
-                    <div
-                        class="absolute -right-6 -bottom-6 w-24 h-24 bg-cyan-500/[0.02] blur-xl rounded-full group-hover:bg-cyan-500/[0.06] transition-all">
-                    </div>
-                    <div class="absolute top-0 left-0 w-2/3 h-[2px] bg-gradient-to-r from-cyan-500 to-transparent">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full font-mono relative z-10">
-                        <span class="text-[11px] text-zinc-500 font-bold uppercase tracking-wider block">Today Team
-                            Business</span>
-                        <span class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_#06b6d4]"></span>
-                    </div>
-
-                    <div class="flex items-end justify-between mt-6 relative z-10">
-                        <h3 class="text-3xl md:text-4xl font-black font-mono tracking-tight text-[#EAB308]">$0</h3>
-                        <div
-                            class="w-11 h-11 rounded-xl bg-cyan-500/5 border border-cyan-500/10 text-cyan-500/40 flex items-center justify-center text-xl group-hover:text-cyan-400 group-hover:bg-cyan-500/10 transition-all duration-300">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Elite Cyber-Glow HUD Investment Pods -->
-        <div class="w-full text-white bg-black antialiased px-2 py-8 relative z-10">
-            <!-- Fully Responsive Layout Container -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- ================= POD 1: ACTIVE INVESTMENT (Emerald Laser Core) ================= -->
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-emerald-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400 hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] group flex flex-col justify-between min-h-[170px]">
-                    <!-- Inner Dynamic Backglow -->
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/[0.03] blur-2xl rounded-full group-hover:bg-emerald-500/[0.08] transition-all">
-                    </div>
-
-                    <!-- Top Tracker Area -->
-                    <div class="flex items-center justify-between w-full border-b border-zinc-900 pb-3 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                            </span>
-                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
-                                Investment</span>
-                        </div>
-                        <span
-                            class="text-[9px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">LIVE_NODE</span>
-                    </div>
-
-                    <!-- Bottom Big Value Frame -->
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5000</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-emerald-500 text-black flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/10 transition duration-300">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= POD 2: ACTIVE EARNING (Purple Laser Core) ================= -->
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-purple-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-purple-400 hover:shadow-[0_20px_40px_rgba(168,85,247,0.1)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-purple-500/[0.03] blur-2xl rounded-full group-hover:bg-purple-500/[0.08] transition-all">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full border-b border-zinc-900 pb-3 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
-                            </span>
-                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
-                                Earning</span>
-                        </div>
-                        <span
-                            class="text-[9px] font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-md border border-purple-500/20">SYS_BOOST</span>
-                    </div>
-
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5.00</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-purple-500/10 transition duration-300">
-                            <i class="bi bi-lightning-charge-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= POD 3: ACTIVE REMAINING (Rose Laser Core) ================= -->
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-rose-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-rose-400 hover:shadow-[0_20px_40px_rgba(244,63,94,0.1)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-rose-500/[0.03] blur-2xl rounded-full group-hover:bg-rose-500/[0.08] transition-all">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full border-b border-zinc-900 pb-3 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
-                            </span>
-                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
-                                Remaining</span>
-                        </div>
-                        <span
-                            class="text-[9px] font-mono font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded-md border border-rose-500/20">LIMIT_CALC</span>
-                    </div>
-
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$14995</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-rose-500/10 transition duration-300">
-                            <i class="bi bi-hourglass-split"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= POD 4: TODAY TEAM BUSINESS (Cyan Laser Core) ================= -->
-                <div
-                    class="bg-gradient-to-b from-[#16161A] to-[#0D0D0F] border-2 border-[#EAB308] rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(234,179,8,0.15)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-amber-500/[0.04] blur-2xl rounded-full group-hover:bg-amber-500/[0.1] transition-all">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full border-b border-zinc-800 pb-3 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#EAB308] opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#EAB308]"></span>
-                            </span>
-                            <span class="text-xs font-mono font-black text-zinc-200 uppercase tracking-widest">Today
-                                Team Business</span>
-                        </div>
-                        <span
-                            class="text-[9px] font-mono font-black bg-[#EAB308] text-black px-2 py-0.5 rounded-md">MATRIX_STAT</span>
-                    </div>
-
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-[#EAB308]">$0</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-[#EAB308] text-black flex items-center justify-center text-2xl shadow-lg shadow-[#EAB308]/20 transition duration-300 border border-[#FBBF24]/40">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Quick Team Highlights Status (Elite High-Contrast Version) -->
-        <div class="w-full text-white bg-black antialiased px-2 py-4 relative z-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-base">
-
-                <!-- 01: Profit Level Pod -->
-                <div
-                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-amber-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-500 flex items-center justify-center text-lg shrink-0">
-                            <i class="bi bi-bar-chart-fill"></i>
-                        </div>
-                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Profit Level</span>
-                    </div>
-                    <span
-                        class="font-black text-amber-400 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow-sm">
-                        Level 1
-                    </span>
-                </div>
-
-                <!-- 02: Team Business Pod -->
-                <div
-                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-emerald-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg shrink-0">
-                            <i class="bi bi-briefcase-fill"></i>
-                        </div>
-                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Team Business</span>
-                    </div>
-                    <span
-                        class="font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-lg text-sm shadow-sm">
-                        $100
-                    </span>
-                </div>
-
-                <!-- 03: Strong Team Pod -->
-                <div
-                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-purple-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg shrink-0">
-                            <i class="bi bi-lightning-fill"></i>
-                        </div>
-                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Strong Team</span>
-                    </div>
-                    <span
-                        class="font-black text-purple-400 bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-lg text-sm shadow-sm">
-                        $100
-                    </span>
-                </div>
-
-                <!-- 04: Other Team Pod -->
-                <div
-                    class="p-5 bg-[#0A0A0B] border-l-4 border-l-zinc-500 border-y border-r border-zinc-900 rounded-r-2xl flex items-center justify-between gap-4 transition duration-200 hover:bg-[#121214]">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-10 h-10 rounded-xl bg-zinc-500/10 border border-zinc-800 text-zinc-400 flex items-center justify-center text-lg shrink-0">
-                            <i class="bi bi-pie-chart-fill"></i>
-                        </div>
-                        <span class="text-zinc-400 font-bold uppercase tracking-wide text-sm">Other Team</span>
-                    </div>
-                    <span
-                        class="font-black text-zinc-300 bg-zinc-800 border border-zinc-700 px-3 py-1 rounded-lg text-sm shadow-sm">
-                        $0
-                    </span>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Quick Team Highlights Status (Futuristic Neon Pulse Edition) -->
-        <div class="w-full text-white bg-black antialiased px-2 py-6 relative z-10">
-
-            <!-- Tailwind Custom CSS Animations for Glow Pulse & Background Flow -->
-            <style>
-                @keyframes pulse-glow {
-
-                    0%,
-                    100% {
-                        transform: scale(1);
-                        opacity: 0.2;
-                        filter: blur(20px);
-                    }
-
-                    50% {
-                        transform: scale(1.15);
-                        opacity: 0.6;
-                        filter: blur(30px);
-                    }
-                }
-
-                .animate-neon-glow {
-                    animation: pulse-glow 3s infinite ease-in-out;
-                }
-            </style>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-base">
-
-                <!-- 01: Profit Level Pod (Amber Neon Flare) -->
-                <div class="group relative rounded-2xl p-[1px] transition-all duration-300 hover:scale-[1.03]">
-                    <!-- Animated Background Glow behind the card (Solves the black-blend problem) -->
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl opacity-20 filter blur-xl group-hover:opacity-60 transition-all duration-500 animate-neon-glow">
-                    </div>
-                    <!-- Sharp Hover Border Mask -->
-                    <div
-                        class="absolute inset-0 bg-zinc-800 rounded-2xl group-hover:bg-gradient-to-r group-hover:from-amber-500 group-hover:to-yellow-400 transition-all duration-300">
-                    </div>
-
-                    <!-- Inner Main Card Content Frame -->
-                    <div
-                        class="relative bg-[#09090B] rounded-2xl p-5 flex items-center justify-between gap-4 h-full z-10">
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-11 h-11 rounded-xl bg-amber-500 text-black shadow-[0_0_15px_rgba(234,179,8,0.4)] flex items-center justify-center text-lg shrink-0 font-sans">
-                                <i class="bi bi-bar-chart-fill animate-pulse"></i>
-                            </div>
+                        <!-- Email Node -->
+                        <li
+                            class="flex flex-col gap-2 p-4 bg-black border border-zinc-900 rounded-xl hover:border-zinc-800 transition-colors">
+                            <span class="text-zinc-500 uppercase flex items-center gap-2.5 text-xs font-bold"><i
+                                    class="bi bi-envelope-at-fill text-[#EAB308]"></i> Email Node</span>
                             <span
-                                class="text-zinc-300 font-black uppercase tracking-wide text-sm group-hover:text-white transition-colors">Profit
-                                Level</span>
-                        </div>
-                        <span
-                            class="font-black text-amber-400 bg-amber-500/10 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs uppercase tracking-widest shadow-[inset_0_0_8px_rgba(234,179,8,0.1)]">
-                            Level 1
-                        </span>
-                    </div>
-                </div>
+                                class="font-black text-zinc-300 truncate text-left tracking-wide">info@realgains.llc</span>
+                        </li>
 
-                <!-- 02: Team Business Pod (Emerald Neon Flare) -->
-                <div class="group relative rounded-2xl p-[1px] transition-all duration-300 hover:scale-[1.03]">
-                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl opacity-20 filter blur-xl group-hover:opacity-60 transition-all duration-500 animate-neon-glow"
-                        style="animation-delay: 0.7s;"></div>
-                    <div
-                        class="absolute inset-0 bg-zinc-800 rounded-2xl group-hover:bg-gradient-to-r group-hover:from-emerald-500 group-hover:to-green-400 transition-all duration-300">
-                    </div>
+                        <!-- Phone Status -->
+                        <li
+                            class="flex items-center justify-between p-4 bg-black border border-zinc-900 rounded-xl hover:border-zinc-800 transition-colors">
+                            <span class="text-zinc-500 uppercase flex items-center gap-2.5 text-xs font-bold"><i
+                                    class="bi bi-telephone-fill text-[#EAB308]"></i> Phone</span>
+                            <span class="text-zinc-600 italic text-sm">[ Unmapped ]</span>
+                        </li>
 
-                    <div
-                        class="relative bg-[#09090B] rounded-2xl p-5 flex items-center justify-between gap-4 h-full z-10">
-                        <div class="flex items-center gap-3">
+                        <!-- Activated Timestamp Row (Golden Glow Integration) -->
+                        <li
+                            class="flex items-center justify-between p-4 bg-[#EAB308]/10 border border-[#EAB308]/30 rounded-xl relative overflow-hidden shadow-[inset_0_0_15px_rgba(234,179,8,0.05)]">
                             <div
-                                class="w-11 h-11 rounded-xl bg-emerald-500 text-black shadow-[0_0_15px_rgba(16,185,129,0.4)] flex items-center justify-center text-lg shrink-0 font-sans">
-                                <i class="bi bi-briefcase-fill animate-bounce"></i>
+                                class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#EAB308] via-[#EAB308]/50 to-transparent">
                             </div>
-                            <span
-                                class="text-zinc-300 font-black uppercase tracking-wide text-sm group-hover:text-white transition-colors">Team
-                                Business</span>
-                        </div>
-                        <span
-                            class="font-black text-emerald-400 bg-emerald-500/10 border border-emerald-500/40 px-3 py-1.5 rounded-xl text-sm shadow-[inset_0_0_8px_rgba(16,185,129,0.1)]">
-                            $100
-                        </span>
-                    </div>
-                </div>
-
-                <!-- 03: Strong Team Pod (Purple Neon Flare) -->
-                <div class="group relative rounded-2xl p-[1px] transition-all duration-300 hover:scale-[1.03]">
-                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-2xl opacity-20 filter blur-xl group-hover:opacity-60 transition-all duration-500 animate-neon-glow"
-                        style="animation-delay: 1.4s;"></div>
-                    <div
-                        class="absolute inset-0 bg-zinc-800 rounded-2xl group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-fuchsia-400 transition-all duration-300">
-                    </div>
-
-                    <div
-                        class="relative bg-[#09090B] rounded-2xl p-5 flex items-center justify-between gap-4 h-full z-10">
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-11 h-11 rounded-xl bg-purple-500 text-white shadow-[0_0_15px_rgba(168,85,247,0.4)] flex items-center justify-center text-lg shrink-0 font-sans">
-                                <i class="bi bi-lightning-fill"></i>
-                            </div>
-                            <span
-                                class="text-zinc-300 font-black uppercase tracking-wide text-sm group-hover:text-white transition-colors">Strong
-                                Team</span>
-                        </div>
-                        <span
-                            class="font-black text-purple-400 bg-purple-500/10 border border-purple-500/40 px-3 py-1.5 rounded-xl text-sm shadow-[inset_0_0_8px_rgba(168,85,247,0.1)]">
-                            $100
-                        </span>
-                    </div>
-                </div>
-
-                <!-- 04: Other Team Pod (Cyan Neon Flare) -->
-                <div class="group relative rounded-2xl p-[1px] transition-all duration-300 hover:scale-[1.03]">
-                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl opacity-20 filter blur-xl group-hover:opacity-60 transition-all duration-500 animate-neon-glow"
-                        style="animation-delay: 2.1s;"></div>
-                    <div
-                        class="absolute inset-0 bg-zinc-800 rounded-2xl group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:to-blue-400 transition-all duration-300">
-                    </div>
-
-                    <div
-                        class="relative bg-[#09090B] rounded-2xl p-5 flex items-center justify-between gap-4 h-full z-10">
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-11 h-11 rounded-xl bg-cyan-500 text-black shadow-[0_0_15px_rgba(6,182,212,0.4)] flex items-center justify-center text-lg shrink-0 font-sans">
-                                <i class="bi bi-pie-chart-fill"></i>
-                            </div>
-                            <span
-                                class="text-zinc-300 font-black uppercase tracking-wide text-sm group-hover:text-white transition-colors">Other
-                                Team</span>
-                        </div>
-                        <span
-                            class="font-black text-cyan-400 bg-cyan-500/10 border border-cyan-500/40 px-3 py-1.5 rounded-xl text-sm shadow-[inset_0_0_8px_rgba(6,182,212,0.1)]">
-                            $0
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        </div>
-
-
-        <!-- Elite Cyber-Glow HUD Investment Pods (Fade-to-Transparent Gradient Edition) -->
-        <div class="w-full text-white bg-black antialiased px-2 py-8 relative z-10">
-            <!-- Fully Responsive Layout Container -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- ================= POD 1: ACTIVE INVESTMENT (Emerald Laser Core) ================= -->
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border border-zinc-900 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-[0_20px_40px_rgba(16,185,129,0.08)] group flex flex-col justify-between min-h-[170px]">
-
-                    <!-- Image Style Top Gradient Accent Line (Fade to Transparent) -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-emerald-400 via-emerald-500/40 to-transparent">
-                    </div>
-
-                    <!-- Inner Dynamic Backglow -->
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/[0.03] blur-2xl rounded-full group-hover:bg-emerald-500/[0.08] transition-all">
-                    </div>
-
-                    <!-- Top Tracker Area -->
-                    <div class="flex items-center justify-between w-full relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                            <span class="text-[#EAB308] font-black uppercase flex items-center gap-2.5 text-sm">
+                                <i class="bi bi-calendar-check-fill animate-pulse text-[#EAB308]"></i> Activated
                             </span>
-                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
-                                Investment</span>
-                        </div>
-                        <span
-                            class="text-[9px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">LIVE_NODE</span>
-                    </div>
+                            <span class="font-mono font-black text-[#EAB308] tracking-wider">2026-06-13</span>
+                        </li>
 
-                    <!-- Bottom Big Value Frame -->
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5000</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-emerald-500 text-black flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/10 transition duration-300">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                    </div>
+                    </ul>
                 </div>
-
-                <!-- ================= POD 2: ACTIVE EARNING (Purple Laser Core) ================= -->
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border border-zinc-900 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30 hover:shadow-[0_20px_40px_rgba(168,85,247,0.08)] group flex flex-col justify-between min-h-[170px]">
-
-                    <!-- Image Style Top Gradient Accent Line (Fade to Transparent) -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-400 via-purple-500/40 to-transparent">
-                    </div>
-
-                    <!-- Inner Dynamic Backglow -->
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-purple-500/[0.03] blur-2xl rounded-full group-hover:bg-purple-500/[0.08] transition-all">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
-                            </span>
-                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
-                                Earning</span>
-                        </div>
-                        <span
-                            class="text-[9px] font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-md border border-purple-500/20">SYS_BOOST</span>
-                    </div>
-
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5.00</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-purple-500/10 transition duration-300">
-                            <i class="bi bi-lightning-charge-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= POD 3: ACTIVE REMAINING (Rose Laser Core) ================= -->
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border border-zinc-900 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-rose-500/30 hover:shadow-[0_20px_40px_rgba(244,63,94,0.08)] group flex flex-col justify-between min-h-[170px]">
-
-                    <!-- Image Style Top Gradient Accent Line (Fade to Transparent) -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-rose-400 via-rose-500/40 to-transparent">
-                    </div>
-
-                    <!-- Inner Dynamic Backglow -->
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-rose-500/[0.03] blur-2xl rounded-full group-hover:bg-rose-500/[0.08] transition-all">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
-                            </span>
-                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Active
-                                Remaining</span>
-                        </div>
-                        <span
-                            class="text-[9px] font-mono font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded-md border border-rose-500/20">LIMIT_CALC</span>
-                    </div>
-
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$14995</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-rose-500/10 transition duration-300">
-                            <i class="bi bi-hourglass-split"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= POD 4: TODAY TEAM BUSINESS (Cyan Laser Core) ================= -->
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border border-zinc-900 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-[0_20px_45px_rgba(6,182,212,0.08)] group flex flex-col justify-between min-h-[170px]">
-
-                    <!-- Image Style Top Gradient Accent Line (Fade to Transparent) -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-400 via-cyan-500/40 to-transparent">
-                    </div>
-
-                    <!-- Inner Dynamic Backglow -->
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-cyan-500/[0.03] blur-2xl rounded-full group-hover:bg-cyan-500/[0.08] transition-all">
-                    </div>
-
-                    <div class="flex items-center justify-between w-full relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
-                            </span>
-                            <span class="text-xs font-mono font-black text-zinc-400 uppercase tracking-widest">Today
-                                Team Business</span>
-                        </div>
-                        <span
-                            class="text-[9px] font-mono font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-md border border-cyan-500/20">MATRIX_STAT</span>
-                    </div>
-
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$0</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-cyan-500/10 transition duration-300">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <!-- Elite Cyber-Glow HUD Investment Pods (Universal Gradient Underline Edition) -->
-        <div class="w-full text-white bg-black antialiased px-2 py-8 relative z-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-emerald-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-[0_20px_40px_rgba(16,185,129,0.08)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-emerald-500/[0.03] blur-2xl rounded-full group-hover:bg-emerald-500/[0.08] transition-all">
-                    </div>
-                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                            </span>
-                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Active
-                                Investment</span>
-                        </div>
-                        <span
-                            class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">LIVE_NODE</span>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-emerald-500 via-emerald-500/30 to-transparent">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5000</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-emerald-500 text-black flex items-center justify-center text-2xl shadow-lg shadow-emerald-500/10 transition duration-300">
-                            <i class="bi bi-shield-lock-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-purple-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30 hover:shadow-[0_20px_40px_rgba(168,85,247,0.08)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-purple-500/[0.03] blur-2xl rounded-full group-hover:bg-purple-500/[0.08] transition-all">
-                    </div>
-                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
-                            </span>
-                            <span class="text-sm font-mono font-black text-zinc-400  tracking-widest">Active
-                                Earning</span>
-                        </div>
-                        <span
-                            class="text-xs font-mono font-bold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded-md border border-purple-500/20">SYS_BOOST</span>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-purple-500 via-purple-500/30 to-transparent">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$5.00</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-purple-500/10 transition duration-300">
-                            <i class="bi bi-lightning-charge-fill"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-rose-600/30 rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-rose-500/30 hover:shadow-[0_20px_40px_rgba(244,63,94,0.08)] group flex flex-col justify-between min-h-[170px]">
-                    <div
-                        class="absolute -right-4 -bottom-4 w-28 h-28 bg-rose-500/[0.03] blur-2xl rounded-full group-hover:bg-rose-500/[0.08] transition-all">
-                    </div>
-                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
-                            </span>
-                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Active
-                                Remaining</span>
-                        </div>
-                        <span
-                            class="text-xs font-mono font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded-md border border-rose-500/20">LIMIT_CALC</span>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-rose-500 via-rose-500/30 to-transparent">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$14995</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-rose-500/10 transition duration-300">
-                            <i class="bi bi-hourglass-split"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-gradient-to-b from-[#0D0D0F] to-[#040405] border-2 border-[#EAB308] rounded-3xl p-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-[0_20px_45px_rgba(6,182,212,0.08)] group flex flex-col justify-between min-h-[170px]">
-                    <div  class="absolute -right-4 -bottom-4 w-28 h-28 bg-cyan-500/[0.03] blur-2xl rounded-full group-hover:bg-cyan-500/[0.08] transition-all">
-                    </div>
-                    <div class="flex items-center justify-between w-full pb-3.5 relative z-10">
-                        <div class="flex items-center gap-2.5">
-                            <span class="flex h-2.5 w-2.5 relative">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
-                            </span>
-                            <span class="text-sm font-mono font-black text-zinc-400 tracking-widest">Today Team
-                                Business</span>
-                        </div>
-                        <span
-                            class="text-xs font-mono font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded-md border border-cyan-500/20">MATRIX_STAT</span>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-500 via-cyan-500/30 to-transparent">
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mt-6 relative z-10">
-                        <h3 class="text-4xl md:text-5xl font-black font-mono tracking-tight text-white">$0</h3>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-cyan-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-cyan-500/10 transition duration-300">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </main>
 
 
+
     <footer class="w-full bg-zinc-950 border-t border-zinc-900 mt-auto font-sans relative z-10 shadow-[0_-4px_30px_rgba(0,0,0,0.3)] w-full overflow-hidden">
-        <div
-            class="absolute bottom-0 right-1/3 w-[200px] h-[100px] bg-amber-500/[0.01] blur-[100px] rounded-full pointer-events-none">
+        <div class="absolute bottom-0 right-1/3 w-[200px] h-[100px] bg-amber-500/[0.01] blur-[100px] rounded-full pointer-events-none">
         </div>
-        <div
-            class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
             <div class="text-center sm:text-left min-w-0">
                 <p class="text-xs font-semibold text-white tracking-wide break-all">
-                    © 2026 <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 font-bold">IBOT
+                    © 2026 <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 font-bold">IBOT
                         Investments</span>. All Rights Reserved.
                 </p>
             </div>
             <div class="flex items-center justify-center sm:justify-end text-xs font-medium flex-shrink-0">
-                <a href="#developer"
-                    class="text-zinc-500 hover:text-amber-400 tracking-wide transition duration-300 uppercase text-[10px] font-bold tracking-widest">
+                <a href="#developer" class="text-zinc-500 hover:text-amber-400 tracking-wide transition duration-300 text-xs font-bold tracking-widest">
                     Design and Developed
                 </a>
             </div>
