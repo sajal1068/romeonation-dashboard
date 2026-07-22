@@ -17,28 +17,21 @@
     </div>
     <div class="absolute bottom-0 left-1/4 w-[300px] sm:w-[500px] h-[400px] bg-yellow-600/[0.01] blur-[150px] rounded-full pointer-events-none z-0">
     </div>
-
-
-<!-- Fixed Header (Removed 'overflow-hidden' so dropdowns show properly) -->
 <header class="sticky top-0 z-50 w-full bg-zinc-950/90 backdrop-blur-xl border-b border-amber-500/20 shadow-[0_15px_30px_rgba(234,179,8,0.12)] font-sans relative">
     
-    <!-- Bottom Edge Glowing Accent Line (Fade-to-Transparent) -->
+    
     <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#EAB308] to-transparent z-40 pointer-events-none"></div>
 
-    <!-- Ambient Golden Top Glow -->
+   
     <div class="absolute top-0 left-1/3 w-[300px] h-[100px] bg-amber-500/[0.03] blur-[100px] rounded-full pointer-events-none"></div>
 
-    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20 relative w-full z-10">
-
-        <!-- Logo Area -->
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20 relative w-full z-10">        
         <div class="flex-shrink-0 flex items-center py-2 z-30">
             <a href="index.html" class="flex items-center group transition duration-300">
                 <img src="assets/images/logo.png" alt="IBOT Panel Logo"
                     class="h-8 sm:h-11 w-auto object-contain block transform group-hover:scale-[1.03] transition duration-500 pointer-events-none filter drop-shadow-[0_0_8px_rgba(245,158,11,0.2)]" />
             </a>
-        </div>
-
-        <!-- Mobile Menu Toggle Button -->
+        </div>    
         <div class="flex xl:hidden items-center z-30">
             <button id="menu-toggle-btn"
                 class="text-zinc-400 hover:text-amber-400 p-2.5 bg-zinc-900/50 rounded-xl border border-zinc-900 focus:outline-none">
@@ -47,32 +40,22 @@
                         d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
-        </div>
-
-        <!-- Backdrop overlay -->
-        <div id="nav-backdrop"
-            class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden xl:hidden transition-opacity duration-300">
-        </div>
-
-        <!-- Navigation Mesh -->
-        <nav id="unified-nav-mesh" class="
-            fixed top-0 right-0 bottom-0 h-screen w-72 sm:w-80 bg-zinc-950 border-l border-zinc-900 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto
+        </div>        
+        <div id="nav-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden xl:hidden transition-opacity duration-300">
+        </div>        
+        <nav id="unified-nav-mesh" class="fixed top-0 right-0 bottom-0 h-screen w-72 sm:w-80 bg-zinc-950 border-l border-zinc-900 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto
             xl:static xl:h-auto xl:w-auto xl:bg-transparent xl:border-l-0 xl:p-0 xl:shadow-none xl:transform-none xl:transition-none xl:overflow-y-visible
             flex flex-col xl:flex-row items-stretch xl:items-center gap-4 xl:gap-2 text-sm font-medium">
 
             <div class="flex xl:hidden items-center justify-between border-b border-zinc-900 pb-4 mb-2">
                 <span class="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">Navigation Core</span>
                 <button id="menu-close-btn" class="text-zinc-500 hover:text-white text-sm font-bold p-1">✕</button>
-            </div>
+            </div>            
+            <a href="index.html" class="nav-core-link px-4 py-3 xl:py-2 rounded-xl text-amber-400 bg-zinc-900/60 border border-amber-500/10 shadow-sm shadow-amber-500/5 text-center xl:text-left">Dashboard</a>
 
-            <!-- 1. Dashboard Link -->
-            <a href="index.html"
-                class="nav-core-link px-4 py-3 xl:py-2 rounded-xl text-amber-400 bg-zinc-900/60 border border-amber-500/10 shadow-sm shadow-amber-500/5 text-center xl:text-left">Dashboard</a>
-
-            <!-- 2. My Account Group -->
+            
             <div class="relative group/main nav-node-group">
-                <button
-                    class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
+                <button class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
                     <span>My Account</span>
                     <svg class="chevron-icon w-4 h-4 transition-transform duration-200" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
@@ -80,15 +63,13 @@
                         </path>
                     </svg>
                 </button>
-
                 <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-56 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
                     <div class="rounded-2xl bg-zinc-950/95 xl:bg-zinc-900/95 backdrop-blur-xl border border-amber-500/20 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.8)] space-y-1">
                         <a href="profile.html"
                             class="nav-core-link block px-4 py-2 text-xs text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/60 rounded-xl transition font-medium">My Profile</a>
 
                         <div class="relative group/sub nav-subnode-group">
-                            <button
-                                class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/60 rounded-xl transition font-medium">
+                            <button class="nav-subtrigger-btn w-full flex items-center justify-between px-4 py-2 text-xs text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/60 rounded-xl transition font-medium">
                                 <span>Security Settings</span>
                                 <svg class="subchevron-icon w-3 h-3 transition-transform xl:-rotate-90" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
@@ -107,9 +88,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 3. Wallets & Investment Hub -->
+            </div>            
             <div class="relative group/main nav-node-group">
                 <button class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
                     <span>Wallets & Investment</span>
@@ -121,7 +100,7 @@
                 </button>
                 <div class="nav-dropdown-shell hidden xl:group-hover/main:block xl:absolute xl:top-full xl:left-0 xl:pt-3 w-full xl:w-64 origin-top pl-4 xl:pl-0 mt-2 xl:mt-0 z-50">
                     <div class="rounded-2xl bg-zinc-950/95 xl:bg-zinc-900/95 backdrop-blur-xl border border-amber-500/20 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.8)] space-y-1">
-                        <a href="#make-investment"
+                        <a href="make-investment.html"
                             class="nav-core-link block px-4 py-2.5 text-xs font-semibold text-amber-400 bg-amber-500/10 rounded-xl border border-amber-500/30 hover:bg-amber-500/20 transition">★ Make Investment</a>
                         
                         <div class="relative group/sub nav-subnode-group">
@@ -166,9 +145,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 4. Network & Reports Hub -->
+            </div>            
             <div class="relative group/main nav-node-group">
                 <button
                     class="nav-trigger-btn w-full xl:w-auto px-4 py-3 xl:py-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900/40 border border-transparent xl:hover:border-zinc-900 flex items-center justify-between xl:justify-start gap-1 transition-all duration-300">
@@ -224,16 +201,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 5. Logout Link -->
-            <a href="#logout"
-                class="nav-core-link mt-4 xl:mt-0 xl:ml-2 px-4 py-3 xl:py-2 text-center text-rose-400 hover:text-white bg-rose-500/5 xl:bg-transparent hover:bg-rose-500/10 border border-rose-500/10 xl:border-transparent xl:hover:border-rose-500/20 rounded-xl transition duration-300 font-bold uppercase xl:normal-case tracking-wider xl:tracking-normal">Logout</a>
+            </div>            
+            <a href="#logout" class="nav-core-link mt-4 xl:mt-0 xl:ml-2 px-4 py-3 xl:py-2 text-center text-rose-400 hover:text-white bg-rose-500/5 xl:bg-transparent hover:bg-rose-500/10 border border-rose-500/10 xl:border-transparent xl:hover:border-rose-500/20 rounded-xl transition duration-300 font-bold uppercase xl:normal-case tracking-wider xl:tracking-normal">Logout</a>
         </nav>
     </div>
 </header>
-
-
 
     <main class="w-full max-w-[1600px] mx-auto p-4 sm:p-8 space-y-10 flex-1 bg-[#050507] text-zinc-300 font-sans selection:bg-yellow-400 selection:text-black overflow-hidden relative">
 
